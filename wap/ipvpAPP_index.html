@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>拼单网-母婴零售服务平台_十万家母婴零售店联合采购!</title>
+
+</head>
+<body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+    $(function() {
+        var key = GetQueryString("key");
+        var username = GetQueryString("username");
+
+        addcookie('username',username,24);
+        addcookie('key',key,24);
+        //alert(key);
+        //alert('hello');
+        location.href = WapSiteUrl+"/index.html";
+
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+[2016-07-18 11:48:37] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+INSERT  INTO `33hao_send_code_record` (request_url,mobile,ip,add_time,send) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187','18558756920','127.0.0.1','1468813716','0')
+[2016-07-18 11:48:37] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_sms_blacklist' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_sms_blacklist` WHERE ( ip = '127.0.0.1' ) AND ( expire_time > '1468813716' ) LIMIT 1  
+[2016-07-18 11:48:37] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468813656' ) LIMIT 1  
+[2016-07-18 11:48:37] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468811916' ) LIMIT 1  
+[2016-07-18 11:48:37] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468727316' ) LIMIT 1  
+[2016-07-18 11:48:37] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468810116' ) LIMIT 1  
+[2016-07-18 11:48:37] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468727316' ) LIMIT 1  
+[2016-07-18 11:48:37] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_request_send_msg' doesn't exist
+INSERT  INTO `33hao_request_send_msg` (url,add_time) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2187','1468813716')
+[2016-07-18 11:50:43] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+INSERT  INTO `33hao_send_code_record` (request_url,mobile,ip,add_time,send) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399','18558756920','127.0.0.1','1468813842','0')
+[2016-07-18 11:50:43] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_sms_blacklist' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_sms_blacklist` WHERE ( ip = '127.0.0.1' ) AND ( expire_time > '1468813842' ) LIMIT 1  
+[2016-07-18 11:50:43] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468813782' ) LIMIT 1  
+[2016-07-18 11:50:43] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468812042' ) LIMIT 1  
+[2016-07-18 11:50:43] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468727442' ) LIMIT 1  
+[2016-07-18 11:50:43] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468810242' ) LIMIT 1  
+[2016-07-18 11:50:43] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468727442' ) LIMIT 1  
+[2016-07-18 11:50:43] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_request_send_msg' doesn't exist
+INSERT  INTO `33hao_request_send_msg` (url,add_time) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=9399','1468813842')
+[2016-07-18 11:51:55] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+INSERT  INTO `33hao_send_code_record` (request_url,mobile,ip,add_time,send) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206','18558756920','127.0.0.1','1468813914','0')
+[2016-07-18 11:51:56] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_sms_blacklist' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_sms_blacklist` WHERE ( ip = '127.0.0.1' ) AND ( expire_time > '1468813914' ) LIMIT 1  
+[2016-07-18 11:51:56] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468813854' ) LIMIT 1  
+[2016-07-18 11:51:56] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468812114' ) LIMIT 1  
+[2016-07-18 11:51:56] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468727514' ) LIMIT 1  
+[2016-07-18 11:51:56] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468810314' ) LIMIT 1  
+[2016-07-18 11:51:56] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468727514' ) LIMIT 1  
+[2016-07-18 11:51:56] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_request_send_msg' doesn't exist
+INSERT  INTO `33hao_request_send_msg` (url,add_time) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8206','1468813914')
+[2016-07-18 11:53:04] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+INSERT  INTO `33hao_send_code_record` (request_url,mobile,ip,add_time,send) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618','18558756920','127.0.0.1','1468813983','0')
+[2016-07-18 11:53:05] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_sms_blacklist' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_sms_blacklist` WHERE ( ip = '127.0.0.1' ) AND ( expire_time > '1468813983' ) LIMIT 1  
+[2016-07-18 11:53:05] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468813923' ) LIMIT 1  
+[2016-07-18 11:53:05] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468812183' ) LIMIT 1  
+[2016-07-18 11:53:05] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468727583' ) LIMIT 1  
+[2016-07-18 11:53:05] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468810383' ) LIMIT 1  
+[2016-07-18 11:53:05] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468727583' ) LIMIT 1  
+[2016-07-18 11:53:05] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_request_send_msg' doesn't exist
+INSERT  INTO `33hao_request_send_msg` (url,add_time) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=8618','1468813983')
+[2016-07-18 11:54:53] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+INSERT  INTO `33hao_send_code_record` (request_url,mobile,ip,add_time,send) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180','18558756920','127.0.0.1','1468814092','0')
+[2016-07-18 11:54:53] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_sms_blacklist' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_sms_blacklist` WHERE ( ip = '127.0.0.1' ) AND ( expire_time > '1468814092' ) LIMIT 1  
+[2016-07-18 11:54:53] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468814032' ) LIMIT 1  
+[2016-07-18 11:54:53] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468812292' ) LIMIT 1  
+[2016-07-18 11:54:53] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( mobile = '18558756920' ) AND ( send = '1' ) AND ( add_time > '1468727692' ) LIMIT 1  
+[2016-07-18 11:54:53] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468810492' ) LIMIT 1  
+[2016-07-18 11:54:53] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_send_code_record' doesn't exist
+SELECT COUNT(*) AS nc_count FROM `33hao_send_code_record` WHERE ( ip = '127.0.0.1' ) AND ( send = '1' ) AND ( add_time > '1468727692' ) LIMIT 1  
+[2016-07-18 11:54:53] /shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180 ( act=login&op=send_register_code ) 
+ERR: Db Error: Table 'ipvp.33hao_request_send_msg' doesn't exist
+INSERT  INTO `33hao_request_send_msg` (url,add_time) VALUES ('ipvp.com/shop/index.php?act=login&op=send_register_code&mobile=18558756920&code=2180','1468814092')
+[2016-07-18 15:06:29] /shop/index.php ( act=index&op=index ) 
+ERR: {"member_id":"3","member_name":"lxr","member_truename":"\u674e\u654f","member_avatar":"avatar_3.jpg","member_sex":"3","member_birthday":null,"member_passwd":"4297f44b13955235245b2497399d7a93","member_paypwd":"4297f44b13955235245b2497399d7a93","member_email":"1198443441@qq.com","member_email_bind":"1","member_mobile":"18649719051","member_mobile_bind":"1","member_qq":"838469450","member_ww":"","member_login_num":"457","member_time":"1435555257","member_login_time":"1461748064","member_old_login_time":"1461575696","member_login_ip":"127.0.0.1","member_old_login_ip":"127.0.0.1","member_qqopenid":null,"member_qqinfo":null,"member_sinaopenid":null,"member_sinainfo":null,"member_points":"200","available_predeposit":"6578.53","freeze_predeposit":"0.00","available_rc_balance":"2.00","freeze_rc_balance":"0.00","inform_allow":"1","is_buy":"1","is_allowtalk":"1","member_state":"1","member_snsvisitnum":"73","member_areaid":"0","member_cityid":"0","member_provinceid":"0","member_areainfo":"","member_privacy":"a:7:{s:5:\"email\";s:1:\"0\";s:8:\"truename\";s:1:\"0\";s:3:\"sex\";s:1:\"0\";s:8:\"birthday\";s:1:\"0\";s:4:\"area\";s:1:\"0\";s:2:\"qq\";s:1:\"0\";s:2:\"ww\";s:1:\"0\";}","member_quicklink":"","member_exppoints":"2297","inviter_id":"0","org_id":"561","register_client":"0","mobile_address":"","member_level":"2","pindan_rebates_total":"0.00","is_zhiyoubao":"0","member_group":"1","is_test":"1","member_level_name":"V1","level":1,"level_name":"V1","exppoints":1000,"favorites_count":"3","order_nopay_count":"0","order_noreceipt_count":"0","order_noeval_count":"0"}

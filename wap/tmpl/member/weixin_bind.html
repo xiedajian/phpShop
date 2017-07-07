@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快捷登陆绑定</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../css/member.css">
+
+</head>
+<body>
+<header id="header"></header>
+<div id="test"></div>
+<div id="main_panel"></div>
+
+<script type="text/html" id="bind_info">
+    <div class="group_wrap">
+        <img src="<%= headimgurl %>" class="wx_avatar">
+        <div class="mt5">
+            <p><%= nickname %></p>
+        </div>
+    </div>
+    <div class="group_wrap">
+        <p style="text-align: center">
+            拼单网账号<span class="code">(<%= username %>)</span>将绑定您的微信账号。
+            <span style="white-space:pre">绑定后下次就会自动登陆</span>
+        </p>
+    </div>
+    <div class="group_wrap">
+        <a href="javascript:void(0);" class="wx_bind_btn mt10" id="do_bind">
+            立即绑定
+        </a>
+        <a href="javascript:void(0);" class="wx_none_btn mt10" id="not_bind">
+            下次再说吧
+        </a>
+    </div>
+</script>
+
+
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/template.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/tmpl/weixin.js"></script>
+<script type="text/javascript" src="../../js/tmpl/common-top.js"></script>
+
+<div class="popup"></div>
+<div class="pop" style="border-radius: 5px;margin-top: -50px;">
+    <div id="content" style="height:50px;line-height:50px;text-align: center;width: 100%;border-bottom: 1px solid #dddddd"></div>
+    <div id="click" style="height:50px;line-height:50px;text-align: center;width: 100%;"></div>
+</div>
+
+</body>
+</html>
+

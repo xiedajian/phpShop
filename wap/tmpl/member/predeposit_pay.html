@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>付款方式</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <style type="text/css">
+        .header-wrap {
+            position: relative;
+            background: #E1017E none repeat scroll 0% 0%;
+            z-index: 8888;
+            height: 50px;
+        }
+        .header-back {
+            position: absolute;
+            top: 8px;
+            left: 6px;
+            width: 30px;
+            height: 32px;
+            display: inline-block;
+        }
+        .header-back span {
+            width: 38px;
+            height: 38px;
+            text-indent: -9999px;
+            background-position: -76px 2px;
+        }
+        .header-wrap h2 {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #FFF;
+            text-align: center;
+        }
+        .content{padding:10% 5% 0 5%;}
+        .content input{width:98%;height:40px;line-height:40px;font-size:1.4em;padding-left:10px;}
+        .content .pwd-title{padding:10px 0;}
+        .content .btn-pay{width:100%;background:rgb(209,0,118);padding:10px 0;text-align:center;display:block;color:#FFF;border-radius:5px;margin-top:10%;}
+        .content .error{color:#e1017e;padding:10px 0;}
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-wrap">
+        <a href="javascript:void(history.back())" class="header-back">
+            <span>返回</span></a>
+        <h2 id="title">余额支付</h2>
+    </div>
+</header>
+<div class="content">
+    <div class="pwd-title">支付密码:</div>
+    <div><input type="password" name="paypwd" id="paypwd"></div>
+    <div><a class="btn-pay" href="javascript:void(0)">确认支付</a></div> 
+    <div class="error"></div>
+</div>
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript">
+      
+     if(!/^\?pay_sn=(\d+)$/.test(location.search)){
+    	 alert("asdfasdfasdf");
+    	 history.back();
+     }
+     var pay_sn=RegExp.$1;
+     var key =getcookie('key');
+     $(".btn-pay").click(function(){
+    	 var paypwd=$("#paypwd").val();
+    	 if(paypwd==''){
+        	 $(".error").html("请输入支付密码");
+        	 return;
+    	 }
+         $.ajax({
+             type:'post',
+             url:ApiUrl+"/index.php?act=member_payment&op=predeposit_pay",
+             data:{key:key,pay_sn:pay_sn,paypwd:paypwd},
+             dataType:'json',
+             success:function(result){
+                 if(result.datas.error){
+                	 $(".error").html($(".error").html("请输入支付密码"));
+                 }else{
+                	 location.href=WapSiteUrl+"/tmpl/member/order_center.html?op=order_wait_send";
+                 }
+             }
+         });
+     });
+</script>
+</body>
+</html>

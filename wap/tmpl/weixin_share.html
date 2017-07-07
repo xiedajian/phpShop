@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拼单网-消息发送</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<style type="text/css">
+      body{padding: 0;margin: 0;background-color:#fff;color: #333;}
+      header{text-align:center;position: relative;background: #f34a9f;width: 100%;height: 50px;text-align: center;}
+       .header-back{background: url(../images/login-reg-icon.png) no-repeat;background-size: 130px;display: block;width: 30px;height: 30px;position: absolute;  left:10px;top: 10px;background-position: -43px -56px;width: 32px;}
+      .remark-box{background:#FFF;min-height:105px;padding:15px;margin-top: 50px;}
+      .remark-box .title{color:#f078b5; }
+      .remark-box .text-box{padding: 15px 0;}
+      .remark-box .text-box img{width: 70px;height: 70px;margin-right: 5px;}
+	</style>
+</head>
+<body>
+   <header>
+        <a class="header-back" href="javascript:history.back();"></a>
+   </header>
+   <div class="remark-box">
+        <p><span class="title"></p>
+        <p class="text-box"><img align="left" src=""><span></span></p>
+    </div>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+      if(/title=([^&]+)&desc=([^&]+)&link=([^&]+)&imgUrl=([^&]+)/.test(location.search)){
+         var share_data={};
+         share_data.title=unescape(RegExp.$1);
+         share_data.desc=unescape(RegExp.$2);
+         share_data.link=unescape(RegExp.$3);
+         share_data.imgUrl=unescape(RegExp.$4);
+         share_data.type="link";
+         $(".remark-box .title").text(share_data.title);
+         $(".remark-box .text-box img").attr("src",share_data.imgUrl);
+         $(".remark-box .text-box span").text(share_data.desc);
+         $.getJSON(ApiUrl+"/index.php?act=otherpay&op=get_wx_signpackage&url="+encodeURIComponent(location.href.split('#')[0]),function(wx_conf){
+                  wx.config({
+                    debug: true,
+                    appId: wx_conf.appId,
+                    timestamp:wx_conf.timestamp,
+                    nonceStr:wx_conf.nonceStr,
+                    signature:wx_conf.signature,
+                    jsApiList: ['onMenuShareAppMessage','onMenuShareQQ']
+                  });
+               wx.ready(function(){
+                  wx.showMenuItems({
+                      menuList: ['onMenuShareAppMessage','onMenuShareQQ'] 
+                  });
+                  wx.onMenuShareAppMessage(share_data);
+                  wx.onMenuShareQQ(share_data);
+               });
+
+          });
+      }
+      $.getJSON(ApiUrl+"/index.php?act=otherpay&op=get_wx_signpackage&url="+encodeURIComponent(location.href.split('#')[0]),function(wx_conf){
+                  wx.config({
+                    debug: true,
+                    appId: wx_conf.appId,
+                    timestamp:wx_conf.timestamp,
+                    nonceStr:wx_conf.nonceStr,
+                    signature:wx_conf.signature,
+                    jsApiList: ['onMenuShareAppMessage','onMenuShareQQ']
+                  });
+          });
+    </script>
+</body>
+</html>

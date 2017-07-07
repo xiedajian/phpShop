@@ -1,0 +1,2979 @@
+执行日期：2015-03-18-23：08：45
+【CODE】:
+031aa72e59222d50f8d161c583bf879r
+
+
+执行日期：2015-03-18-23：08：45
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-18-23：08：45
+【postXml 】:
+
+
+
+执行日期：2015-03-18-23：08：45
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[mc5eg1fa0nnt9q5g3gmdlisykwal0t8g]]></nonce_str><sign><![CDATA[C9940586F4FD39E0B5AE5E4B7F3E132A]]></sign></xml>
+
+
+执行日期：2015-03-18-23：08：45
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：08：45
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[mc5eg1fa0nnt9q5g3gmdlisykwal0t8g]]></nonce_str><sign><![CDATA[C9940586F4FD39E0B5AE5E4B7F3E132A]]></sign></xml>
+
+
+执行日期：2015-03-18-23：08：45
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：08：51
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-18-23：08：51
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-18-23：08：51
+【CODE】:
+0418c8ff0389f2106b54af7b31c3d03A
+
+
+执行日期：2015-03-18-23：08：51
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-18-23：08：51
+【postXml 】:
+
+
+
+执行日期：2015-03-18-23：08：51
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[7y1tl4jxawmvubgm68lnce37wbokdh2f]]></nonce_str><sign><![CDATA[ED4DA66BFF888BD2F823216A669275EE]]></sign></xml>
+
+
+执行日期：2015-03-18-23：08：51
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：08：51
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[7y1tl4jxawmvubgm68lnce37wbokdh2f]]></nonce_str><sign><![CDATA[ED4DA66BFF888BD2F823216A669275EE]]></sign></xml>
+
+
+执行日期：2015-03-18-23：08：51
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：08：52
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-18-23：08：52
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-18-23：19：54
+【CODE】:
+03111e81220e0775dfd7e00dbc65335t
+
+
+执行日期：2015-03-18-23：19：54
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-18-23：19：54
+【postXml 】:
+
+
+
+执行日期：2015-03-18-23：19：54
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[lfk9x6uwvhmcn3mstilk0gsjy6w2g5h8]]></nonce_str><sign><![CDATA[92E70363B3D5FF30E1B73B801F123A8C]]></sign></xml>
+
+
+执行日期：2015-03-18-23：19：54
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：19：54
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[lfk9x6uwvhmcn3mstilk0gsjy6w2g5h8]]></nonce_str><sign><![CDATA[92E70363B3D5FF30E1B73B801F123A8C]]></sign></xml>
+
+
+执行日期：2015-03-18-23：19：54
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：19：58
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-18-23：19：58
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-18-23：20：18
+【CODE】:
+021f22d79a098a6cf8865e44179421f6
+
+
+执行日期：2015-03-18-23：20：18
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-18-23：20：18
+【postXml 】:
+
+
+
+执行日期：2015-03-18-23：20：18
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[tycmkwuy07ft2qk8ciptfyqpazeeyzbb]]></nonce_str><sign><![CDATA[7139EA1E3570E1F81FCBE27F6B1E674F]]></sign></xml>
+
+
+执行日期：2015-03-18-23：20：18
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：20：18
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[tycmkwuy07ft2qk8ciptfyqpazeeyzbb]]></nonce_str><sign><![CDATA[7139EA1E3570E1F81FCBE27F6B1E674F]]></sign></xml>
+
+
+执行日期：2015-03-18-23：20：18
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：20：18
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-18-23：20：18
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-18-23：27：25
+【CODE】:
+031ebb9facb0657201baa1824897f7bi
+
+
+执行日期：2015-03-18-23：27：25
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-18-23：27：25
+【postXml 】:
+
+
+
+执行日期：2015-03-18-23：27：25
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[1kdnuhke9rkp5jdc296rc176ahkneqbp]]></nonce_str><sign><![CDATA[818D894A421A0EDD58E67791E370807E]]></sign></xml>
+
+
+执行日期：2015-03-18-23：27：25
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：27：25
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[1kdnuhke9rkp5jdc296rc176ahkneqbp]]></nonce_str><sign><![CDATA[818D894A421A0EDD58E67791E370807E]]></sign></xml>
+
+
+执行日期：2015-03-18-23：27：25
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-18-23：27：28
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-18-23：27：28
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-19-00：30：59
+【CODE】:
+011f0a890ec704cfceec14ea9bda937-
+
+
+执行日期：2015-03-19-00：30：59
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-19-00：30：59
+【postXml 】:
+
+
+
+执行日期：2015-03-19-00：30：59
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[yx0ixbch8xtxohyahoirzv2vwozplzvh]]></nonce_str><sign><![CDATA[C6234B5A3FD32C268FD06D142011CF32]]></sign></xml>
+
+
+执行日期：2015-03-19-00：30：59
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-19-00：30：59
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[yx0ixbch8xtxohyahoirzv2vwozplzvh]]></nonce_str><sign><![CDATA[C6234B5A3FD32C268FD06D142011CF32]]></sign></xml>
+
+
+执行日期：2015-03-19-00：30：59
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-19-00：31：03
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-19-00：31：03
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-19-01：42：44
+【CODE】:
+01131b70ff99935520fe4702572c9c2n
+
+
+执行日期：2015-03-19-01：42：44
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-19-01：42：44
+【postXml 】:
+
+
+
+执行日期：2015-03-19-01：42：44
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[cr97dysckenrt3viclmji6wsz0svgyny]]></nonce_str><sign><![CDATA[9FAAA10B4D76B7286A396C6F9673EE24]]></sign></xml>
+
+
+执行日期：2015-03-19-01：42：44
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-19-01：42：44
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[124.15.160.27]]></spbill_create_ip><nonce_str><![CDATA[cr97dysckenrt3viclmji6wsz0svgyny]]></nonce_str><sign><![CDATA[9FAAA10B4D76B7286A396C6F9673EE24]]></sign></xml>
+
+
+执行日期：2015-03-19-01：42：44
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-19-01：42：46
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-19-01：42：46
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-19-23：57：36
+【CODE】:
+0114b6cc08b598a101e6fc50e5df275P
+
+
+执行日期：2015-03-19-23：57：36
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-19-23：57：36
+【postXml 】:
+
+
+
+执行日期：2015-03-19-23：57：36
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[223.210.182.177]]></spbill_create_ip><nonce_str><![CDATA[83papwd2eozi2zazdsjnnlhhbpdx32s9]]></nonce_str><sign><![CDATA[D75A5C817467E1155390516FD6899CD6]]></sign></xml>
+
+
+执行日期：2015-03-19-23：57：36
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-19-23：57：36
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[223.210.182.177]]></spbill_create_ip><nonce_str><![CDATA[83papwd2eozi2zazdsjnnlhhbpdx32s9]]></nonce_str><sign><![CDATA[D75A5C817467E1155390516FD6899CD6]]></sign></xml>
+
+
+执行日期：2015-03-19-23：57：36
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-19-23：57：47
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-19-23：57：47
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-19-23：57：48
+【CODE】:
+0313c2af701d01cb4b76823f43ac7b1d
+
+
+执行日期：2015-03-19-23：57：48
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-19-23：57：48
+【postXml 】:
+
+
+
+执行日期：2015-03-19-23：57：48
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[223.210.182.177]]></spbill_create_ip><nonce_str><![CDATA[3gf1t85foq08jua0j463j9o8718l59y9]]></nonce_str><sign><![CDATA[A473B4BBE83EFE26093DFAC0DAC10DA6]]></sign></xml>
+
+
+执行日期：2015-03-19-23：57：48
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-19-23：57：48
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[223.210.182.177]]></spbill_create_ip><nonce_str><![CDATA[3gf1t85foq08jua0j463j9o8718l59y9]]></nonce_str><sign><![CDATA[A473B4BBE83EFE26093DFAC0DAC10DA6]]></sign></xml>
+
+
+执行日期：2015-03-19-23：57：48
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-19-23：57：48
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-19-23：57：48
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：00：52
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：05：59
+【CODE】:
+0217eb58d563b19381b61cbf41d6b4aZ
+
+
+执行日期：2015-03-20-09：05：59
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-09：05：59
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：05：59
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[211.143.145.209]]></spbill_create_ip><nonce_str><![CDATA[o192broljfvl6aku87752kf3z1xm75sa]]></nonce_str><sign><![CDATA[38A19C6E9C159C2B849EF0F70735253D]]></sign></xml>
+
+
+执行日期：2015-03-20-09：05：59
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：05：59
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[211.143.145.209]]></spbill_create_ip><nonce_str><![CDATA[o192broljfvl6aku87752kf3z1xm75sa]]></nonce_str><sign><![CDATA[38A19C6E9C159C2B849EF0F70735253D]]></sign></xml>
+
+
+执行日期：2015-03-20-09：05：59
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：06：00
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：06：00
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：09：39
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：09：41
+【CODE】:
+04120270ebc32541869fdd4d9981442O
+
+
+执行日期：2015-03-20-09：09：41
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：09：41
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：09：41
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[pnvgt9zpaf3cjweg3emuqymmx22vui2o]]></nonce_str><sign><![CDATA[5AE48C6141C88D1AA8CE735376D913A9]]></sign></xml>
+
+
+执行日期：2015-03-20-09：09：41
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：09：41
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[pnvgt9zpaf3cjweg3emuqymmx22vui2o]]></nonce_str><sign><![CDATA[5AE48C6141C88D1AA8CE735376D913A9]]></sign></xml>
+
+
+执行日期：2015-03-20-09：09：41
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：09：44
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：09：46
+【CODE】:
+01104e0d35d36b0753666dfeb815dfcw
+
+
+执行日期：2015-03-20-09：09：46
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：09：46
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：09：46
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[uf7ikr0uranux2epab8sricg6f0wyle8]]></nonce_str><sign><![CDATA[7F5CC7E9D884EBA0DAFD9958090BC2A9]]></sign></xml>
+
+
+执行日期：2015-03-20-09：09：46
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：09：46
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[uf7ikr0uranux2epab8sricg6f0wyle8]]></nonce_str><sign><![CDATA[7F5CC7E9D884EBA0DAFD9958090BC2A9]]></sign></xml>
+
+
+执行日期：2015-03-20-09：09：46
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：09：46
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[vbqcoIHPiqBH2Kgf]]></nonce_str>
+<sign><![CDATA[EF8DAFDEC2F41DD8B0AEAF046C54885A]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320090946381ea4e98c0713324611]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：09：46
+【接收到的notify通知】:
+wx20150320090946381ea4e98c0713324611
+
+
+执行日期：2015-03-20-09：10：04
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[ZKWUaXGg4po89RdT]]></nonce_str>
+<sign><![CDATA[3C9E7F551C804696EE2854465FC58302]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320091003e53d1479b00558059087]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：10：04
+【接收到的notify通知】:
+wx20150320091003e53d1479b00558059087
+
+
+执行日期：2015-03-20-09：11：04
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：11：05
+【CODE】:
+011688c17b92d70f9d419e016ddab5dU
+
+
+执行日期：2015-03-20-09：11：05
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：11：05
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：11：05
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[oppy8do2gdrwn3mpvllklv2n5eihi9tp]]></nonce_str><sign><![CDATA[CF93B02B81844D3797939029042162C2]]></sign></xml>
+
+
+执行日期：2015-03-20-09：11：05
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：11：05
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[oppy8do2gdrwn3mpvllklv2n5eihi9tp]]></nonce_str><sign><![CDATA[CF93B02B81844D3797939029042162C2]]></sign></xml>
+
+
+执行日期：2015-03-20-09：11：05
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：11：05
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[t705q8mksCNBrzoB]]></nonce_str>
+<sign><![CDATA[1B169958C73B70376F69A1365D618173]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320091105ff9f5189950593411343]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：11：05
+【接收到的notify通知】:
+wx20150320091105ff9f5189950593411343
+
+
+执行日期：2015-03-20-09：14：00
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：14：01
+【CODE】:
+041ab96c5f7611565eef916612b3da0E
+
+
+执行日期：2015-03-20-09：14：01
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：14：01
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：14：01
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[3p68r7gtoo7drki5s0wy43t6tc19mwql]]></nonce_str><sign><![CDATA[6E2A2A58E024DE634C3B49A6AB84384C]]></sign></xml>
+
+
+执行日期：2015-03-20-09：14：01
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：14：01
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[3p68r7gtoo7drki5s0wy43t6tc19mwql]]></nonce_str><sign><![CDATA[6E2A2A58E024DE634C3B49A6AB84384C]]></sign></xml>
+
+
+执行日期：2015-03-20-09：14：01
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：14：05
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：14：07
+【CODE】:
+041b0c1f1e42b7f254005b26b31d05cg
+
+
+执行日期：2015-03-20-09：14：07
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：14：07
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：14：07
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[x23s0x8py41vbenw3igh0qxvvdzpthv1]]></nonce_str><sign><![CDATA[9B93E65E5C838210EF5E7A00517C23E7]]></sign></xml>
+
+
+执行日期：2015-03-20-09：14：07
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：14：07
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[x23s0x8py41vbenw3igh0qxvvdzpthv1]]></nonce_str><sign><![CDATA[9B93E65E5C838210EF5E7A00517C23E7]]></sign></xml>
+
+
+执行日期：2015-03-20-09：14：07
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：14：10
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[Phv6Uns8rrWZkayK]]></nonce_str>
+<sign><![CDATA[F1F635D48322CFABAE952D7272A3ADD2]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015032009140903676bc22a0967865666]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：14：10
+【接收到的notify通知】:
+wx2015032009140903676bc22a0967865666
+
+
+执行日期：2015-03-20-09：14：10
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[klnWqkjPFMNd06RI]]></nonce_str>
+<sign><![CDATA[5687977473A50A63EF459B03FC7753BD]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320091410117f01e80e0740525684]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：14：10
+【接收到的notify通知】:
+wx20150320091410117f01e80e0740525684
+
+
+执行日期：2015-03-20-09：20：01
+【CODE】:
+04151e53dc694e6c0e805b8baa4bdc75
+
+
+执行日期：2015-03-20-09：20：01
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：20：01
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：20：01
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[66fz3ys8coiszl63vix7e50c8g874k2z]]></nonce_str><sign><![CDATA[9ACD76DB4122AAB0018C05F79AD3DB07]]></sign></xml>
+
+
+执行日期：2015-03-20-09：20：01
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：20：01
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[66fz3ys8coiszl63vix7e50c8g874k2z]]></nonce_str><sign><![CDATA[9ACD76DB4122AAB0018C05F79AD3DB07]]></sign></xml>
+
+
+执行日期：2015-03-20-09：20：01
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：20：06
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：20：06
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：20：07
+【CODE】:
+011ed111b86fa2adc6c6c2a7233eafet
+
+
+执行日期：2015-03-20-09：20：07
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：20：07
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：20：07
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[fuxacn1j9nw2ozfabx0o8o3bzwganwgh]]></nonce_str><sign><![CDATA[AEDE92C386ED66DDDE868FFB834BC2E7]]></sign></xml>
+
+
+执行日期：2015-03-20-09：20：07
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：20：07
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[fuxacn1j9nw2ozfabx0o8o3bzwganwgh]]></nonce_str><sign><![CDATA[AEDE92C386ED66DDDE868FFB834BC2E7]]></sign></xml>
+
+
+执行日期：2015-03-20-09：20：07
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：20：13
+【CODE】:
+011d7b80125ee343d172f97fd953ff2i
+
+
+执行日期：2015-03-20-09：20：13
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：20：13
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：20：13
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[neaekahh67ucwld1emly4czue5ecpe5d]]></nonce_str><sign><![CDATA[300C7DC1BD835A4CABE61000E51A0EA4]]></sign></xml>
+
+
+执行日期：2015-03-20-09：20：13
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：20：13
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[neaekahh67ucwld1emly4czue5ecpe5d]]></nonce_str><sign><![CDATA[300C7DC1BD835A4CABE61000E51A0EA4]]></sign></xml>
+
+
+执行日期：2015-03-20-09：20：13
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：20：13
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：20：13
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：20：16
+【CODE】:
+0115f4df8a17db49d2d240730ab22cdS
+
+
+执行日期：2015-03-20-09：20：16
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：20：16
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：20：16
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[a1sxm2hjkhyewoji6ufsbs1rmmtked12]]></nonce_str><sign><![CDATA[74A62FB5F8EAD6008C8317B2826E19EE]]></sign></xml>
+
+
+执行日期：2015-03-20-09：20：16
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：20：16
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[a1sxm2hjkhyewoji6ufsbs1rmmtked12]]></nonce_str><sign><![CDATA[74A62FB5F8EAD6008C8317B2826E19EE]]></sign></xml>
+
+
+执行日期：2015-03-20-09：20：16
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：20：16
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：20：16
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：20：16
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：20：16
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：25：40
+【CODE】:
+041e0a58096de9ca9917dfa38f2660bM
+
+
+执行日期：2015-03-20-09：25：40
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：25：40
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：25：40
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[04dz980gdqv2c7t03c570vctclgvdg8o]]></nonce_str><sign><![CDATA[02F9F65031FA2C74EECE7BB0B0624674]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：40
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：40
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[04dz980gdqv2c7t03c570vctclgvdg8o]]></nonce_str><sign><![CDATA[02F9F65031FA2C74EECE7BB0B0624674]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：40
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：43
+【CODE】:
+01103300fd348b6fd502f0c1a6a70a02
+
+
+执行日期：2015-03-20-09：25：43
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：25：43
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：25：43
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[y9tovmq30vs71gxs2ion02ecdjy5au19]]></nonce_str><sign><![CDATA[015C3B4C95398AE57E5B846B3FEED7FE]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：43
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：43
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[y9tovmq30vs71gxs2ion02ecdjy5au19]]></nonce_str><sign><![CDATA[015C3B4C95398AE57E5B846B3FEED7FE]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：43
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：46
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：25：46
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：25：47
+【CODE】:
+031bb11eef181bfa1d977b26da06bc2V
+
+
+执行日期：2015-03-20-09：25：47
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：25：47
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：25：47
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[g4iudg5cnmu7ovm3mya4zi66z61eys93]]></nonce_str><sign><![CDATA[57879175259434E70B0E28577B8E2D78]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：47
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：47
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[g4iudg5cnmu7ovm3mya4zi66z61eys93]]></nonce_str><sign><![CDATA[57879175259434E70B0E28577B8E2D78]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：47
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：53
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：25：54
+【CODE】:
+0114ae71a1ae7d286b536359781465dX
+
+
+执行日期：2015-03-20-09：25：54
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：25：54
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：25：54
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[kj5sebae30t9yu8nc01h6p29d13pjult]]></nonce_str><sign><![CDATA[A9A6412D38F26521884B71A0605E8568]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：54
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：54
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[kj5sebae30t9yu8nc01h6p29d13pjult]]></nonce_str><sign><![CDATA[A9A6412D38F26521884B71A0605E8568]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：54
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：56
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：25：56
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：25：56
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：25：56
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[o2fBRylFO9OOWvJX]]></nonce_str>
+<sign><![CDATA[D5D90802FC8D636F15748B8CBE0F104B]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201503200925555ee01896440062593337]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：25：56
+【接收到的notify通知】:
+wx201503200925555ee01896440062593337
+
+
+执行日期：2015-03-20-09：25：57
+【CODE】:
+0217fe33404cecba61d69d937b926e8w
+
+
+执行日期：2015-03-20-09：25：57
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：25：57
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：25：57
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[nyv23yjbr5cmtcvsnw06abrgboclwi33]]></nonce_str><sign><![CDATA[37C7264251488FA6B144D778FF27CBFC]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：57
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：57
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[nyv23yjbr5cmtcvsnw06abrgboclwi33]]></nonce_str><sign><![CDATA[37C7264251488FA6B144D778FF27CBFC]]></sign></xml>
+
+
+执行日期：2015-03-20-09：25：57
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：25：58
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[xbjWXTLNTNnbGlbp]]></nonce_str>
+<sign><![CDATA[65EB560C619A2BAA12CE4EE940D45E6E]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320092557c247591b370700302143]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：25：58
+【接收到的notify通知】:
+wx20150320092557c247591b370700302143
+
+
+执行日期：2015-03-20-09：26：41
+【CODE】:
+0017fb7e88e1f98b0580e50d3c897f4i
+
+
+执行日期：2015-03-20-09：26：41
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-09：26：41
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：26：41
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[7wnxi9tw7y9bjlxjoc1xsna6xnxpac8v]]></nonce_str><sign><![CDATA[D97A01695633F32DB58ADBD94F9B1EA2]]></sign></xml>
+
+
+执行日期：2015-03-20-09：26：41
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：26：41
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>570480034402074005</body><out_trade_no>570480034402074005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[7wnxi9tw7y9bjlxjoc1xsna6xnxpac8v]]></nonce_str><sign><![CDATA[D97A01695633F32DB58ADBD94F9B1EA2]]></sign></xml>
+
+
+执行日期：2015-03-20-09：26：41
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：26：41
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：26：41
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：29：15
+【CODE】:
+0410d436ac2e980640d04d3cf6ec564k
+
+
+执行日期：2015-03-20-09：29：15
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-09：29：15
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：29：15
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>170480158946650005</body><out_trade_no>170480158946650005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[jz5dt20lzu2qtjwnswyx1ub2oaor28jk]]></nonce_str><sign><![CDATA[02E29E2D3B4C2B30CECF830F4066AC2A]]></sign></xml>
+
+
+执行日期：2015-03-20-09：29：15
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：29：15
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>170480158946650005</body><out_trade_no>170480158946650005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[jz5dt20lzu2qtjwnswyx1ub2oaor28jk]]></nonce_str><sign><![CDATA[02E29E2D3B4C2B30CECF830F4066AC2A]]></sign></xml>
+
+
+执行日期：2015-03-20-09：29：15
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：29：16
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：29：16
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：30：34
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：30：36
+【CODE】:
+031c641e260e4f6248445a852dcc3bcp
+
+
+执行日期：2015-03-20-09：30：36
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-09：30：36
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：30：36
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[6f5j2vwegtwossr6rkxm572uv1n7v09t]]></nonce_str><sign><![CDATA[9DE45386BEDC8B68FB5E7FBEFEBE05B6]]></sign></xml>
+
+
+执行日期：2015-03-20-09：30：36
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：30：36
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[117.136.40.198]]></spbill_create_ip><nonce_str><![CDATA[6f5j2vwegtwossr6rkxm572uv1n7v09t]]></nonce_str><sign><![CDATA[9DE45386BEDC8B68FB5E7FBEFEBE05B6]]></sign></xml>
+
+
+执行日期：2015-03-20-09：30：36
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：30：36
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[MWoOECVFkm5533Jd]]></nonce_str>
+<sign><![CDATA[4EEFF7B4B33F9A18BFA53FD0EFAA71AE]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320093036942c275cf90239331922]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：30：36
+【接收到的notify通知】:
+wx20150320093036942c275cf90239331922
+
+
+执行日期：2015-03-20-09：30：48
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：31：54
+【CODE】:
+031f936f795d38813985e8720ca5359f
+
+
+执行日期：2015-03-20-09：31：54
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-09：31：54
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：31：54
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>690480159107729005</body><out_trade_no>690480159107729005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[vgw3sime64qu7zv9jivash8w4g21jz56]]></nonce_str><sign><![CDATA[14FA4F738EC2227938072024FB663BC4]]></sign></xml>
+
+
+执行日期：2015-03-20-09：31：54
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：31：54
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>690480159107729005</body><out_trade_no>690480159107729005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[vgw3sime64qu7zv9jivash8w4g21jz56]]></nonce_str><sign><![CDATA[14FA4F738EC2227938072024FB663BC4]]></sign></xml>
+
+
+执行日期：2015-03-20-09：31：54
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：31：56
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：31：56
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：46：42
+【CODE】:
+0315b497055b7edfee1bddf81521d788
+
+
+执行日期：2015-03-20-09：46：42
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-09：46：42
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：46：42
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>170480158946650005</body><out_trade_no>170480158946650005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[1lmcdxnvscvto5r3h703dqttbi0nbnfp]]></nonce_str><sign><![CDATA[A9CCDDAB379637422DE875B23062053A]]></sign></xml>
+
+
+执行日期：2015-03-20-09：46：42
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：46：42
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>170480158946650005</body><out_trade_no>170480158946650005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[1lmcdxnvscvto5r3h703dqttbi0nbnfp]]></nonce_str><sign><![CDATA[A9CCDDAB379637422DE875B23062053A]]></sign></xml>
+
+
+执行日期：2015-03-20-09：46：42
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：46：46
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：46：46
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：46：54
+【CODE】:
+001ebe79704d8da2f654e3ff5d281243
+
+
+执行日期：2015-03-20-09：46：54
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-09：46：54
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：46：54
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>690480159107729005</body><out_trade_no>690480159107729005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[jzo9lxds9vflb3fmn6f5b35phok6u35l]]></nonce_str><sign><![CDATA[C00AAA0703843380ADEECF973F006083]]></sign></xml>
+
+
+执行日期：2015-03-20-09：46：54
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：46：54
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>690480159107729005</body><out_trade_no>690480159107729005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[jzo9lxds9vflb3fmn6f5b35phok6u35l]]></nonce_str><sign><![CDATA[C00AAA0703843380ADEECF973F006083]]></sign></xml>
+
+
+执行日期：2015-03-20-09：46：54
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：46：54
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-09：46：54
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-09：56：02
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：56：03
+【CODE】:
+0118c2400ba84fa5bab54b8c2040440E
+
+
+执行日期：2015-03-20-09：56：03
+【openid】:
+oLGOYjoun9fGIzhETtQFB6yQPFIs
+
+
+执行日期：2015-03-20-09：56：03
+【postXml 】:
+
+
+
+执行日期：2015-03-20-09：56：03
+【xml 】:
+<xml><openid><![CDATA[oLGOYjoun9fGIzhETtQFB6yQPFIs]]></openid><body>170480158946650005</body><out_trade_no>170480158946650005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[2gcx2rlgzu9t2r6b1qmj8rlc3y3exank]]></nonce_str><sign><![CDATA[7BC2785FD70CBF03FA7D474F156A2766]]></sign></xml>
+
+
+执行日期：2015-03-20-09：56：03
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：56：03
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjoun9fGIzhETtQFB6yQPFIs]]></openid><body>170480158946650005</body><out_trade_no>170480158946650005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[2gcx2rlgzu9t2r6b1qmj8rlc3y3exank]]></nonce_str><sign><![CDATA[7BC2785FD70CBF03FA7D474F156A2766]]></sign></xml>
+
+
+执行日期：2015-03-20-09：56：03
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-09：56：05
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[WKBVrrXJD6YZi1wA]]></nonce_str>
+<sign><![CDATA[C2C6822691F8CFD1E71CCE9B80F8B97E]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201503200956053a22d75ce30606304340]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-09：56：05
+【接收到的notify通知】:
+wx201503200956053a22d75ce30606304340
+
+
+执行日期：2015-03-20-09：56：29
+【接收到的notify通知】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[2gcx2rlgzu9t2r6b1qmj8rlc3y3exank]]></nonce_str>
+<openid><![CDATA[oLGOYjoun9fGIzhETtQFB6yQPFIs]]></openid>
+<out_trade_no><![CDATA[170480158946650005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[A7C08CA1DF6424D19DD398164683B6D3]]></sign>
+<time_end><![CDATA[20150320095628]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1007370609201503200034434963]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-09：56：29
+【支付成功】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[2gcx2rlgzu9t2r6b1qmj8rlc3y3exank]]></nonce_str>
+<openid><![CDATA[oLGOYjoun9fGIzhETtQFB6yQPFIs]]></openid>
+<out_trade_no><![CDATA[170480158946650005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[A7C08CA1DF6424D19DD398164683B6D3]]></sign>
+<time_end><![CDATA[20150320095628]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1007370609201503200034434963]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-10：03：21
+【CODE】:
+041fbed11ec2f1261331b00e4646ed9Z
+
+
+执行日期：2015-03-20-10：03：21
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-10：03：21
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：03：21
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>630479921774268005</body><out_trade_no>630479921774268005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[2ck9d2mqgkqyb2zxtzmidatjolpoqma4]]></nonce_str><sign><![CDATA[C2B12268A6B2B58E241C53A5D01ABF1A]]></sign></xml>
+
+
+执行日期：2015-03-20-10：03：21
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：03：21
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>630479921774268005</body><out_trade_no>630479921774268005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[2ck9d2mqgkqyb2zxtzmidatjolpoqma4]]></nonce_str><sign><![CDATA[C2B12268A6B2B58E241C53A5D01ABF1A]]></sign></xml>
+
+
+执行日期：2015-03-20-10：03：21
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：03：29
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-10：03：29
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-10：09：32
+【CODE】:
+01153d51d63bf7877804799b2118e10G
+
+
+执行日期：2015-03-20-10：09：32
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-10：09：32
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：09：32
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>180480161366861005</body><out_trade_no>180480161366861005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[nw1ujtq1vuvbm7vmrr4dto75jnb2cbyi]]></nonce_str><sign><![CDATA[2A9210625FFAE33A7A73238DB186E927]]></sign></xml>
+
+
+执行日期：2015-03-20-10：09：32
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：09：32
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>180480161366861005</body><out_trade_no>180480161366861005</out_trade_no><total_fee>0</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[nw1ujtq1vuvbm7vmrr4dto75jnb2cbyi]]></nonce_str><sign><![CDATA[2A9210625FFAE33A7A73238DB186E927]]></sign></xml>
+
+
+执行日期：2015-03-20-10：09：32
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：09：41
+【接收到的notify通知】:
+<xml><return_code><![CDATA[FAIL]]></return_code>
+<return_msg><![CDATA[invalid total_fee]]></return_msg>
+</xml>
+
+
+执行日期：2015-03-20-10：09：41
+【接收到的notify通知】:
+
+
+
+执行日期：2015-03-20-10：13：21
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：13：22
+【CODE】:
+021a7316a9f1c123f76fc7d844cc75cD
+
+
+执行日期：2015-03-20-10：13：22
+【openid】:
+oLGOYjmyVOLHlWsKbJHyfu-KwmMY
+
+
+执行日期：2015-03-20-10：13：22
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：13：22
+【xml 】:
+<xml><openid><![CDATA[oLGOYjmyVOLHlWsKbJHyfu-KwmMY]]></openid><body>400480161597236006</body><out_trade_no>400480161597236006</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[nezp7qakoa7b64ruaz7w3jh2rd8mvuvt]]></nonce_str><sign><![CDATA[8A41228775B80F23DD796EA479E298B2]]></sign></xml>
+
+
+执行日期：2015-03-20-10：13：22
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：13：22
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjmyVOLHlWsKbJHyfu-KwmMY]]></openid><body>400480161597236006</body><out_trade_no>400480161597236006</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[nezp7qakoa7b64ruaz7w3jh2rd8mvuvt]]></nonce_str><sign><![CDATA[8A41228775B80F23DD796EA479E298B2]]></sign></xml>
+
+
+执行日期：2015-03-20-10：13：22
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：13：30
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：13：31
+【CODE】:
+01130f94dbfa9f660a685219ff0729a3
+
+
+执行日期：2015-03-20-10：13：31
+【openid】:
+oLGOYjmyVOLHlWsKbJHyfu-KwmMY
+
+
+执行日期：2015-03-20-10：13：31
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：13：31
+【xml 】:
+<xml><openid><![CDATA[oLGOYjmyVOLHlWsKbJHyfu-KwmMY]]></openid><body>400480161597236006</body><out_trade_no>400480161597236006</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[emqv7e58w8u4cdoh6g0wd6at2mh5cwb7]]></nonce_str><sign><![CDATA[11A0FC03863A2D800CAE30896B53C836]]></sign></xml>
+
+
+执行日期：2015-03-20-10：13：31
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：13：31
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjmyVOLHlWsKbJHyfu-KwmMY]]></openid><body>400480161597236006</body><out_trade_no>400480161597236006</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[emqv7e58w8u4cdoh6g0wd6at2mh5cwb7]]></nonce_str><sign><![CDATA[11A0FC03863A2D800CAE30896B53C836]]></sign></xml>
+
+
+执行日期：2015-03-20-10：13：31
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：13：34
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[Tjwo8uBy3afrX9GU]]></nonce_str>
+<sign><![CDATA[7DBABEFA8657C095637920C14563329F]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320101334ad2c2973120525232249]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-10：13：34
+【接收到的notify通知】:
+wx20150320101334ad2c2973120525232249
+
+
+执行日期：2015-03-20-10：13：35
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[C47e2zFdAR9OLf5D]]></nonce_str>
+<sign><![CDATA[920417A89A7FE9F2542F3465212E96A2]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320101334ad2c2973120803121971]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-10：13：35
+【接收到的notify通知】:
+wx20150320101334ad2c2973120803121971
+
+
+执行日期：2015-03-20-10：13：46
+【接收到的notify通知】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[ABC_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[emqv7e58w8u4cdoh6g0wd6at2mh5cwb7]]></nonce_str>
+<openid><![CDATA[oLGOYjmyVOLHlWsKbJHyfu-KwmMY]]></openid>
+<out_trade_no><![CDATA[400480161597236006]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[C7328A64F734702C3C6BBDDA3333E85A]]></sign>
+<time_end><![CDATA[20150320101345]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1003490609201503200034449472]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-10：13：46
+【支付成功】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[ABC_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[emqv7e58w8u4cdoh6g0wd6at2mh5cwb7]]></nonce_str>
+<openid><![CDATA[oLGOYjmyVOLHlWsKbJHyfu-KwmMY]]></openid>
+<out_trade_no><![CDATA[400480161597236006]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[C7328A64F734702C3C6BBDDA3333E85A]]></sign>
+<time_end><![CDATA[20150320101345]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1003490609201503200034449472]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-10：33：28
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：33：29
+【CODE】:
+021a86b8ec784079df0dc8269887c3eb
+
+
+执行日期：2015-03-20-10：33：29
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-10：33：29
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：33：29
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>180480161366861005</body><out_trade_no>180480161366861005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[qcdfkf02k14wcr9zkejw3ajua88hgonk]]></nonce_str><sign><![CDATA[F4D48CDE75C68E2643D2187C2E02C083]]></sign></xml>
+
+
+执行日期：2015-03-20-10：33：29
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：33：29
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>180480161366861005</body><out_trade_no>180480161366861005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[qcdfkf02k14wcr9zkejw3ajua88hgonk]]></nonce_str><sign><![CDATA[F4D48CDE75C68E2643D2187C2E02C083]]></sign></xml>
+
+
+执行日期：2015-03-20-10：33：29
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：33：31
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[s7fUzDAo594muflP]]></nonce_str>
+<sign><![CDATA[4A292C658798F8EAC773EC8E4C040C37]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320103331b19b5bfd060339017341]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-10：33：31
+【接收到的notify通知】:
+wx20150320103331b19b5bfd060339017341
+
+
+执行日期：2015-03-20-10：33：55
+【接收到的notify通知】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[qcdfkf02k14wcr9zkejw3ajua88hgonk]]></nonce_str>
+<openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid>
+<out_trade_no><![CDATA[180480161366861005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[806F49C91035F9F72B2AF5CBF8177BD6]]></sign>
+<time_end><![CDATA[20150320103354]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1002570609201503200034455569]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-10：33：55
+【支付成功】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[qcdfkf02k14wcr9zkejw3ajua88hgonk]]></nonce_str>
+<openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid>
+<out_trade_no><![CDATA[180480161366861005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[806F49C91035F9F72B2AF5CBF8177BD6]]></sign>
+<time_end><![CDATA[20150320103354]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1002570609201503200034455569]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-10：45：45
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：45：46
+【CODE】:
+02149408529f3947448bf5e00c25135b
+
+
+执行日期：2015-03-20-10：45：46
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-10：45：46
+【postXml 】:
+
+
+
+执行日期：2015-03-20-10：45：46
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>900480163540830005</body><out_trade_no>900480163540830005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[wfsflu9oy9q9yzzsugwd2i0ay899u73q]]></nonce_str><sign><![CDATA[582B2470ADC7CC3F8A485FC91BA40416]]></sign></xml>
+
+
+执行日期：2015-03-20-10：45：46
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：45：46
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>900480163540830005</body><out_trade_no>900480163540830005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[wfsflu9oy9q9yzzsugwd2i0ay899u73q]]></nonce_str><sign><![CDATA[582B2470ADC7CC3F8A485FC91BA40416]]></sign></xml>
+
+
+执行日期：2015-03-20-10：45：46
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-10：45：53
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[isY1puA3Z5IwMalg]]></nonce_str>
+<sign><![CDATA[E49AC589086656591D3F36F1F3DAF44F]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320104552a85d567e880879089591]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-10：45：53
+【接收到的notify通知】:
+wx20150320104552a85d567e880879089591
+
+
+执行日期：2015-03-20-10：48：46
+【接收到的notify通知】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[wfsflu9oy9q9yzzsugwd2i0ay899u73q]]></nonce_str>
+<openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid>
+<out_trade_no><![CDATA[900480163540830005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[B75E646FFBC7745EF4501494A0EC6E7A]]></sign>
+<time_end><![CDATA[20150320104845]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1002570609201503200034452169]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-10：48：46
+【支付成功】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[wfsflu9oy9q9yzzsugwd2i0ay899u73q]]></nonce_str>
+<openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid>
+<out_trade_no><![CDATA[900480163540830005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[B75E646FFBC7745EF4501494A0EC6E7A]]></sign>
+<time_end><![CDATA[20150320104845]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1002570609201503200034452169]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-10：48：48
+【接收到的notify通知】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_DEBIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[wfsflu9oy9q9yzzsugwd2i0ay899u73q]]></nonce_str>
+<openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid>
+<out_trade_no><![CDATA[900480163540830005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[5D84FA26D3825D4792A4B4C13B51C512]]></sign>
+<time_end><![CDATA[20150320104845]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1002570609201503200034452169]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-10：48：48
+【支付成功】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_DEBIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[wfsflu9oy9q9yzzsugwd2i0ay899u73q]]></nonce_str>
+<openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid>
+<out_trade_no><![CDATA[900480163540830005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[5D84FA26D3825D4792A4B4C13B51C512]]></sign>
+<time_end><![CDATA[20150320104845]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1002570609201503200034452169]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-11：04：58
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：05：00
+【CODE】:
+0317bd88ad7c9ca57425403fe1f8247z
+
+
+执行日期：2015-03-20-11：05：00
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-11：05：00
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：05：00
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[14.29.102.216]]></spbill_create_ip><nonce_str><![CDATA[5bp43bai7a4d4okbrj885i8qk2x89lai]]></nonce_str><sign><![CDATA[FB17DFCF7CD9C767EBE73E548B3D437D]]></sign></xml>
+
+
+执行日期：2015-03-20-11：05：00
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：05：00
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[14.29.102.216]]></spbill_create_ip><nonce_str><![CDATA[5bp43bai7a4d4okbrj885i8qk2x89lai]]></nonce_str><sign><![CDATA[FB17DFCF7CD9C767EBE73E548B3D437D]]></sign></xml>
+
+
+执行日期：2015-03-20-11：05：00
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：05：02
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[cOGd7lZm3HZZDah9]]></nonce_str>
+<sign><![CDATA[92759B97EC26B3B8D09C43730BDDECC4]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx2015032011050136c0c570010813510189]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-11：05：02
+【接收到的notify通知】:
+wx2015032011050136c0c570010813510189
+
+
+执行日期：2015-03-20-11：06：08
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：06：09
+【CODE】:
+041d33d2836917cbef123f82aa722bfH
+
+
+执行日期：2015-03-20-11：06：09
+【openid】:
+oLGOYjtm6J3p239Vyyg3HeJkq32A
+
+
+执行日期：2015-03-20-11：06：09
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：06：09
+【xml 】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[14.29.102.216]]></spbill_create_ip><nonce_str><![CDATA[ji2plvx7ac7888dt3ju44tms56r481r3]]></nonce_str><sign><![CDATA[0AAE95A6AD05002A5E23F2F522B30208]]></sign></xml>
+
+
+执行日期：2015-03-20-11：06：09
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：06：09
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjtm6J3p239Vyyg3HeJkq32A]]></openid><body>390479916333264007</body><out_trade_no>390479916333264007</out_trade_no><total_fee>24000</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[14.29.102.216]]></spbill_create_ip><nonce_str><![CDATA[ji2plvx7ac7888dt3ju44tms56r481r3]]></nonce_str><sign><![CDATA[0AAE95A6AD05002A5E23F2F522B30208]]></sign></xml>
+
+
+执行日期：2015-03-20-11：06：09
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：06：12
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[zl3I2suOP1cL7Lxp]]></nonce_str>
+<sign><![CDATA[FDBB6017EE34E94B6E721E858740193E]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201503201106117948c4d6740224687780]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-11：06：12
+【接收到的notify通知】:
+wx201503201106117948c4d6740224687780
+
+
+执行日期：2015-03-20-11：08：16
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：08：17
+【CODE】:
+001fa01ede86504c70fa3c7a80c8d32p
+
+
+执行日期：2015-03-20-11：08：17
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-11：08：17
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：08：17
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>510480164892250005</body><out_trade_no>510480164892250005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[ict0blsaw3rb5kqastz28tx8v6bmkmcs]]></nonce_str><sign><![CDATA[DBCBDFB26145E98CEEFC3BDAFFF81ADA]]></sign></xml>
+
+
+执行日期：2015-03-20-11：08：17
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：08：17
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>510480164892250005</body><out_trade_no>510480164892250005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[ict0blsaw3rb5kqastz28tx8v6bmkmcs]]></nonce_str><sign><![CDATA[DBCBDFB26145E98CEEFC3BDAFFF81ADA]]></sign></xml>
+
+
+执行日期：2015-03-20-11：08：17
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：08：24
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：08：25
+【CODE】:
+011d52205b11be8697c93d00576dfafH
+
+
+执行日期：2015-03-20-11：08：25
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-11：08：25
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：08：25
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>510480164892250005</body><out_trade_no>510480164892250005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[j46dgnbp6lwfqilec6kcsz4j015js94f]]></nonce_str><sign><![CDATA[A526495090449831F5F5248D1DC9F4A8]]></sign></xml>
+
+
+执行日期：2015-03-20-11：08：25
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：08：25
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>510480164892250005</body><out_trade_no>510480164892250005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[j46dgnbp6lwfqilec6kcsz4j015js94f]]></nonce_str><sign><![CDATA[A526495090449831F5F5248D1DC9F4A8]]></sign></xml>
+
+
+执行日期：2015-03-20-11：08：25
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：08：27
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[tSUuJy1EKWoL7OHC]]></nonce_str>
+<sign><![CDATA[050474FBF38DF4F41FC691E5864E2870]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320110826d93b060d120746533950]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-11：08：27
+【接收到的notify通知】:
+wx20150320110826d93b060d120746533950
+
+
+执行日期：2015-03-20-11：08：29
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[yLb2QASDzmE2YdEV]]></nonce_str>
+<sign><![CDATA[308184975BD39BD46EF11A9962311659]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320110828e2701d66310923262399]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-11：08：29
+【接收到的notify通知】:
+wx20150320110828e2701d66310923262399
+
+
+执行日期：2015-03-20-11：08：40
+【接收到的notify通知】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[j46dgnbp6lwfqilec6kcsz4j015js94f]]></nonce_str>
+<openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid>
+<out_trade_no><![CDATA[510480164892250005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[C51570A6103EF17BB92BD002D74B602C]]></sign>
+<time_end><![CDATA[20150320110839]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1002570609201503200034454998]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-11：08：40
+【支付成功】:
+<xml><appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<bank_type><![CDATA[CCB_CREDIT]]></bank_type>
+<cash_fee><![CDATA[1]]></cash_fee>
+<fee_type><![CDATA[CNY]]></fee_type>
+<is_subscribe><![CDATA[Y]]></is_subscribe>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[j46dgnbp6lwfqilec6kcsz4j015js94f]]></nonce_str>
+<openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid>
+<out_trade_no><![CDATA[510480164892250005]]></out_trade_no>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<return_code><![CDATA[SUCCESS]]></return_code>
+<sign><![CDATA[C51570A6103EF17BB92BD002D74B602C]]></sign>
+<time_end><![CDATA[20150320110839]]></time_end>
+<total_fee>1</total_fee>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+<transaction_id><![CDATA[1002570609201503200034454998]]></transaction_id>
+</xml>
+
+
+执行日期：2015-03-20-11：09：44
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：09：45
+【CODE】:
+04162bff0a30e16689b2e1dc3818552i
+
+
+执行日期：2015-03-20-11：09：45
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-11：09：45
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：09：45
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>770480164140798005</body><out_trade_no>770480164140798005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[hfu9n267nxjoeqkttn8v67fobgfrcbbm]]></nonce_str><sign><![CDATA[A8698D847A9A2C8A84EA30C9E9ACB559]]></sign></xml>
+
+
+执行日期：2015-03-20-11：09：45
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：09：45
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>770480164140798005</body><out_trade_no>770480164140798005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[hfu9n267nxjoeqkttn8v67fobgfrcbbm]]></nonce_str><sign><![CDATA[A8698D847A9A2C8A84EA30C9E9ACB559]]></sign></xml>
+
+
+执行日期：2015-03-20-11：09：45
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：09：47
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：09：48
+【CODE】:
+021191e1994d6179a35c23ad944b01be
+
+
+执行日期：2015-03-20-11：09：48
+【openid】:
+oLGOYjnaCZVqumk03gNpI4kr1Sus
+
+
+执行日期：2015-03-20-11：09：48
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：09：48
+【xml 】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>770480164140798005</body><out_trade_no>770480164140798005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[jcoxyklkjpquomwdyx3vmuoer285tw94]]></nonce_str><sign><![CDATA[9E9219369DF7F9FF5D52914913EE626C]]></sign></xml>
+
+
+执行日期：2015-03-20-11：09：48
+【url 】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：09：48
+【postXmlCurl xml】:
+<xml><openid><![CDATA[oLGOYjnaCZVqumk03gNpI4kr1Sus]]></openid><body>770480164140798005</body><out_trade_no>770480164140798005</out_trade_no><total_fee>1</total_fee><notify_url><![CDATA[http://www.taiwangou.com/mobile/api/payment/wxpay/notify_url.php]]></notify_url><trade_type><![CDATA[JSAPI]]></trade_type><appid><![CDATA[wx8b6beb61345c9fe8]]></appid><mch_id>10020449</mch_id><spbill_create_ip><![CDATA[120.42.114.49]]></spbill_create_ip><nonce_str><![CDATA[jcoxyklkjpquomwdyx3vmuoer285tw94]]></nonce_str><sign><![CDATA[9E9219369DF7F9FF5D52914913EE626C]]></sign></xml>
+
+
+执行日期：2015-03-20-11：09：48
+【postXmlCurl url】:
+https://api.mch.weixin.qq.com/pay/unifiedorder
+
+
+执行日期：2015-03-20-11：09：48
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[N6mkG0tfxoBEnDox]]></nonce_str>
+<sign><![CDATA[59AA2E4FAFD5A78C7D6DA556B5DC246D]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx201503201109484aaac634bb0172663673]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-11：09：48
+【接收到的notify通知】:
+wx201503201109484aaac634bb0172663673
+
+
+执行日期：2015-03-20-11：10：10
+【接收到的notify通知】:
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wx8b6beb61345c9fe8]]></appid>
+<mch_id><![CDATA[10020449]]></mch_id>
+<nonce_str><![CDATA[fUhkxbl9vl31cEoQ]]></nonce_str>
+<sign><![CDATA[FE2996E46A5F9937DBD59877C07C2EBF]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20150320111009ea70463a680193333176]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+
+执行日期：2015-03-20-11：10：10
+【接收到的notify通知】:
+wx20150320111009ea70463a680193333176
+
+
+执行日期：2015-03-20-11：11：48
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：11：52
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：11：54
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：10
+【CODE】:
+021974374e3e2c4ddf4e0b460b9b47bJ
+
+
+执行日期：2015-03-20-11：12：10
+【openid】:
+
+
+
+执行日期：2015-03-20-11：12：10
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：14
+【CODE】:
+041e26b44a886e34ab28174d4ab5e21i
+
+
+执行日期：2015-03-20-11：12：14
+【openid】:
+
+
+
+执行日期：2015-03-20-11：12：14
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：15
+【CODE】:
+01162d057f406d5c355c3075fb1f05cN
+
+
+执行日期：2015-03-20-11：12：15
+【openid】:
+
+
+
+执行日期：2015-03-20-11：12：15
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：28
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：33
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：34
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：50
+【CODE】:
+0015b0c773437797f26a89ba3d27762d
+
+
+执行日期：2015-03-20-11：12：50
+【openid】:
+
+
+
+执行日期：2015-03-20-11：12：50
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：55
+【CODE】:
+001cc0f34ec3cadf50117100bd54ad7a
+
+
+执行日期：2015-03-20-11：12：55
+【openid】:
+
+
+
+执行日期：2015-03-20-11：12：55
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：12：56
+【CODE】:
+031b5c9232b52ab507b899a97ca3560y
+
+
+执行日期：2015-03-20-11：12：56
+【openid】:
+
+
+
+执行日期：2015-03-20-11：12：56
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：15：54
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：15：57
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：16：16
+【CODE】:
+0115f9b63713b90c448f0f6e0660423f
+
+
+执行日期：2015-03-20-11：16：16
+【openid】:
+
+
+
+执行日期：2015-03-20-11：16：16
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：16：19
+【CODE】:
+0115c8d20abebd67860a7eee543bceau
+
+
+执行日期：2015-03-20-11：16：19
+【openid】:
+
+
+
+执行日期：2015-03-20-11：16：19
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：17：36
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：17：48
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：17：58
+【CODE】:
+001d63ae7c5eea1fa8714ba8f98a9e6j
+
+
+执行日期：2015-03-20-11：17：58
+【openid】:
+
+
+
+执行日期：2015-03-20-11：17：58
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：18：10
+【CODE】:
+02104d73e4c0844a3e5286e7fe3d6f88
+
+
+执行日期：2015-03-20-11：18：10
+【openid】:
+
+
+
+执行日期：2015-03-20-11：18：10
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：18：28
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：18：50
+【CODE】:
+031f4707cb07ddeabc3145513f9ee7fO
+
+
+执行日期：2015-03-20-11：18：50
+【openid】:
+
+
+
+执行日期：2015-03-20-11：18：50
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：18：54
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：18：55
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：19：15
+【CODE】:
+011635220c9cd887a76aefde1bddfd1j
+
+
+执行日期：2015-03-20-11：19：15
+【openid】:
+
+
+
+执行日期：2015-03-20-11：19：15
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：19：17
+【CODE】:
+011bf20f5a06cc2c946e2a4276eaa29Z
+
+
+执行日期：2015-03-20-11：19：17
+【openid】:
+
+
+
+执行日期：2015-03-20-11：19：17
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：21：02
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：21：07
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：21：24
+【CODE】:
+031388c03a347f423675fcd96031823n
+
+
+执行日期：2015-03-20-11：21：24
+【openid】:
+
+
+
+执行日期：2015-03-20-11：21：24
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：21：28
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：21：29
+【CODE】:
+00143956441ee18f1441f6a9e57c1f0B
+
+
+执行日期：2015-03-20-11：21：29
+【openid】:
+
+
+
+执行日期：2015-03-20-11：21：29
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：21：57
+【CODE】:
+0416caf7320e83d44ee8606068940cc3
+
+
+执行日期：2015-03-20-11：21：57
+【openid】:
+
+
+
+执行日期：2015-03-20-11：21：57
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：22：05
+【CODE】:
+0416caf7320e83d44ee8606068940cc3
+
+
+执行日期：2015-03-20-11：22：05
+【openid】:
+
+
+
+执行日期：2015-03-20-11：22：05
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：22：32
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：22：36
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：22：39
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：22：54
+【CODE】:
+001dd72299606e0a126ccc541e8051c4
+
+
+执行日期：2015-03-20-11：22：54
+【openid】:
+
+
+
+执行日期：2015-03-20-11：22：54
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：22：59
+【CODE】:
+00159fe511172fa4e0b90f1f062ff520
+
+
+执行日期：2015-03-20-11：22：59
+【openid】:
+
+
+
+执行日期：2015-03-20-11：22：59
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：23：02
+【CODE】:
+04114eb47fa9c71ccac07643c946b99D
+
+
+执行日期：2015-03-20-11：23：02
+【openid】:
+
+
+
+执行日期：2015-03-20-11：23：02
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：24：25
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：24：27
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：24：47
+【CODE】:
+0015b32785d379b8a04d5b2d1fac3e8l
+
+
+执行日期：2015-03-20-11：24：47
+【openid】:
+
+
+
+执行日期：2015-03-20-11：24：47
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：24：49
+【CODE】:
+021d56082e701aeb2c103e8fb8aaa59x
+
+
+执行日期：2015-03-20-11：24：49
+【openid】:
+
+
+
+执行日期：2015-03-20-11：24：49
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：25：08
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：25：35
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：25：38
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：25：57
+【CODE】:
+041a4c21cff411464316fc416456bfbl
+
+
+执行日期：2015-03-20-11：25：57
+【openid】:
+
+
+
+执行日期：2015-03-20-11：25：57
+【postXml 】:
+
+
+
+执行日期：2015-03-20-11：26：00
+【CODE】:
+04167a450c55b45919ff841bcf46967z
+
+
+执行日期：2015-03-20-11：26：00
+【openid】:
+
+
+
+执行日期：2015-03-20-11：26：00
+【postXml 】:
+
+
+

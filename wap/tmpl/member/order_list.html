@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+	  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/member.css">
+
+</head>
+<body>
+<!--//zmr>v30-->
+    <header id="header"></header>
+    <div class="order-list-wp" id="order-list"></div>
+    <script type="text/html" id="order-list-tmpl">
+        <div class="order-list">
+            <%if (order_group_list.length >0){%>
+                <ul>
+                    <%for(var i = 0;i<order_group_list.length;i++){
+                        var orderlist = order_group_list[i].order_list;
+                    %>
+                        <li class="<%if(order_group_list[i].pay_amount){%>green-order-skin<%}else{%>gray-order-skin<%}%> <%if(i>0){%>mt10<%}%>">
+                            <div class="order-ltlt">
+                                <p>
+                                    下单时间：
+                                   <%=$getLocalTime(order_group_list[i].add_time)%>
+                                </p>
+                            </div>
+                            <% for(var j = 0;j<orderlist.length;j++){
+                                var order_goods = orderlist[j].extend_order_goods;
+                            %>
+                                <div class="order-lcnt">
+                                    <div class="order-lcnt-shop">
+                                        <p>店铺名称：<%=orderlist[j].store_name%></p>
+                                        <p>订单编号：<%=orderlist[j].order_sn%></p>
+                                    </div>
+                                    <div class="order-shop-pd">
+                                        <%for (var k = 0;k<order_goods.length;k++){%>
+                                        <a class="order-ldetail clearfix <%if(k>0){%>bd-t-de<%}%>" href="<%=WapSiteUrl%>/tmpl/product_detail.html?goods_id=<%=order_goods[k].goods_id%>">
+                                            <span class="order-pdpic">
+                                                <img src="<%=order_goods[k].goods_image_url%>"/>
+                                            </span>
+                                            <div class="order-pdinfor">
+                                                <p><%=order_goods[k].goods_name%></p>
+                                                <p>
+                                                    单价：<span class="clr-d94">￥<%=order_goods[k].goods_price%></span>
+                                                </p>
+                                                 <p>
+                                                    商品数目：<%=order_goods[k].goods_num%>
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <%}%>
+                                    </div>
+                                    <div class="order-shop-total">
+                                        <p>运费：<span class="clr-d94">￥<%=orderlist[j].shipping_fee%></span></p>
+                                        <p class="clr-c07">合计：￥<%=orderlist[j].order_amount%> </p>
+                                        <p class="mt5">
+                                            <%
+                                                var stateClass ="ot-finish";
+                                                var orderstate = orderlist[j].order_state;
+                                                if(orderstate == 20 || orderstate == 30 || orderstate == 40){
+                                                    stateClass = stateClass;
+                                                }else if(orderstate == 0) {
+                                                    stateClass = "ot-cancel";
+                                                }else {
+                                                    stateClass = "ot-nofinish";
+                                                }
+                                            %>
+                                            <span class="<%=stateClass%>"><%=orderlist[j].state_desc%></span>
+                                        </p>
+                                        <p class="mt5">
+                                            <%if(orderlist[j].if_receive){%>
+                                            <a href="javascript:void(0)" order_id="<%=orderlist[j].order_id%>" class="sure-order">确认订单</a>
+                                            <%}%>
+                                             <%if(orderlist[j].if_cancel){%>
+                                            <a href="javascript:void(0)" order_id="<%=orderlist[j].order_id%>" order_sn="<%=orderlist[j].order_sn%>" class="cancel-order">取消订单</a>
+                                            <%}%>
+                                            <%if(orderlist[j].if_deliver){%>
+                                            <a href="javascript:void(0)" order_id="<%=orderlist[j].order_id%>" class="viewdelivery-order">查看物流</a>
+                                            <%}%>
+                                        </p>
+                                    </div>
+                                </div>
+                            <%}%>
+                             <%if(order_group_list[i].pay_amount && order_group_list[i].pay_amount>0 &&
+                            payment_list.length > 0) {%>
+                            <%for(var p = 0;p < payment_list.length;p++){
+								if(payment_list[p].payment_code=="wxpay"){
+							%>
+							 <a href="<%=ApiUrl %>/api/payment/wxpay/wxpay.php?pay_sn=<%=order_group_list[i].pay_sn %>&pay_amount=<%= p2f(order_group_list[i].pay_amount) %>" class="l-btn-login check-payment">微信支付（￥<%= p2f(order_group_list[i].pay_amount) %>）</a>
+                         <% }else{%>
+                            <a href="<%=ApiUrl %>/index.php?act=member_payment&op=pay&key=<%=key %>&pay_sn=<%=order_group_list[i].pay_sn %>&payment_code=<%=payment_list[p].payment_code%>"
+                              id="btn-<%=payment_list[p].payment_code%>" class="l-btn-login check-payment"><%=payment_list[p].payment_name%>（￥<%=
+                                p2f(order_group_list[i].pay_amount) %>）</a>
+								<%}%>
+								<br>
+                            <%} %>
+                            <a class="btn-otherpay" onclick="show_contact_box(this,&quot;<%=buyer_name%>&quot;,&quot;<%=p2f(order_group_list[i].pay_amount)%>&quot;,&quot;<%=WapSiteUrl%>/tmpl/otherpay.html?sn=<%=order_group_list[i].otherpay_sn %>&quot;)"  href="javascript:void(0);">找人代付</a> 
+                            </br>
+                          <% }%> 
+							
+							<!-- <%if(order_group_list[i].pay_amount && order_group_list[i].pay_amount>0 &&
+                            payment_list.length > 0){%>
+                                <a href="<%=ApiUrl %>/index.php?act=member_payment&op=pay&key=<%=key %>&pay_sn=<%=order_group_list[i].pay_sn %>&payment_code=alipay" class="l-btn-login check-payment">支付宝支付（￥<%= p2f(order_group_list[i].pay_amount) %>）</a>
+                                <br/>
+                                <a href="<%=ApiUrl %>/api/payment/wxpay/wxpay.php?pay_sn=<%=order_group_list[i].pay_sn %>&pay_amount=<%= p2f(order_group_list[i].pay_amount) %>" class="l-btn-login check-payment">微信支付（￥<%= p2f(order_group_list[i].pay_amount) %>）</a>
+                            <%}%> -->
+							
+                        </li>
+                    <%}%>
+                </ul>
+                <div class="pagination mt10">
+                    <a href="javascript:void(0);" class="pre-page <%if(curpage <=1 ){%>disabled<%}%>">上一页</a>
+                    <a href="javascript:void(0);" has_more="<%if (hasmore){%>true<%}else{%>false<%}%>"  class="next-page <%if (!hasmore){%>disabled<%}%>">下一页</a>
+                </div>
+            <%}else {%>
+                <div class="no-record">
+                    暂无记录
+                </div>
+            <%}%>
+        </div>
+    </script>
+    <div id="footer"></div>
+    <div id="modal" class="popup"></div>
+    <div id="form" class="pop">
+        <div class="sep">
+            <div class="content tip" id="order_sn">订单号：</div>
+        </div>
+        <div class="sep">
+            <div class="content">
+                <p>取消原因：</p>
+                <input type="hidden" id="order_id">
+                <ul>
+                    <li><label form="r1"><input checked="改买其他商品" name="reason" type="radio" value="改买其他商品" id="r1">改买其他商品</label></li>
+                    <li><label form="r2"><input name="reason" type="radio" value="改用其他配送方式" id="r2">改用其他配送方式</label></li>
+                    <li><label form="r3"><input name="reason" type="radio" value="从其他店铺购买" id="r3">从其他店铺购买</label></li>
+                    <li><label form="r4"><input name="reason" type="radio" value="other" id="r4">其他原因</label></li>
+                    <li id="other" style="display: none;" >
+                        <input placeholder="请输入原因..." type="text" style="height:30px;width: 200px;overflow: hidden">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div class="op" id="close">
+                取消
+            </div>
+            <div class="op colsep" id="docancel">
+                确定
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../../js/template.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/simple-plugin.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/common-top.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/footer.js"></script>
+    <script type="text/javascript" src="../../js/ap.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/order_list.js"></script>
+    
+   <!-- 找人代付-->
+    <style type="text/css">
+       .btn-otherpay{background: #e8e9ed;border: 1px solid #9c9898;text-decoration: inherit;color:#9c9898;display: block;width: 90%;margin: 0 5%;border-radius: 5px;padding: 8px 0;text-align: center; }
+       .otherpay-way-box-bg{position: fixed;width: 100%;height: 100%;left: 0;top: 0;background-color: #000;opacity: 0.3;z-index: 10000000}
+       .otherpay-way-box{background-color: #FFF;position: fixed;left: 0;bottom: 0;width: 100%;z-index: 10000001;}
+       .otherpay-way-box .t{padding:10px 0 15px 20px;color:#adacac;}
+       .otherpay-way-box .w{width: 100%;padding: 0 5% 0 5%;}
+       .otherpay-way-box .c{clear: both;}
+       .otherpay-way-box .c a{color: #f571b3;width: 100%;text-align: center;padding: 12px 0;border-top: 1px solid #dbdada;text-decoration: inherit;display: block;font-size: 1.2em;}
+       .otherpay-way-box ul{width: 90%;}
+       .otherpay-way-box ul li{float: left;width: 25%;text-align: center; margin-bottom: 15px;}
+       .otherpay-way-box ul li>a{color: #666;}
+       .otherpay-way-box ul li span{background:url(../../images/contact-icon.png) no-repeat center;display: inline-block;width: 60px;height: 60px;background-size: 220px;}
+       .otherpay-way-box ul .weixin span{background-position:-11px -10px}
+       .otherpay-way-box ul .qq span{background-position: -80px -10px}
+       .otherpay-way-box ul .sms span{background-position: -148px -10px}
+       .otherpay-way-box ul .email span{background-position:-11px -79px}
+       .otherpay-way-box ul .copy span{background-position: -80px -79px}
+       
+       .weixin-qq-message{position: fixed;background: #FFF;width: 100%;height: 100%;left: 0;top: 0;z-index:10000002; }
+      .remark-box{background:#FFF;min-height:105px;padding:15px;}
+      .remark-box .title{color:#f078b5; }
+      .remark-box .text-box{padding: 15px 0;}
+      .remark-box .text-box img{width: 70px;height: 70px;margin-right: 5px;}
+      .diretion-bg{position:absolute;left: 0;top: 0;width: 100%;height: 100%;background: #000;opacity: 0.5;}
+      .weixin-qq-message .diretion{
+        position:absolute;left: 0;top: 0;width: 100%;height: 100%;
+        background:url(../../images/wx_diretion.png) no-repeat top right;
+      }
+      .weixin-qq-message .diretion>div{padding: 140px 50px 0 50px;color: #FFF;text-align: center;}
+    </style>
+    <script id="weixin_qq_message_tmpl" type="text/html">
+    <div class="remark-box">
+        <p><span class="title"><%=title%></p>
+        <p class="text-box"><img align="left" src="<%=imgUrl%>"><span><%=desc%></span></p>
+    </div>
+    <div class="diretion-bg"></div>
+    <div class="diretion">
+      <div>请在菜单中选择 发送给朋友 或者 分享到手机QQ,让您的好友来支付这边订单</div></div>
+    </script>
+    <div style="display:none;" class="weixin-qq-message"></div>
+    <div style="display:none;opacity:0;" class="otherpay-way-box-bg"></div>
+    <div style="display:none;" class="otherpay-way-box">
+        <div class="t">找人代付</div>
+        <div class="w">
+            <ul>
+                <li class="weixin"><a><span></span></br>微信好友</a></li>
+                <li class="qq"><a><span></span></br>QQ好友</a></li>
+                <li class="sms"><a><span></span></br>短信</a></li>
+                <li class="email"><a><span></span></br>邮件</a></li>
+            </ul>
+        </div>
+        <div class="c">
+            <a href="javascript:close_contact_box();">取消</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/fx.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+        var isweixin_browser=true;///MicroMessenger/i.test(window.navigator.userAgent.toLowerCase());
+        var is_ios=/\(i[^;]+;( U;)? CPU.+Mac OS X/i.test(window.navigator.userAgent.toLowerCase());
+        if(isweixin_browser){
+            $.getJSON(ApiUrl+"/index.php?act=otherpay&op=get_wx_signpackage&url="+encodeURIComponent(location.href.split('#')[0]),function(wx_conf){
+                  wx.config({
+                    debug: false,
+                    appId: wx_conf.appId,
+                    timestamp:wx_conf.timestamp,
+                    nonceStr:wx_conf.nonceStr,
+                    signature:wx_conf.signature,
+                    jsApiList: ['onMenuShareAppMessage','onMenuShareQQ']
+                  });
+                  wx.ready(function(){
+                    wx.hideOptionMenu();
+                  });
+            });
+        }
+        function show_contact_box(sender,buyer_name,pay_amount,pay_url){
+               var box=$(".otherpay-way-box");
+               if(!isweixin_browser){
+                 box.find(".weixin").remove();
+                 box.find(".qq").remove();
+               }else{
+                 box.find(".email").remove();
+               }   
+               if(is_ios){
+                  box.find(".sms").remove();
+               }
+               box.show();
+               box.css("bottom",-box.height());
+               box.animate({
+                 bottom:0
+               },300, 'ease');
+               var bg=$(".otherpay-way-box-bg");
+               bg.show();
+               bg.animate({
+                 opacity:0.3
+               },300, 'ease');
+               var sender_obj=$(sender);
+               if(!is_ios||!isweixin_browser){
+                 var tingurl=sender_obj.data("tingurl");
+                 var sms_body="sms:?body="+buyer_name+"在拼单网采购了一批货，货款总额"+pay_amount+"元，请您支付。支付地址：";
+                 var email_body="mailto:?subject="+encodeURIComponent(buyer_name+"的采购订单——拼单网")+"&body="+encodeURIComponent(buyer_name+"在拼单网采购了一批货，货款总额"+pay_amount+"元，请您支付。支付地址：");
+                 if(tingurl){
+                    if(!is_ios){
+                      box.find(".sms a").attr("href",sms_body+tingurl);
+                    }
+                    if(!isweixin_browser){
+                      box.find(".email a").attr('href',email_body+encodeURIComponent(tingurl));
+                    }
+                    
+                 }else{
+                   $.ajax({
+                        type:"post",
+                        data:{url:pay_url},
+                        url:ApiUrl+"/index.php?act=otherpay&op=get_tingurl",
+                        success:function(get_url){
+                           sender_obj.data("tingurl",get_url);
+                           if(!is_ios){
+                              box.find(".sms a").attr("href",sms_body+get_url);
+                           }
+                           if(!isweixin_browser){
+                              box.find(".email a").attr('href',email_body+encodeURIComponent(get_url));
+                           }
+                        }
+                    });
+                 }
+               }
+
+               if(isweixin_browser){
+                    var create_senddata=function(){
+                        var a_list=sender_obj.closest("li").find(".order-shop-pd a");
+                        var goods_name_0=a_list.first().find(".order-pdinfor p").first().text();
+                        var goods_image_0=a_list.first().find(".order-pdpic img").attr("src");
+                        var goods_count=a_list.length;
+                        var senddata={
+                            title: buyer_name+'请您支付￥'+pay_amount+'元', // 分享标题
+                            desc: '我在拼单网ipvp.cn采购了'+(goods_count>1?(goods_name_0+"等"+goods_count+"种规格商品"):""), 
+                            link: pay_url, // 分享链接
+                            imgUrl: goods_image_0, // 分享图标
+                            type: 'link',
+                            success:function(){
+                                $(".weixin-qq-message").html("");
+                                $(".weixin-qq-message").hide();
+                                wx.hideOptionMenu();
+                            },
+                            cancel:function(){
+                                $(".weixin-qq-message").html("");
+                                $(".weixin-qq-message").hide();
+                                wx.hideOptionMenu();
+                            }
+                        }
+                        return senddata;
+                   }
+                   box.find(".weixin a").click(function(){
+                     wx.showMenuItems({
+                          menuList: ['onMenuShareAppMessage','onMenuShareQQ']
+                     });
+                     var senddata=create_senddata();
+                     var box=$(".weixin-qq-message");
+                     box.html(template.render('weixin_qq_message_tmpl', senddata));
+                     box.show();
+                     wx.onMenuShareAppMessage(senddata);
+                   });
+                   box.find(".qq a").click(function(){
+                     wx.showMenuItems({
+                          menuList: ['onMenuShareAppMessage','onMenuShareQQ']
+                     });
+                     var senddata=create_senddata();
+                     var box=$(".weixin-qq-message");
+                     box.html(template.render('weixin_qq_message_tmpl', senddata));
+                     box.show();
+                     wx.onMenuShareQQ(senddata);
+                   });
+               }
+
+        }
+        function close_contact_box(){
+               var box=$(".otherpay-way-box"),bg=$(".otherpay-way-box-bg");
+                bg.animate({
+                 opacity:0
+               },300, 'ease',function(){
+                  bg.hide();
+               });
+               box.animate({
+                 bottom:-box.height()
+               },300, 'ease',function(){
+                   box.hide();
+               });
+               box.find('li').unbind();
+        }
+    </script>
+
+</body>
+</html>

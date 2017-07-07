@@ -1,0 +1,17 @@
+/*企业资质*/
+.bg_hs{ background-color: #F5F5F5;}
+.quali_head{ padding: 45px 0 11px 86px; position: fixed; left: 0;right: 0;top: 0; z-index: 2;background-color: white;}
+.quali_head>img{width: 67px;position: absolute; left: 14px;}
+.quali_head .p1{font-size: 18px;  padding-bottom: 10px; color: #2F65AA;}
+.quali_head .btn1{border-radius: 12px;border: none;color: white;padding: 3px 10px; background-color: #BE0000;}
+.quali_head .btn2{border: 2px solid #666666; background-color: white; border-radius: 16px;color: #656565;padding-left: 20px; margin-left:5%;background: url(../images/yes.png) no-repeat 6px 5px;}
+.quali_cotent{margin-top: 121px;}
+
+.white_bg{background-color: white;}
+.reduce_img .barand_img img{width: 50%;}
+.quali_cotent .p1{font-size: 16px; color: #CC3E43;padding: 20px 0 9px;margin: 0 5%; border-bottom: 1px solid #D8D8D8;font-weight: bold;}
+.p_qulifi{background-color: #CCCCCC;padding: 2px 0;font-size: 15px;}
+.zz_img{left: 0; bottom: 0;top: 0;right: 0; position: absolute;margin: auto;width: 93%;}
+.cricle_close_icon{display: inline-block;width:41px;height: 41px;background: url(../images/icon3.png) no-repeat -383px -89px;position: absolute;right: 2%;top: 2%;cursor: pointer;}
+
+.hide{display: none;}

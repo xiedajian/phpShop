@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+	<style>
+        .icon{background: url(../../images/order_detail.png) no-repeat;}
+        .dfh{width: 32px;height: 32px;background-position: -13px -24px;display: inline-block;position: absolute;left: -37px;top: -10px;}
+        .dfk{width: 32px;height: 32px;background-position: -46px -24px;display: inline-block;position: absolute;left: -37px;top: -10px;}
+        .dsh{width: 32px;height: 32px;background-position: -82px -24px;display: inline-block;position: absolute;left: -37px;top: -10px;}
+        .succ{width: 32px;height: 32px;background-position:-154px -21px;display: inline-block;position: absolute;left: -37px;top: -10px;}
+        .fail{width: 32px;height: 32px;background-position:-190px -22px;display: inline-block;position: absolute;left: -37px;top: -10px;}
+        .addr{width: 27px;height: 28px;display: inline-block;background-position:-226px -25px;position: absolute;left: -2px;top: -4px;}
+        /*订单取消原因*/
+        .popup{
+            position:fixed;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:100%;
+            background-color:#000;
+            filter:alpha(opacity=45);
+            opacity:0.45;
+            display:none;
+            z-index:9000;
+        }
+        .pop{
+            width: 70%;
+            border: 3px solid #808080;
+            position: fixed;
+            top: 50%;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: -150px;
+            display: none;
+            background-color:#FFF;
+            z-index:9001;
+            font-size: 12px;
+        }
+        .pop .sep{
+            border-bottom: 1px solid #dddddd;
+        }
+        .pop .colsep{
+            border-left: 1px solid #dddddd;
+        }
+        .pop .tip{
+            margin-left: 20px;
+        }
+        .pop .content{
+            margin: 10px 0px 10px 20px;
+        }
+        .pop ul{
+            width: 100%;
+        }
+        .pop ul li{
+            margin-top: 5px;
+        }
+        .pop .op{
+            text-align: center;
+            width: 49%;
+            float: left;
+            text-align: center;
+            padding: 8px 0px;
+            cursor: pointer;
+        }
+        .header-wrap {
+            position: relative;
+            background: #E1017E none repeat scroll 0% 0%;
+            z-index: 8888;
+            height: 50px;
+        }
+        .header-back {
+            position: absolute;
+            top: 8px;
+            left: 6px;
+            width: 30px;
+            height: 32px;
+            display: inline-block;
+        }
+        .header-back span {
+            width: 38px;
+            height: 38px;
+            text-indent: -9999px;
+            background-position: -76px 2px;
+        }
+        .header-wrap h2 {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #FFF;
+            text-align: center;
+        }
+
+        .pay-info{background-color: rgb(86,113,164);color: #ffffff;padding:6% 3% 2% 3%;font-size: 20px;}
+        .pay-info .title{position: relative;margin: 5px 0px 5px 30px;font-size: 18px;}
+        .pay-info .next{font-size: 14px;margin: 5px 0px 5px 30px;}
+        .pay-info .next div{line-height: 23px;}
+
+        .order-address-info{background-color: #ffffff;padding: 10px 3%;}
+        .order-address-info div{padding-left: 30px;font-size: 14px;line-height: 23px;position: relative}
+
+        .order-title{color: #000000;padding:10px 3%;background-color: rgb(232,233,237);border-top: 1px solid rgb(208,208,208);border-bottom: 1px solid rgb(208,208,208)}
+
+        .order{background-color: #ffffff;padding: 10px 0px 0px;margin-bottom: 10px;font-size: 12px;}
+        .order .info{padding-left: 3%}
+        .order .info .store-name{font-size: 14px;}
+        .order .info div{padding: 5px 0px;}
+        .order .info .order-sn{font-size: 14px;}
+        .goods-list{}
+        .common-goods{vertical-align: top;padding: 15px 3% 10px 3%;height: 60px;}
+        .common-goods img{width: 60px;height: 60px;}
+        .goods-warp{margin-top: 10px;border-bottom: 1px solid rgb(216,216,216);background-color: rgb(246,235,218)}
+        .goods-warp .goods{padding:10px 0px 10px 6%;height:60px;border-top: 1px solid rgb(216,216,216)}
+        .goods-item{float: left;margin-left: 10px;max-width: 50%}
+        .goods-warp .goods .goods-item p{margin: 3px 0px 10px;}
+        .goods-warp .goods .goods-item-right{float: right;margin-right: 5%;line-height: 30px;font-size: 16px;width: 80px;}
+        .goods-warp .goods .goods-item-right p.refund{color: #f34a9f;font-size: 12px;}
+        .order-operation{width: 100%;background-color: #ffffff;padding: 15px 0px;}
+        .order-operation .liuyan{margin-left: 3%;float: left;width: 50%;height: 40px;overflow: hidden}
+        .order-operation .row{height: 25px;line-height:30px;padding-right: 4%}
+        .order-operation .row div{line-height:25px;float: right;}
+        .order-operation .op-row{height: 30px;padding-right: 4%;margin-top: 5px;}
+        .order-operation .op-row div{float: right;border: 1px solid #f34a9f;border-radius: 5px;color: #f34a9f;padding: 5px 10px;margin-left: 10px;}
+
+        .pay-info2{background-color: rgb(232,233,237);padding:15px 0px 15px 3%;margin-top: -10px;}
+        .pay-info2 div{font-size: 12px;margin-top: 5px;}
+        .pay-info3 {line-height: 80px;background-color: rgb(247,166,207);color: #ffffff;font-size: 14px;box-shadow: 0px 0px 8px;}
+        .operation{background-color: #ffffff;height: 60px;padding-right: 5%;font-size: 12px;position: fixed;bottom: 0px;width: 95%;box-shadow: 0px 0px 8px;}
+        .operation div{float: right;border: 1px solid rgb(157,157,157);border-radius: 5px;color: rgb(157,157,157);padding: 5px 0px;text-align:center;width:20%;margin: 15px 0px 15px 10px;}
+        .operation .pay-btn{background-color: #f34a9f;color: #ffffff;border: 1px solid #f34a9f}
+        .operation .receive-btn{border: 1px solid #45C3FE;
+            color: #FFF;
+            background-color: #45C3FE;
+            border-color: #45C3FE;
+        }
+        .take_apart{padding: 5px 3%;background-color: #FEFDDC}
+	</style>
+
+</head>
+<body style="background-color: #E7E9ED">
+
+        <header>
+            <div class="header-wrap">
+                <a href="javascript:back()" class="header-back">
+                    <span>返回</span></a>
+                <h2 id="title">订单详情</h2>
+            </div>
+        </header>
+        <div id="order"></div>
+
+    <script type="text/html" id="order_detail">
+        <%if(pay_info.if_take_apart==1){%>
+        <div class="take_apart">本单已拆单处理，<a href="sub_order.html?order_id=<%=pay_info.order_id%>">查看子单</a></div>
+        <%}%>
+        <div class="pay-info">
+            <div class="title"><span class="icon <%=pay_info.state_class%>"></span><%=pay_info.state_desc%></div>
+            <%if(pay_info.if_new_order){%>
+            <div class="next">
+                <div>需付金额（含运费）：￥<%=p2f(pay_info.pay_amount)%></div>
+                <div>总金额：￥<%=p2f(pay_info.order_amount)%></div>
+                <%if(pay_info.order_pay>0){%>
+                <div>
+                    账户/充值卡余额已付：￥<%=p2f(pay_info.order_pay)%>
+                </div>
+                <%}%>
+                <div>运费：￥<%=p2f(pay_info.shipping_fee)%></div>
+            </div>
+            <%}else{%>
+            <div class="next">
+                <div>总金额：￥<%=p2f(pay_info.order_amount)%><span style="float: right;margin-right: 30px;">运费：￥<%=p2f(pay_info.shipping_fee)%></span></div>
+                <div>账户/充值卡余额支付：￥<%=p2f(pay_info.order_pay)%></div>
+                <div><%=pay_info.payment_name%>支付：￥<%=p2f(pay_info.pay_amount)%></div>
+            </div>
+            <%}%>
+        </div>
+        <div class="order-address-info">
+            <div>收货人：<%=pay_info.extend_order_common.reciver_name%>&nbsp;&nbsp;&nbsp;<%=pay_info.extend_order_common.reciver_info.mob_phone?pay_info.extend_order_common.reciver_info.mob_phone:pay_info.extend_order_common.reciver_info.tel_phone%></div>
+            <div><span class="icon addr"></span>收货地址：<%=pay_info.extend_order_common.reciver_info.address%></div>
+        </div>
+        <div class="order-list">
+            <div class="order-title">采购清单</div>
+            <%for(var i in order_list){var order = order_list[i];%>
+            <div class="order">
+                <div class="info">
+                    <div class="store-name"><%=order.store_name%></div>
+                    <div class="order-sn">订单号：<%=order.order_sn%></div>
+                </div>
+                <%for(var cg in order.goods_list){%>
+                    <div class="goods-list">
+                        <%if(common_goods_list[cg]){%>
+                        <div class="common-goods">
+                            <div class="goods-item">
+                                <img src="<%=common_goods_list[cg].goods_image_url%>" width="60" height="60">
+                            </div>
+                            <div class="goods-item" style="margin-top: 10px;width: 200px;">
+                                <%=common_goods_list[cg].goods_name%>
+                            </div>
+                        </div>
+                        <%}%>
+                        <div class="goods-warp">
+                            <%var sub_goods = order.goods_list[cg]; for(var g in sub_goods){var goods = sub_goods[g];%>
+                            <div class="goods">
+                                <div class="goods-item"><img src="<%=goods.goods_image_url%>" width="60" height="60" onclick="location.href='<%=WapSiteUrl%>/tmpl/product_detail.html?goods_id=<%=goods.goods_id%>'"></div>
+                                <div class="goods-item">
+                                    <p style="width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis"><%=goods.goods_spec_name%></p>
+                                    <p>单价：￥<%=goods.goods_price%></p>
+                                </div>
+                                <div class="goods-item-right" order_id="<%=order.order_id%>" goods_id="<%=goods.rec_id%>" refund_id="<%if(goods.extend_refund){%><%=goods.extend_refund.refund_id%><%}%>">
+                                    <p>X<%=goods.goods_num%></p>
+                                    <%if(goods.refund==1&&goods.extend_refund==null){%>
+                                    <p class="refund">退货/退款</p>
+                                    <%}else if(goods.extend_refund!=null){%>
+
+                                            <%if(goods.extend_refund.refund_state==1){%>
+                                            <p class="refund"> <%if(goods.extend_refund.refund_type==1){%>退款<%}else{%>退货<%}%>处理中</p>
+                                            <%}else if(goods.extend_refund.refund_state==2){%>
+                                            <p class="refund"> <%if(goods.extend_refund.refund_type==1){%>退款<%}else{%>退货<%}%>处理中</p>
+                                            <%}else if(goods.extend_refund.refund_state==3&&goods.extend_refund.seller_state==2){%>
+                                            <p class="refund">
+                                                <%if(goods.extend_refund.refund_type==1){%>退款<%}else{%>退货<%}%>成功
+                                            </p>
+                                            <%}else{%>
+                                            <p class="refund">
+                                                <%if(goods.extend_refund.refund_type==1){%>退款<%}else{%>退货<%}%>失败
+                                            </p>
+                                            <%}%>
+
+                                    <%}%>
+                                </div>
+
+                            </div>
+                           <%}%>
+                        </div>
+                    </div>
+                <%}%>
+                <div class="order-operation">
+                    <div class="liuyan">你的留言:<%=order.extend_order_common.order_message%></div>
+                    <div class="row">
+                        <div>运费：￥<%=p2f(order.shipping_fee)%></div>
+                    </div>
+                    <div  class="row">
+                        <div>小计：￥<%=p2f(order.order_amount)%></div>
+                    </div>
+                    <%if(pay_info.if_new_order){%>
+                    <div class="op-row">
+
+                        <%if(order.if_cancel){%>
+                        <div class="cancel_order" order_id="<%=order.order_id%>" order_sn="<%=order.order_sn%>">取消订单</div>
+                        <%}%>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+            <%}%>
+        </div>
+        <div class="pay-info2">
+            <div>支付单号：<%=pay_info.pay_sn%></div>
+            <div>下单时间：<%=$getLocalTime(pay_info.add_time)%></div>
+            <%if(!pay_info.if_new_order&&pay_info.order_state!=0){%>
+            <div>付款时间：<%=$getLocalTime(pay_info.payment_time)%></div>
+            <%}%>
+        </div>
+        <%if(pay_info.if_new_order){%>
+        <div class="pay-info3">
+            <span style="margin-left: 3%">需付金额（含运费￥<%=p2f(pay_info.shipping_fee)%>）：</span>
+            <span style="margin-right: 4%;float: right;color: #f34a9f;font-size: 22px;">￥<%=p2f(pay_info.pay_amount)%></span>
+        </div>
+        <%}%>
+        <%if(pay_info.if_new_order||pay_info.if_receive||pay_info.if_deliver||pay_info.if_refund_cancel||view_refund_id){%>
+        <div style="margin-bottom: 60px;"></div>
+        <div class="operation">
+            <%if(pay_info.if_new_order){%>
+            <div class="pay-btn" onclick="location.href='<%=WapSiteUrl%>/tmpl/member/order_pay.html?order_id=<%=pay_info.order_ids_str%>'">付款</div>
+            <div style="display: none">线下转账</div>
+            <div class="normal-btn zhaoren-btn" onclick="show_contact_box(this,&quot;<%=pay_info.buyer_name%>&quot;,&quot;<%=p2f(pay_info.pay_amount)%>&quot;,&quot;<%=WapSiteUrl%>/tmpl/otherpay.html?sn=<%=pay_info.otherpay_sn %>&quot;)">找人代付</div>
+            <div class="cancel_order" order_id="<%=pay_info.order_ids_str%>" pay_sn="<%=pay_info.pay_sn%>">取消订单</div>
+            <%}else{%>
+                <%if(pay_info.if_receive){%>
+                <div class="receive-btn" order_id="<%=pay_info.order_id%>">确认收货</div>
+                <%}%>
+                <%if(pay_info.if_deliver){%>
+                <div class="view-delivery" order_id="<%=pay_info.order_id%>">查看物流</div>
+                <%}%>
+                <%if(pay_info.if_refund_cancel){%>
+                <div class="refund-btn" order_id="<%=pay_info.order_id%>">退款</div>
+                <%}else if(view_refund_id){%>
+                <div class="normal-btn" onclick="location.href='<%=WapSiteUrl%>/tmpl/member/refund_view.html?refund_id=<%=view_refund_id%>'">查看退款</div>
+                <%}%>
+            <%}%>
+        </div>
+        <%}%>
+
+    </script>
+    <div class="dialog-bg"></div>
+    <div class="dialog">
+        <div class="content"></div>
+        <div class="confirm-btns"><a id="dialog_btn_n" href="javascript:close_dialog()">取消</a><a id="dialog_btn_y" href="javascript:void(0);">确定</a></div>
+        <div class="alert-btn"><a id="dialog_btn_a" href="javascript:close_dialog()">知道了</a></div>
+    </div>
+        <!-- 取消订单-->
+        <div id="modal" class="popup"></div>
+        <div id="form" class="pop">
+            <div class="sep">
+                <div class="content tip" id="order_sn">订单号：</div>
+            </div>
+            <div class="sep">
+                <div class="content">
+                    <p>取消原因：</p>
+                    <input type="hidden" id="order_id">
+                    <ul>
+                        <li><label form="r1"><input checked="改买其他商品" name="reason" type="radio" value="改买其他商品" id="r1">&nbsp;&nbsp;改买其他商品</label></li>
+                        <li><label form="r2"><input name="reason" type="radio" value="改用其他配送方式" id="r2">&nbsp;&nbsp;改用其他配送方式</label></li>
+                        <li><label form="r3"><input name="reason" type="radio" value="从其他店铺购买" id="r3">&nbsp;&nbsp;从其他店铺购买</label></li>
+                        <li><label form="r4"><input name="reason" type="radio" value="other" id="r4">&nbsp;&nbsp;其他原因</label></li>
+                        <li id="other" style="display: none;" >
+                            <input placeholder="请输入原因..." type="text" style="height:30px;width: 80%;overflow: hidden">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="op" id="close">
+                    取消
+                </div>
+                <div class="op colsep" id="docancel">
+                    确定
+                </div>
+            </div>
+        </div>
+    <script type="text/javascript" src="../../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../../js/template.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/simple-plugin.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/common-top.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/footer.js"></script>
+    <script type="text/javascript" src="../../js/ap.js"></script>
+    <script>
+        function back(){
+            if(document.referrer.indexOf('sub_order')>0||document.referrer.indexOf('refund_')>0)history.go(-3);else history.go(-1);
+        }
+        /order_id=([0-9,]*)/.test(location.search);
+        var order_id = RegExp.$1;
+        var key =getcookie('key');
+        $(function(){
+            if(key==''){
+                window.location.href = WapSiteUrl+'/tmpl/member/login.html';
+            }
+            $.ajax({
+                type:'post',
+                url:ApiUrl+"/index.php?act=member_order&op=order_detail",
+                data:{key:key,order_id:order_id},
+                dataType:'json',
+                success:function(result){
+                    checklogin(result.login);//检测是否登录了
+                    var data = result.datas;
+                    data.WapSiteUrl = WapSiteUrl;//页面地址
+                    data.ApiUrl = ApiUrl;
+                    data.key = getcookie('key');
+                    template.helper('p2f', function(s) {
+                        return (parseFloat(s) || 0).toFixed(2);
+                    });
+                    template.helper('$getLocalTime', function (nS) {
+                        var d = new Date(parseInt(nS) * 1000);
+                        var s = '';
+                        s += d.getFullYear() + '-';
+                        s += (d.getMonth() + 1) + '-';
+                        s += d.getDate() + ' ';
+                        if( d.getHours()<10){
+                            s += '0'+d.getHours() + ':';
+                        }else{
+                            s += d.getHours() + ':';
+                        }
+                        if(d.getMinutes()<10){
+                            s += "0"+d.getMinutes();
+                        }else{
+                            s += d.getMinutes();
+                        }
+                        return s;
+                    });
+                    var html = template.render('order_detail', data);
+                    $("#order").html(html);
+                    //取消订单
+                    $(".cancel_order").click(cancel_form_show);
+                    //查看物流
+                    $(".view-delivery").click(viewOrderDelivery);
+                    //确认收货
+                    $(".receive-btn").click(sureOrder);
+                    //退货退款
+                    $(".refund").click(refund);
+                    //整单退款
+                    $(".refund-btn").click(refund_all);
+                    $(window).scrollTop(0);
+                }
+            });
+        });
+        //退货退款
+        function refund(){
+            var order_id = $(this).closest('.goods-item-right').attr('order_id');
+            var goods_id = $(this).closest('.goods-item-right').attr('goods_id');
+            var refund_id = $(this).closest('.goods-item-right').attr('refund_id');
+            //alert(order_id+':'+goods_id);
+            if(refund_id){
+                location.href=WapSiteUrl+'/tmpl/member/refund_view.html?refund_id='+refund_id;
+            }else{
+                location.href=WapSiteUrl+'/tmpl/member/refund_add.html?order_id='+order_id+'&goods_id='+goods_id;
+            }
+
+        }
+        function refund_all(){
+            var order_id = $(this).attr('order_id');
+            location.href = WapSiteUrl+'/tmpl/member/refund_all.html?order_id='+order_id;
+        }
+        //确认收货
+        function sureOrder(){
+            var order_id = $(this).attr("order_id");
+            show_dialog('confirm','确认收货？',function(d){
+                var yes = d.find('#dialog_btn_y');
+                yes.unbind();
+                yes.click(function(){
+                    sureOrderId(order_id);
+                });
+            });
+        }
+        function sureOrderId(order_id) {
+            $.ajax({
+                type:"post",
+                url:ApiUrl+"/index.php?act=member_order&op=order_receive",
+                data:{order_id:order_id,key:key},
+                dataType:"json",
+                success:function(result){
+                    if(result.datas && result.datas == 1){
+                        location.reload(true);
+                    }
+                }
+            });
+        }
+        //查看物流
+        function viewOrderDelivery() {
+            var orderId = $(this).attr('order_id');
+            location.href = WapSiteUrl + '/tmpl/member/order_delivery.html?order_id=' + orderId;
+        }
+        //取消订单
+        $('input[type="radio"]').click(function(){
+            if($(this).val()=='other'){
+                $('#other').show();
+            }else{
+                $('#other').hide();
+            }
+        });
+        $('#docancel').click(function(){
+            cancel_order();
+        });
+        $('#close').click(function(){
+            cancel_form_close();
+        });
+        function cancelOrderId(order_id,reason) {
+            $.ajax({
+                type:"post",
+                url:ApiUrl+"/index.php?act=member_order&op=order_cancel",
+                data:{order_id:order_id,key:getcookie('key'),reason:reason},
+                dataType:"json",
+                success:function(result){
+                    if(result.datas && result.datas == 1){
+                        cancel_form_close();
+                        location.reload(true);
+                    }
+                }
+            });
+        }
+        function cancel_order(){
+            var reason = $(":checked").val();
+            if(reason=='other'){
+                reason = $("#other").find('input').val();
+            }
+            if(!reason){
+                $("#other").find('input').attr('placeholder','请输入原因...');
+                return;
+            }
+            var order_id = $('#order_id').val();
+            cancelOrderId(order_id,reason);
+        }
+        function cancel_form_close(){
+            $('#modal').hide();
+            $('#form').hide();
+        }
+        function cancel_form_show(){
+            if($(":checked").val()=='other'){
+                $('#other').show();
+            }else{
+                $('#other').hide();
+            }
+            $('#order_id').val($(this).attr("order_id"));
+            if($(this).attr("order_sn")!=null){
+                $('#order_sn').html("订单编号："+$(this).attr("order_sn"));
+            }else{
+                $('#order_sn').html("支付单号："+$(this).attr("pay_sn"));
+            }
+
+            $('#other').find('input').val('');
+            $('#modal').show();
+            $('#form').show();
+        }
+    </script>
+
+    <!-- 找人代付-->
+    <style type="text/css">
+        .btn-otherpay{background: #e8e9ed;border: 1px solid #9c9898;text-decoration: inherit;color:#9c9898;display: block;width: 90%;margin: 0 5%;border-radius: 5px;padding: 8px 0;text-align: center; }
+        .otherpay-way-box-bg{position: fixed;width: 100%;height: 100%;left: 0;top: 0;background-color: #000;opacity: 0.3;z-index: 10000000}
+        .otherpay-way-box{background-color: #FFF;position: fixed;left: 0;bottom: 0;width: 100%;z-index: 10000001;}
+        .otherpay-way-box .t{padding:10px 0 15px 20px;color:#adacac;}
+        .otherpay-way-box .w{width: 100%;padding: 0 5% 0 5%;}
+        .otherpay-way-box .c{clear: both;}
+        .otherpay-way-box .c a{color: #f571b3;width: 100%;text-align: center;padding: 12px 0;border-top: 1px solid #dbdada;text-decoration: inherit;display: block;font-size: 1.2em;}
+        .otherpay-way-box ul{width: 90%;}
+        .otherpay-way-box ul li{float: left;width: 25%;text-align: center; margin-bottom: 15px;}
+        .otherpay-way-box ul li>a{color: #666;}
+        .otherpay-way-box ul li span{background:url(../../images/contact-icon.png) no-repeat center;display: inline-block;width: 60px;height: 60px;background-size: 220px;}
+        .otherpay-way-box ul .weixin span{background-position:-11px -10px}
+        .otherpay-way-box ul .qq span{background-position: -80px -10px}
+        .otherpay-way-box ul .sms span{background-position: -148px -10px}
+        .otherpay-way-box ul .email span{background-position:-11px -79px}
+        .otherpay-way-box ul .copy span{background-position: -80px -79px}
+
+        .weixin-qq-message{position: fixed;background: #FFF;width: 100%;height: 100%;left: 0;top: 0;z-index:10000002; }
+        .remark-box{background:#FFF;min-height:105px;padding:15px;}
+        .remark-box .title{color:#f078b5; }
+        .remark-box .text-box{padding: 15px 0;}
+        .remark-box .text-box img{width: 70px;height: 70px;margin-right: 5px;}
+        .remark-remark{text-align:center;color: #666;width: 90%;padding: 50px 5%;}
+    </style>
+    <script id="weixin_qq_message_tmpl" type="text/html">
+        <div class="remark-box">
+            <p><span class="title"><%=title%></p>
+            <p class="text-box"><img align="left" src="<%=imgUrl%>"><span><%=desc%></span></p>
+        </div>
+        <div class="remark-remark">消息已准备好,请在右上角选择发送给朋友</div>
+    </script>
+    <div style="display:none;" class="weixin-qq-message"></div>
+    <div style="display:none;opacity:0;" class="otherpay-way-box-bg"></div>
+    <div style="display:none;" class="otherpay-way-box">
+        <div class="t">找人代付</div>
+        <div class="w">
+            <ul>
+                <li class="weixin"><a><span></span></br>微信好友</a></li>
+                <li class="qq"><a><span></span></br>QQ好友</a></li>
+                <li class="sms"><a><span></span></br>短信</a></li>
+                <li class="email"><a><span></span></br>邮件</a></li>
+            </ul>
+        </div>
+        <div class="c">
+            <a href="javascript:close_contact_box();">取消</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/fx.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+        var isweixin_browser=/MicroMessenger/i.test(window.navigator.userAgent.toLowerCase());
+        var is_ios=/\(i[^;]+;( U;)? CPU.+Mac OS X/i.test(window.navigator.userAgent.toLowerCase());
+        if(isweixin_browser){
+            $.getJSON(ApiUrl+"/index.php?act=otherpay&op=get_wx_signpackage&url="+encodeURIComponent(location.href.split('#')[0]),function(wx_conf){
+                wx.config({
+                    debug: false,
+                    appId: wx_conf.appId,
+                    timestamp:wx_conf.timestamp,
+                    nonceStr:wx_conf.nonceStr,
+                    signature:wx_conf.signature,
+                    jsApiList: ['onMenuShareAppMessage','onMenuShareQQ']
+                });
+            });
+        }
+        function show_contact_box(sender,buyer_name,pay_amount,pay_url){
+            var box=$(".otherpay-way-box");
+            if(!isweixin_browser){
+                box.find(".weixin").remove();
+                box.find(".qq").remove();
+            }else{
+                box.find(".email").remove();
+            }
+            if(is_ios){
+                box.find(".sms").remove();
+            }
+            box.show();
+            box.css("bottom",-box.height());
+            box.animate({
+                bottom:0
+            },300, 'ease');
+            var bg=$(".otherpay-way-box-bg");
+            bg.show();
+            bg.animate({
+                opacity:0.3
+            },300, 'ease');
+            var sender_obj=$(sender);
+            if(!is_ios||!isweixin_browser){
+                var tingurl=sender_obj.data("tingurl");
+                var sms_body="sms:?body="+buyer_name+"在拼单网采购了一批货，货款总额"+pay_amount+"元，请您支付。支付地址：";
+                var email_body="mailto:?subject="+encodeURIComponent(buyer_name+"的采购订单——拼单网")+"&body="+encodeURIComponent(buyer_name+"在拼单网采购了一批货，货款总额"+pay_amount+"元，请您支付。支付地址：");
+                if(tingurl){
+                    if(!is_ios){
+                        box.find(".sms a").attr("href",sms_body+tingurl);
+                    }
+                    if(!isweixin_browser){
+                        box.find(".email a").attr('href',email_body+encodeURIComponent(tingurl));
+                    }
+
+                }else{
+                    $.ajax({
+                        type:"post",
+                        data:{url:pay_url},
+                        url:ApiUrl+"/index.php?act=otherpay&op=get_tingurl",
+                        success:function(get_url){
+                            sender_obj.data("tingurl",get_url);
+                            if(!is_ios){
+                                box.find(".sms a").attr("href",sms_body+get_url);
+                            }
+                            if(!isweixin_browser){
+                                box.find(".email a").attr('href',email_body+encodeURIComponent(get_url));
+                            }
+                        }
+                    });
+                }
+            }
+
+            if(isweixin_browser){
+                var create_senddata=function(){
+                    var a_list=sender_obj.closest("li").find(".order-shop-pd a");
+                    var goods_name_0=a_list.first().find(".order-pdinfor p").first().text();
+                    var goods_image_0=a_list.first().find(".order-pdpic img").attr("src");
+                    var goods_count=a_list.length;
+                    var senddata={
+                        title: buyer_name+'请您支付￥'+pay_amount+'元', // 分享标题
+                        desc: '我在拼单网ipvp.cn采购了'+(goods_count>1?(goods_name_0+"等"+goods_count+"种规格商品"):""),
+                        link: pay_url, // 分享链接
+                        imgUrl: goods_image_0, // 分享图标
+                        type: 'link',
+                        success:function(){
+                            $(".weixin-qq-message").html("");
+                            $(".weixin-qq-message").hide();
+                        },
+                        cancel:function(){
+                            $(".weixin-qq-message").html("");
+                            $(".weixin-qq-message").hide();
+                        }
+                    }
+                    return senddata;
+                }
+                box.find(".weixin a").click(function(){
+                    var senddata=create_senddata();
+                    var box=$(".weixin-qq-message");
+                    box.html(template.render('weixin_qq_message_tmpl', senddata));
+                    box.show();
+                    wx.onMenuShareAppMessage(senddata);
+                });
+                box.find(".qq a").click(function(){
+                    var senddata=create_senddata();
+                    var box=$(".weixin-qq-message");
+                    box.html(template.render('weixin_qq_message_tmpl', senddata));
+                    box.show();
+                    wx.onMenuShareQQ(senddata);
+                });
+            }
+
+        }
+        function close_contact_box(){
+            var box=$(".otherpay-way-box"),bg=$(".otherpay-way-box-bg");
+            bg.animate({
+                opacity:0
+            },300, 'ease',function(){
+                bg.hide();
+            });
+            box.animate({
+                bottom:-box.height()
+            },300, 'ease',function(){
+                box.hide();
+            });
+            box.find('li').unbind();
+        }
+    </script>
+
+</body>
+</html>

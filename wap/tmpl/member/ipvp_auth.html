@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拼单网-店铺认证</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <style type="text/css">
+       body{background: #f3f4f8;}
+       .login-icon{background: url(../../images/login-reg-icon.png) no-repeat;background-size: 130px;display: block;width: 30px;height: 30px;}
+       header{text-align:center;position: relative;background: #f34a9f;width: 100%;height: 50px;text-align: center;}
+       header h2{font-size:1.5em;line-height: 50px;color: #FFF;}
+       .header-back{position: absolute;  left:10px;top: 10px;background-position: -43px -56px;width: 32px;}
+
+       .auth-form {position: relative;min-width: 320px;margin-top: 20px;}
+       /*.auth-form input{width: 100%;height:80px;line-height:80px;border:0;font-size:1.4em;  text-indent:60px;border-top: 1px solid #B1B1B1;border-bottom: 1px solid #B1B1B1;}*/
+       .auth-form>form>div{height: 80px;width: 100%;border-top:1px solid #ccc;position: relative;}
+       .auth-form>form>div:last-child{border-bottom:1px solid #ccc;}
+       .auth-form>form>div>span{width:36%;height: 80px;line-height: 80px;display: inline-block;color: #333;font-size:1.1em;padding-left: 15px;}
+       .auth-form>form>div>span>i{position: absolute;color:#f34a9f;font-size: 1.3em;top:2px;left:3px; }
+       .auth-input{width:55%;border: none;height: 60px;background-color:#f3f4f8;font-size: 1em; }
+       .auth-form>form>div>img{max-height: 70px;position: absolute;top: 5px;left: 42%;}
+       .ipvp-btn-next{background-color: #45c3f5;height: 50px;line-height: 50px;display: block;text-align: center;width:90%;margin: 0 5%;font-size: 1.5em;color: #FFF;border-radius: 5px;}
+       .auth-top-step{color:#4daefd;width: 96%;margin-top: 20px;margin-left: 2%;}
+       .auth-top-step ul{height: 45px;line-height: 45px;font-size:1em;}
+       .auth-top-step li{background:#fff;float: left;width:32.9%;text-align: center;border-top:1px solid #4daefd;border-bottom:1px solid #4daefd;border-right:1px solid #4daefd; }
+       .auth-top-step li:first-child{border-left:1px solid #4daefd;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+       .auth-top-step li:last-child{border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+       .auth-top-step .done{background-color: #4daefd;color: #FFF;}
+
+
+        .auth-remark{padding: 20px;color: #a8a8a8;font-size: 1em;}
+
+   .body-bg{display:none;position: fixed;width: 100%;height: 100%;background: #000000;opacity:0.5;top: 0;left: 0; }
+   .reg-dialog{display:none;position:fixed;top:30%;width:80%;margin:0 10%;z-index: 2;border-radius: 5px;background-color: #FFF;}
+   .reg-dialog .content{padding: 20px 10px;text-align: center;border-bottom: 1px solid #CCC;}
+   .reg-dialog .confirm-btns a{width: 50%;height: 50px;line-height: 50px;text-align: center;display: inline-block;}
+   .reg-dialog .confirm-btns a:first-child{width: 49%;border-right: 1px solid #CCC;}
+   .reg-dialog  .alert-btn a{width: 100%;height: 50px;line-height: 50px;text-align: center;display: inline-block;color:#333;}
+   #dialog_btn_n{color: #333;}
+   #dialog_btn_y{color: #f34a9f;}
+   .reg-dialog.confirm .alert-btn{display: none;}
+   .reg-dialog.alert .confirm-btns{display: none;}
+
+   .auth-success-dialog{display:none;position: fixed;width: 100%;height: 100%;background-color: #f3f4f8;top: 0;left: 0;text-align: center;}
+   .auth-success-dialog h1{font-size:2em;color: #000;margin:50px 0 50px 0;}
+   .auth-success-dialog p{padding: 5px 5%;line-height: 30px;}
+   .auth-success-dialog .ipvp-tel{color:#f34a9f;}
+    </style>
+</head>
+<body>
+    <header>
+        <a class="header-back login-icon" href="javascript:void(0);"></a>
+        <h2>店铺认证</h2>
+    </header>
+    <div class="auth-top-step">
+       <ul>
+         <li class="done">店铺信息</li>
+         <li>法人身份信息</li>
+         <li>业务联系人</li>
+       </ul>
+    </div>
+
+    <div class="auth-form">
+        <form   id="form_1" action="" method ="">
+            <div>
+              <span><i>*</i><label>店铺名称</label></span>
+              <input class="auth-input" type="text" placeholder="请填写真实的店铺名称" name="org_name" id="org_name"/>
+            </div>
+            <div>
+              <span><i>*</i><label>门店数</label></span>
+              <input class="auth-input" type="number" name="store_count" id="store_count" value="1"/>
+            </div>
+            <div>
+              <span><i>*</i><label>营业执照</label></span>
+              <input  type="hidden" name="license_img" id="license_img"/>
+              <input style="display:none;" type="file" name="license" id="license"/>
+              <img src="../../images/image-upload-btn.png">
+            </div>
+            <div>
+              <span><label>组织机构代码证</label></span>
+              <input  type="hidden" name="organization_certificate_img" id="organization_certificate_img"/>
+              <input style="display:none;"  type="file" name="organization_certificate" id="organization_certificate"/>
+              <img src="../../images/image-upload-btn.png">
+            </div>
+            <div>
+              <span><label>税务登记证</label></span>
+              <input  type="hidden" name="tax_certificate_img" id="tax_certificate_img"/>
+              <input style="display:none;"  type="file" name="tax_certificate" id="tax_certificate"/>
+              <img src="../../images/image-upload-btn.png">
+            </div>
+        </form>
+        <form style="display:none;"  id="form_2" action="" method ="">
+            <div>
+              <span><i>*</i><label>法人姓名</label></span>
+              <input class="auth-input" type="text" placeholder="2-8个字" name="corporate" id="corporate"/>
+            </div>
+            <div>
+              <span><i>*</i><label>身份证正面</label></span>
+              <input  type="hidden" name="corporate_idcart_img" id="corporate_idcart_img"/>
+              <input style="display:none;" type="file" name="corporate_idcart" id="corporate_idcart"/>
+              <img src="../../images/image-upload-btn.png">
+            </div>
+            <div>
+                <span><i>*</i><label>身份证反面</label></span>
+                <input  type="hidden" name="corporate_idcartf_img" id="corporate_idcartf_img"/>
+                <input style="display:none;" type="file" name="corporate_idcartf" id="corporate_idcartf"/>
+                <img src="../../images/image-upload-btn.png">
+            </div>
+        </form>
+        <form style="display:none;"  id="form_3" action="" method ="">
+            <div>
+              <span><i>*</i><label>联系人姓名</label></span>
+              <input class="auth-input" type="text" placeholder="请填写真实姓名" name="conneter" id="conneter"/>
+            </div>
+            <div>
+              <span><i>*</i><label>联系人电话</label></span>
+              <input class="auth-input" type="tel" placeholder="请填写联系人电话号码" name="conneter_tel" id="conneter_tel"/>
+            </div>
+            <div>
+              <span><label>联系人QQ</label></span>
+              <input class="auth-input" type="number" placeholder="请填写联系人QQ" name="conneter_qq" id="conneter_qq"/>
+            </div>
+        </form>
+    </div>
+    <div class="auth-remark">
+        拼单网承诺您所传的身份证明、营业执照等，只用于本平台查验您店铺信息的真实性，不会将您的信息泄露给第三方用作商业用途。
+    </div>
+    <div>
+      <a href="javascript:void(0);" id="ipvp_btn_next" class="ipvp-btn-next">下一步</a>
+    </div>
+    <div style="height:50px;"></div>
+    <div class="body-bg"></div>
+    <div class="reg-dialog">
+       <div class="content"></div>
+       <div class="confirm-btns"><a id="dialog_btn_n" href="javascript:close_reg_dialog()">取消</a><a id="dialog_btn_y" href="javascript:void(0);">确定</a></div>
+       <div class="alert-btn"><a id="dialog_btn_a" href="javascript:close_reg_dialog()">知道了</a></div>
+    </div>
+    <div class="auth-success-dialog">
+       <h1>认证申请已提交</h1>
+       <p>我们将在一个工作日内为您审核完成，请密切关注!认证审核通过后，您可在拼单网上以低于您当地供应商的价格下单购买哦！</p>
+       <p>如果问题请联系<span class="ipvp-tel">400-900-8982</span></p>
+       <div style="height:50px;"></div>
+       <div>
+         <a href="../../index.html" class="ipvp-btn-next">先逛逛拼单网</a>
+       </div>
+    </div>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="../../js/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript">
+    var key = getcookie('key');
+    if(key==''){
+      location.href = 'login.html';
+    }
+    function show_reg_dialog(type,text,call){
+       $(".body-bg").show();
+       var dialog=$(".reg-dialog");
+       dialog.attr("class","reg-dialog");
+       dialog.addClass(type);
+       dialog.find(".content").text(text);
+       dialog.show();
+       dialog.find("a").unbind();
+       if(typeof call=='function'){
+         call(dialog);
+       }
+    }
+    function close_reg_dialog(){
+      $(".body-bg").hide();
+      $(".reg-dialog").hide();
+    }
+    function addImg(e,data){
+        if(data.files[0].size>=4*1024*1024){
+            show_reg_dialog("alert","上传图片不能超过4M");
+            return;
+        }
+        showLoading();
+        data.submit();
+    }
+    function doneImg(e,data){
+        closeLoading();
+        var param = data.result;
+        if (param.datas.error) {
+          show_reg_dialog("alert",param.datas.error);
+        } else {
+            var input=$('#'+e.target.name+"_img");
+            input.val(param.datas.img_name);
+            param.datas.img_path += "?rand="+Math.random();
+            $(e.target).next().attr('src',param.datas.img_path);
+        }
+    }
+    function showLoading(){
+       $(".body-bg").show();
+       $("<img id='img_upload_loading' src='../../images/loading.gif' style='position:fixed;top:50%;left:50%;z-index:2;'/>").appendTo('body');
+    }
+    function closeLoading(){
+        $(".body-bg").hide();
+        $("#img_upload_loading").remove();
+    }
+    function input_error_func(id,error_text,li_index){
+        show_reg_dialog("alert",error_text,function(d){
+            d.find("#dialog_btn_a").click(function(){
+                $(".auth-top-step li").eq(li_index).trigger('click');
+                $("#"+id).focus();
+            });
+        });
+    }
+    $(function(){
+          $(".header-back").bind('click',function(){
+               show_reg_dialog("confirm","离开此页面后，店铺认证将无法申请成功。无法享受拼单网优惠价格以及不能下单购买哦！",function(d){
+                  d.find("#dialog_btn_n").text("坚决离开");
+                  d.find("#dialog_btn_y").text("继续认证");
+                  d.find("#dialog_btn_n").click(function(){
+                     history.back();
+                  });
+                  d.find("#dialog_btn_y").click(function(){
+                     close_reg_dialog();
+                  });
+               });
+          });
+
+          $(".auth-top-step li").bind('click',function(){
+              if($(this).is(".done")){
+                return;
+              }
+              var current_index=$(this).index()+1;
+              $(".auth-form form").hide();
+              $("#form_"+current_index).show();
+              $(".auth-top-step .done").removeClass("done");
+              $(this).addClass("done");
+              if(current_index==3){
+                $("#ipvp_btn_next").text("提交");
+              }else{
+                $("#ipvp_btn_next").text("下一步");
+              }
+          });
+
+          $("#ipvp_btn_next").bind('click',function(){
+              var form_data={};
+              $(".auth-form input").each(function(){
+                  if(!$(this).is(":file")){
+                    form_data[this.id]=this.value;
+                  }
+              });
+              var auth_step=$(".auth-top-step .done").index();
+              
+                if(!form_data.org_name){
+                  input_error_func('org_name',"请填写店铺名称",0);
+                  return;
+                }
+                if(!form_data.store_count){
+                  input_error_func('store_count',"请输入门店数",0);
+                  return;
+                }
+                if(!form_data.license_img){
+                  show_reg_dialog("alert","请上传营业执照",0);
+                  return;
+                }
+                if(auth_step==0){
+                  $(".auth-top-step li").eq(1).trigger('click');
+                  return;
+                }
+                if(!form_data.corporate){
+                  input_error_func('corporate',"请输入法人姓名",1);
+                  return;
+                }
+                if(!form_data.corporate_idcart_img){
+                  show_reg_dialog("alert","请上传法人身份证正面照片",1);
+                  return;
+                }
+              if(!form_data.corporate_idcartf_img){
+                  show_reg_dialog("alert","请上传法人身份证反面照片",1);
+                  return;
+              }
+                if(auth_step==1){
+                  $(".auth-top-step li").eq(2).trigger('click');
+                  return;
+                }
+                if(!form_data.conneter){
+                  input_error_func('conneter',"请输入联系人姓名",2);
+                  return;
+                }
+                if(!form_data.conneter_tel){
+                  input_error_func('conneter_tel',"请输入联系人电话号码",2);
+                  return;
+                }
+                showLoading();
+                $.ajax({
+                    type:'POST',
+                    url:ApiUrl+"/index.php?act=member_org&op=org_auth&key="+key,  
+                    data:form_data,
+                    dataType:'json',
+                    success:function(result){
+                      closeLoading();
+                      if (result.datas.error) {
+                         show_reg_dialog("alert",result.datas.error);
+                         return;
+                      }
+                      $(".auth-success-dialog").show();
+                    }
+                });  
+
+          });
+          $(".auth-form img").bind('click',function(){
+              $(this).prev().trigger('click');
+          });
+          $('#license').fileupload({
+               dataType: 'json',
+               url: ApiUrl+'/index.php?act=member_org&op=image_upload&key='+key,
+               formData: {name:'license'},
+               add: addImg,
+               done: doneImg
+          });
+          $('#organization_certificate').fileupload({
+              dataType: 'json',
+              url: ApiUrl+'/index.php?act=member_org&op=image_upload&key='+key,
+              formData: {name:'organization_certificate'},
+              add: addImg,
+              done: doneImg
+          });
+          $('#tax_certificate').fileupload({
+              dataType: 'json',
+              url: ApiUrl+'/index.php?act=member_org&op=image_upload&key='+key,
+              formData: {name:'tax_certificate'},
+              add: addImg,
+              done: doneImg
+          });
+          $('#corporate_idcart').fileupload({
+              dataType: 'json',
+              url: ApiUrl+'/index.php?act=member_org&op=image_upload&key='+key,
+              formData: {name:'corporate_idcart'},
+              add: addImg,
+              done: doneImg
+          });
+        $('#corporate_idcartf').fileupload({
+            dataType: 'json',
+            url: ApiUrl+'/index.php?act=member_org&op=image_upload&key='+key,
+            formData: {name:'corporate_idcartf'},
+            add: addImg,
+            done: doneImg
+        });
+    });
+</script>
+</body>
+</html>

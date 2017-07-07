@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>物流信息</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/main.css">
+<style>
+    .header-wrap {
+        position: relative;
+        background: #E1017E none repeat scroll 0% 0%;
+        z-index: 8888;
+        height: 50px;
+    }
+    .header-back {
+        position: absolute;
+        top: 8px;
+        left: 6px;
+        width: 30px;
+        height: 32px;
+        display: inline-block;
+    }
+    .header-back span {
+        width: 38px;
+        height: 38px;
+        text-indent: -9999px;
+        background-position: -76px 2px;
+    }
+    .header-wrap h2 {
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        color: #FFF;
+        text-align: center;
+    }
+
+
+    .delivery-list{font-size: 12px;background-color: #ffffff;color: rgb(164,164,164);padding: 10px;margin-top:10px;border-top: 1px solid rgb(210,210,211);border-bottom: 1px solid rgb(210,210,211);padding-left: 3%;}
+    .delivery-list table{width: 100%}
+    .delivery-list table tr{width: 100%}
+    .delivery-list table tr td{padding: 15px 0px;}
+    .delivery-list table tr td div.first {margin-left: 20px;padding: 5px 10px;background-color:#f34a9f;color: #ffffff;margin-right: 5%;border-radius: 5px;position: relative}
+    .delivery-list table tr td div.detail {margin-left: 20px;padding: 5px 10px;background-color:#E7E9ED;;margin-right: 5%;border-radius: 5px;position: relative}
+    .delivery-list table tr td div p{margin-top: 3px;}
+    .status{width: 14px;background: url("../../images/deliver-list.png") no-repeat scroll -18px center;}
+    .status-first{width: 14px;background: url("../../images/deliver-list.png") no-repeat scroll -1px center;}
+    .status-last{width: 14px;background:  url("../../images/deliver-list.png") no-repeat scroll -36px center;}
+
+
+
+    .top{font-size: 14px;background-color: #ffffff;padding: 5px 0px;}
+    .big-txt{font-size: 18px !important;color: #000000;margin:10px 0px 10px 3%}
+    .top p{margin-left: 3%;font-size: 12px;}
+    .error{width: 100%;padding: 15px 0px;text-align: center;background-color: #ffffff}
+
+    .order{margin-top: 10px;background-color: #ffffff;padding-top:8px;}
+    .order-info{margin: 0px 0px 8px 3%;font-size: 14px;}
+    .goods-list{margin-left: 3%;overflow-x: scroll;margin-bottom: 5px;}
+    .goods-list .goods-img-warp{float: left;width: 88px}
+    .goods-list .goods-name{width:80px;padding: 3px 5px;font-size: 10px;height: 20px;overflow: hidden;text-align: center}
+    .goods-list img{width: 80px;height: 80px;margin: 3px 5px;}
+
+    .delivery-info{margin-top: 10px;background-color: #ffffff;padding: 5px 0px;}
+    .delivery-info p{margin-left: 3%;font-size: 12px;}
+
+    .first .angle{position: absolute;width: 10px;height: 10px;left: -10px;top: 50%;margin-top:-15px;background:  url("../../images/deliver-list.png") no-repeat scroll -91px center;}
+    .detail .angle{position: absolute;width: 10px;height: 10px;left: -10px;top: 50%;margin-top:-15px;background:  url("../../images/deliver-list.png") no-repeat scroll -108px center;}
+</style>
+</head>
+<body style="background-color: #E7E9ED">
+<header>
+    <div class="header-wrap">
+        <a href="javascript:void(history.back())" class="header-back">
+            <span>返回</span></a>
+        <h2 id="title">物流信息</h2>
+    </div>
+</header>
+<div class="order-delivery-wp" id="order-delivery"></div>
+
+
+<script type="text/html" id="order-delivery-tmpl">
+
+<div class="order-delivery-wrapper">
+    <% if(error){ %>
+    <div class="error">
+        <%= error %>
+    </div>
+    <%}else{%>
+    <div class="top">
+        <p class="big-txt" style="color: #000;">物流状态 <span style="color: #f34a9f"><%if(order_info.order_state==20){%>等待发货<%}else if(order_info.order_state==30){%>运输中<%}else if(order_info.order_state==40){%>已收货<%}%></span></p>
+        <p>物流公司：<span style="color: #000000"><%= express_name %></span></p>
+        <p>运单编号：<span style="color: #000000"><%= shipping_code %></span></p>
+    </div>
+    <div class="order">
+        <div class="order-info">订单号：<%=order_info.order_sn%></div>
+        <div class="goods-list">
+            <div style="width: <%=order_info.extend_order_goods.length*90+5%>px;padding-left: 5px;">
+                <% for(var j=0;j<order_info.extend_order_goods.length;j++){ var goods= order_info.extend_order_goods[j]; %>
+                <div class="goods-img-warp">
+                    <a href="<%=WapSiteUrl%>/tmpl/product_detail.html?goods_id=<%=goods.goods_id %>">
+                        <img src="<%=goods.goods_image_url%>">
+                    </a>
+                    <div class="goods-name"><%=goods.goods_name%></div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <div class="delivery-info">
+        <p class="big-txt">物流跟踪</p>
+        <p><%=today%></p>
+        <p><%=xq%></p>
+    </div>
+
+        <% if(deliver_info&&deliver_info.status==200){%>
+            <div class="delivery-list">
+                <table cellspacing="0">
+                    <tbody>
+                    <%for(var i=0;i<deliver_info.data.length;i++){%>
+                    <tr>
+                        <td width="10"></td>
+                        <td class="<%if(i==0){%>status-first<%}else if(i==deliver_info.data.length-1){%>status-last<%}else{%>status<%}%>">&nbsp;</td>
+                        <td>
+                            <div class="<%if(i==0){%>first<%}else{%>detail<%}%>">
+                                <div><%= deliver_info.data[i].context%></div>
+                                <p><%= deliver_info.data[i].time%></p>
+                                <div class="angle"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <%}%>
+                    </tbody>
+                </table>
+            </div>
+            <div style="font-size: 12px;text-align: left;padding: 25px 3%;">
+                以上部分信息来自于第三方，仅供参考如需准确信息可联系物流公司
+            </div>
+        <%}else{%>
+            <div style="width: 100%;padding: 30px 0px;background-color: rgb(232,233,237);">
+                <p style="text-align: center;color: #6D6D6D;font-size: 12px;">暂无物流信息</p>
+                <p style="text-align: center;color: #6D6D6D;font-size: 12px;">如需准确信息可联系物流公司</p>
+            </div>
+        <%}%>
+    <%}%>
+</div>
+</script>
+<footer id="footer"></footer>
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/template.js"></script>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/simple-plugin.js"></script>
+<script type="text/javascript" src="../../js/tmpl/order_delivery.js"></script>
+</body>
+</html>

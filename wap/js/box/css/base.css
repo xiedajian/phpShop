@@ -1,0 +1,61 @@
+
+
+.modal-form-pop{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:#ccc;
+    filter:alpha(opacity=30);
+    opacity:0.3;
+    z-index:1000;
+}
+.modal-form{
+    position: absolute;
+    z-index: 1001;
+    min-width: 400px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    background-color: #ffffff;
+    left: 50%;
+    top: 50%;
+    box-shadow: 4px 10px 20px #aaaaaa;
+}
+.form-title-bar{
+    height: 26px;
+    border-bottom: 1px solid #c6c6c6;
+    position: relative;
+    cursor: move;
+    background: url(../images/dialog-title-bg.png) repeat-x bottom;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.title-content{
+    padding: 4px 3%;
+}
+.form-close{
+    position: absolute !important;
+    right: 5px;
+    top: 3px;
+    cursor: pointer;
+    height: 20px;
+    width: 30px;
+    text-align: center;
+}
+.form-body{padding: 0px;}
+.form-body-content{padding: 0px 2%;overflow-y: scroll}
+.loading{vertical-align: middle;text-align: center;margin-top: 50px;}
+
+
+
+/*分页*/
+.page-bar{width: 100%;margin: 10px 0px;}
+.page-bar >ul {list-style: none;margin: 0;padding: 0;}
+.page-bar >ul >li{display: inline-block;margin: 0 3px;}
+.page-bar >ul >li >a{padding: 3px 10px;border: 1px solid #dddddd;border-radius: 5px;cursor: pointer;text-decoration: none;color: #000000}
+.page-bar >ul >li >span.current{background-color: rgb(0,165,255);color: #ffffff !important;border-color: rgb(0,165,255);padding: 3px 10px;border-radius: 3px;}
+.page-bar >ul >li >span{padding: 3px;}
+.page-bar >ul >li >input{padding: 3px;width: 50px}
+.now-page{background-color: rgb(0,165,255)}
+.page-jump{cursor: pointer;color: rgb(0,165,255)}

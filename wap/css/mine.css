@@ -1,0 +1,287 @@
+
+/*我的样式*/
+
+/*头部样式*/
+.bar .font_bold{font-weight: bold;}
+.return_icon_grey ,
+.return_icon_white,
+.certified_icon,
+.none_certified_icon,
+.certified_process_icon,
+.setting_icon,
+.wait_pay_icon,
+.wait_sent_icon,
+.wait_received_icon,
+.return_money_icon,
+.Pay_off_icon,
+.Ious_orders_icon,
+.Credit_Score_icon,
+.Improve_lines_icon,
+.money_icon{display: inline-block; position: absolute; background: url(../img/icon.png) no-repeat ; width: 29px;height: 26px;}
+.return_icon_grey ,
+.return_icon_white{top: 17px;right: 4%;}
+.return_icon_white{background-position: -22px -79px;}
+.return_icon_grey{background-position: -79px -79px;}
+.certified_icon{background-position: -498px -6px;top: 17px;margin-left: -22px;}
+.none_certified_icon{background-position: -433px -6px;top: 17px;margin-left: -22px;}
+.certified_process_icon{background-position: -470px -6px;top: 17px;margin-left: -22px;}
+.setting_icon{background-position: -545px -5px;width: 39px;height: 37px;right: 13px; top: 13px; }
+
+
+.money_icon{background-position: -168px -127px;margin-top:3.5%;}
+
+
+
+
+
+/*.order_main*/ .certifi_head,.mine_head{height: 54px!important;}
+.certifi_head .title,.mine_head .title{line-height: 54px;text-align: left;}
+.certifi_head .title{font-size: 22px;left: 15px!important;}
+.mine_head .title{font-size: 16px;}
+.head_small{font-size: 13px;padding-left:37px;}
+
+.Auth_Info_main .btn_Auth_info_next{margin: 11px auto; width: 93%;border-radius: 39px;}
+
+.text_center{text-align: center;}
+
+.text_gree{color:#0FC33D ;}
+
+
+/*我的首页*/
+.mine_list  .tabs .tab-item{font-size: 3vw;line-height:5vw;color: #000000;overflow: visible;}
+.mine_list .tab-item .badge{top: -3%;right: 21%;font-size: 3.5vw;line-height: normal;height: 5vw; width: 5vw;border-radius: 2.5vw;text-align: center;padding: 0;}
+.mine_list .item-icon-left{padding-left: 40px;}
+.mine_list .item{font-size:4vw;}
+.btn_accout_detail{background-color:#C00000;border: none;color: white;padding: 3px 14px;border-radius: 13px;position: absolute;top: 30%;right: 30vw;}
+.mine_list  .item-icon-right .icon{right: 2px;}
+.text_detail_right{position: absolute;right: 30px;}
+.tab_list_cg .tabs{position: relative;background-size: 100% 0px;padding-top: 2vw;padding-bottom: 2vw;justify-content: space-around;height:20vw;}
+.tab_list_cg .tab-item,.tab_list_bt .tab-item{font-family: "微软雅黑",'苹方';color: #000000;}
+.tab_list_cg .tab-item .icon {/*height: 50px;width:56px;*/position: relative;width: 10vw;height: 10vw;line-height: 10vw;}
+.tab_list_cg .tabs .tab-item .badge{background-color: #C10000;}
+.tab_list_cg .tabs .icon img{width: 10vw;}
+
+.tab_list_bt .tab-item p,.tab_list_bt .tab-item span{font-size:3vw;}
+
+.tab_list_bt .tabs{position: relative;background-size: 100% 0px;padding-top: 2vw;padding-bottom: 2vw;justify-content: space-around;height: 29vw;}
+.tab_list_bt .tabs .icon img{width: 10vw;}
+.tab_list_bt .tab-item .icon {position: relative;width: 10vw;height: 10vw;line-height: 10vw;}
+
+.tab_list_brand{overflow: auto;margin-bottom: 30px;}
+.tab_list_brand >div{width: 49%;float: left;background-color: white;text-align: center;font-size: 13px;padding: 10px 0;margin-bottom: 10px;}
+.brand_div_interval{margin-left: 6px;}
+.tab_list_brand img{width: 80%; position: absolute; left: 0; top: 0; right: 0; bottom: 0;margin: auto;}
+.barand_img{height:35vw;position: relative;}
+.mine_list .item-icon-left .red_bar{background-color: #C00000;width:5px;height:51%;display: inline-block;left: 24px;margin-top: 3vw;}
+.setting_main .mine_main .list{margin-bottom: 10px;}
+.mine_main{padding-top: 10px;}
+
+.wait_pay_icon{background-position: -485px -87px;}
+.wait_sent_icon{background-position: -571px -87px;}
+.wait_received_icon{background-position: -485px -184px;}
+.return_money_icon{background-position: -580px -189px;}
+
+.Pay_off_icon{background-position: -618px -8px;}
+.Ious_orders_icon{background-position: -673px -6px;}
+.Credit_Score_icon{background-position: -723px -8px;}
+.Improve_lines_icon{background-position: -784px -8px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*弹窗复制——order*/
+.mask{z-index:999; position:absolute;left:0; top:0;  width:100%;height: 100%;background: rgba(0,0,0,0.7)}
+.mask_content_height{width: 80%; background-color: white; position: absolute;left: 0;bottom: 0; right: 0;top: 0; margin: auto;/* height:75%;*/height:65%;font-size: 4vw;}
+.mask_content{width: 80%; background-color: white; position: absolute;left: 0;bottom: 0; right: 0;top: 0; margin: auto;/* height:75%;*/height:78%;font-size: 4vw;}
+.btn_red_block,
+.btn_grey_block,
+.btn_white_block{display: block; width: 96%; color: white; font-size: 5vw;padding: 4px 0;border-radius: 20px; border: none; margin: 10px auto;}
+.btn_grey_block{background-color: #999999;}
+.btn_red_block{background-color: #C00000;}
+.btn_white_block{background-color:white;color: black;}
+
+.Auth_main{font-size: 16px;/*background-color:#F5F5F5 ;*/}
+.Auth_Info_main{background-color: white;}
+.Auth_Info{background-color: white;}
+.Auth_Info .active{color: red;border-bottom: 2px solid red;}
+.Auth_Info > li{display: inline-block;width: 32%;padding: 11px 0;text-align: center;background-color: white;}
+.Auth_Info_content{width: 90%;margin: 0 auto;}
+.Auth_Info_content>li{padding: 15px 10px;border-bottom: 1px solid gainsboro;}
+.Auth_Info_content>li:last-child{border-bottom:none;}
+.Auth_Info_content .shop_name{display: inline-block!important;font-size: 16px;padding-top: 0;height: auto;}
+.Auth_info_head{width:29vw;display: inline-block;}
+.info_upload{display: inline-block;border: 1px dashed grey;text-align: center;padding: 10px;}
+.Auth_info_head_center{position: relative;top: -10px;}
+.promise_content{font-size: 13px;padding: 16px 17px;color:#736f6f;}
+.account_img{text-align: center;width: 50%;margin: 10% auto 21px;}
+.account_img img{width: 60%;}
+.Auth_succeed_content{width: 90%;margin: 0 auto;padding-bottom: 20px;}
+.Auth_succeed_content >p{line-height: 1.5;}
+.anth_ok_tip>p:first-child{color: black;font-size: 21px;padding-bottom: 7px;}
+.anth_ok_tip>p:last-child{font-size: 14px;}
+.Audit_content{height: 43%;font-size: 16px;border-radius: 30px;}
+.Audit_content>p:first-child{margin:15px 20px;text-align: center;font-size: 23px;color: #666666; border-bottom: 1px solid gainsboro;padding: 7px 0;}
+.Audit_content .btn_red_block{margin-top:30px;}
+
+/*设置*/
+.setting_main{background-color: #F5F5F5;}
+.Basic_infor{padding: 10px 5%;}
+.person_icon{width: 34px;height: 34px;display: inline-block;background: url(../img/icon.png) no-repeat -185px -374px;position: absolute;right: 42px;margin-top: -6px;}
+.person_icon.img{background: none}
+.person_icon.img img{
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+}
+.name_right{position: absolute;right: 23px;}
+.text_bind_right{position: absolute;right: 43px;}
+.setting_main .btn_Log_out{font-size: 17px;background-color: white;margin: 20px 0;font-weight: bold;}
+.setting_main .list{margin-bottom: 20px;}
+
+
+
+/*账户安全*/
+.lock_blue,.lock_gree,.pay_yellow{width: 34px;height: 34px;display: inline-block;background: url(../img/icon.png) no-repeat ;margin-top: 15px;}
+.lock_gree{background-position: -63px -469px ;}
+.lock_blue{background-position:-6px -467px ;}
+.pay_yellow{background-position:-121px -479px ;margin-top: 26px;}
+.pay_set_position{margin-top: -42px;}
+.account_safe_list .item p{font-family:'PingFang SC Medium',cursive,tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif ;font-size: 13px;margin-bottom: 0;}
+.account_safe_list .item h1{margin-bottom: 7px;}
+.account_safe_list .item {height: 96px;}
+
+/*账户安全--弹窗：确定重置密码*/
+.reset_psw_content{/*height: 40%;*/height:246px;font-size: 15px;border-radius: 30px;text-align: center;padding: 0 6%;}
+.reset_psw_content>h1:first-child { margin: 15px 0; font-size: 23px; color:black; padding-top:10px;}
+.reset_psw_content p{font-size: 14px;color:#999999 ;}
+.reset_psw_content .btn_red_block{margin-top: 28px;}
+
+/*修改密码*/
+.list_top{margin-top: 10px;}
+.psw_erro_tip{text-align: center;/*color: red;*/padding-top: 10px;}
+
+
+/* --------------支付密码-----------------*/
+.top{
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.3rem;
+    background-color: rgb(250,0,1);
+    color: #ffffff;
+    text-indent: 3%;
+    position: relative;
+}
+.top-back{
+    float: right;
+    margin-right: 3%;
+    width: 4rem;
+}
+.content-block{padding: 0 3%;}
+.sub-menu{
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.sub-menu-current{
+    color: rgb(196,14,14);
+    border-bottom: 2px solid rgb(192,0,0);
+}
+.send-tip{margin: 1.5rem 0px;font-size: 1rem}
+.common-tip{margin: 1.5rem 0px;color: rgb(164,164,164)}
+
+.send-code-form{font-size: 0.5rem;margin: 1.5rem 0px;}
+.send-code-form >div{
+    display: inline-block;
+    height:2.5rem;
+    vertical-align: top;
+    margin-right: -4px;
+}
+.send-code-form input{
+    height:2.5rem;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    text-indent: 5px;
+    width: 100% !important;
+}
+.btn-submit{
+    background-color: rgb(192,0,0);
+    color: #ffffff;
+    font-size: 1rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 1.25rem;
+}
+.resend{
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: rgb(192,0,0);
+    border-radius: 1.25rem;
+}
+.count-down{
+    font-size: 0.5rem;
+    text-align: center;
+    color:rgb(39,128,232)
+}
+
+
+.inline{width: 100%}
+.inline > li{display: inline-block;}
+.w50{width: 49%}
+
+.password-form{margin: 2rem 0px;font-size: 1rem}
+.password-form input{border: none}
+.password-form >div{margin: 1rem 0px}
+.password-form >div >div{display: inline-block;}
+.password-form >div >div:first-child{width: 33%;min-width: 100px}
+/* --------------支付密码-----------------*/
+
+/*代付人*/
+.payAgent_content{background-color:#F5F5F5 ;}
+.payAgent_content  .ion-ios-arrow-right{right:-0.5vw;}
+.payAgent_content .btn_addr{position: absolute;right:19vw;}
+.payAgent_content .delete_icon{font-size: 28px;right:7vw;}
+.payAgent_content .item:first-child{margin-top:12px;}
+.payAgent_content .item{margin:8px 0;}
+
+
+/*设置登录密码*/
+.green_check,.red_check{width: 15%;text-align: center;font-size: 32px;}
+.red_check{color:#BF0101;}
+.green_check{color:#15CE15;}
+
+/*设置修改密码*/
+.change-phone{
+    position: relative;
+}
+.sendCode{
+    position: absolute;width: 30vw;right:2vw;text-align: center;height:9.5vw;line-height:9.5vw;font-size: 4vw;color: #ffffff;background-color: rgb(192,0,0);border-radius: 10vw;
+}
+/*绑定手机号码，信息框样式*/
+#msg{
+    height:5vh;line-height: 5vh;margin-bottom: 1vh;text-align: center;width: 100%;
+}
+.err-msg{
+    background-color: rgb(255,227,227);color:red;
+}

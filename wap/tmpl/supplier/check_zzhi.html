@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">	
+		<link href="../../css/reset.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../../css/qualification.css" />
+		<link rel="stylesheet" href="../../css/mine.css" />
+		<script src="../../js/jquery.min.js"></script>
+		<title>查看企业资质</title>
+	</head>
+	<body class="bg_hs">
+		<header>
+			<div class="quali_head">
+				<a class=" return_icon_grey"></a>
+				<img src="../../images/en_zzhi_03.png"/>
+				<p class="p1">福建星心贸易有限公司</p>
+				<p >企业资质</p>
+			</div>
+		</header>
+		<div class="quali_cotent white_bg">
+			<p class="p1">共有4个资料，点击查看</p>
+		<div class="tab_list_brand">
+					<div class="business_license">
+						<div class="barand_img">
+						<img class="icon " src="../../images/zizhi_06.png"/>
+						</div>
+						<p class="p_qulifi">营业执照</p>									
+					</div>
+					<div class="brand_div_interval Tax_registration">
+						<div class="barand_img">
+						<img class="icon " src="../../images/zizhi_09.png"/>
+						</div>
+						<p class="p_qulifi">税务登记证</p>											
+					</div>
+					<div class="reduce_img import_entry">
+						<div class="barand_img">
+						<img class="icon " src="../../images/zizhi_18.png"/>
+						</div>					
+						<p class="p_qulifi">花生进口报关单</p>						
+					</div>
+					<div class="brand_div_interval Franchise_authorized">
+						<div class="barand_img">
+						<img class="icon " src="../../images/zizhi_21.jpg"/>
+						</div>					
+						<p class="p_qulifi">美赞臣特许经销授权</p>						
+					</div>
+	    </div>
+		</div>
+		<!--企业资质弹窗-->
+		<div class="mask business_license_mask hide">
+			<i class="cricle_close_icon"></i>
+			<img src="../../images/qualification1_03.jpg" class="zz_img"/>
+		</div>
+		
+		<!--税务登记证-->
+		<div class="mask Tax_registration_mask hide">
+			<i class="cricle_close_icon"></i>
+			<img src="../../images/zizhi_09.png" class="zz_img"/>
+		</div>
+		
+		<!--花生进口报关单-->
+		<div class="mask import_entry_mask hide">
+			<i class="cricle_close_icon"></i>
+			<img src="../../images/zizhi_18.png" class="zz_img"/>
+		</div>
+		
+		<!--美赞臣特许经销授权-->
+		<div class="mask Franchise_authorized_mask hide">
+			<i class="cricle_close_icon"></i>
+			<img src="../../images/zizhi_21.jpg" class="zz_img"/>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+//点击按钮叉,关闭弹窗
+	$(".cricle_close_icon").click(function(){
+		$(".mask").hide();
+	});
+	
+//	营业执照资质
+    $(".business_license").click(function(){
+		$(".business_license_mask").show();
+	});
+	
+	//	税务登记证
+    $(".Tax_registration").click(function(){
+		$(".Tax_registration_mask").show();
+	});
+	
+	//	花生进口报关单
+    $(".import_entry").click(function(){
+		$(".import_entry_mask").show();
+	});
+	
+	//	美赞臣特许经销授权
+    $(".Franchise_authorized").click(function(){
+		$(".Franchise_authorized_mask").show();
+	});
+	
+	
+	
+</script>

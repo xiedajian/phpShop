@@ -1,0 +1,85 @@
+
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <style type="text/css">
+        #footer{position: fixed;bottom: 0}/*让foot都在底边*/
+        .check_color{font-family:  '微软雅黑';font-size: 14px;color: #E1017E}
+    </style>
+
+
+<div class="wrapper">
+<div class="person_center">个人中心</div><div class="person_line"></div>
+<div class="mine_left">
+    <ul class="store_ul">
+        <li class="my_class" ><img class="img_class" src="../image/my_class1.png">我的课堂</li>
+        <li class="my_phone xuanzhong" ><img class="img_phone" src="../image/my_phone.png">联系我们</li>
+    </ul>
+</div>
+<div class="mine_right">
+    <div id="minephone">
+        <div class="mine_ul">
+            <ul>
+                <li class="kefu xz">联系客服</li>
+                <li class="daoshi">联系营销导师</li>
+            </ul>
+            <div id="kefu">
+                <div class="kf_title"> 您好，有关微商城相关的营销问题欢迎通过以下方式联系我们，我们将竭诚为您服务！</div>
+                <p>电话：4000908982</p>
+                <p>QQ：2785299647</p>
+                <p>邮箱：pindanwang@126.com</p>
+                <p>微信：母婴拼单网</p>
+                <p class="office">福州拼单网电子商务有限公司<span class="check_color">>>关于我们</span></p>
+            </div>
+            <div id="daoshi" style="display: none">
+                <div class="kf_title"> 您好，有关微商城相关的营销问题欢迎通过以下方式联系我们，我们将竭诚为您服务！</div>
+                <p>联系人：姜薇</p>
+                <p>电话：12345667899</p>
+                <p>QQ：2132132123</p>
+                <p>微信：325645362253</p>
+                <p class="office">福州拼单网电子商务有限公司<span class="check_color">>>关于我们</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".class_ul li").click(function(){
+            $(".class_ul li").removeClass("xz");
+            var id = $(this).attr("name");
+            $("div.classs").addClass("hide");
+            $("#" + id).removeClass("hide");
+            $(this).addClass("xz");
+        });
+
+
+//客服和营销导师切换
+        $(".kefu").click(function(){
+            $("#kefu").css("display","block");
+            $("#daoshi").css("display","none");
+            $(".daoshi").removeClass("xz");
+            $(".kefu").addClass("xz");
+        });
+        $(".daoshi").click(function(){
+            $("#kefu").css("display","none");
+            $("#daoshi").css("display","block");
+            $(".kefu").removeClass("xz");
+            $(".daoshi").addClass("xz");
+        });
+
+
+    });
+
+
+
+</script>
+
+

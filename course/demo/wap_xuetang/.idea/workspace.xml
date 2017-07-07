@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4d04c201-6afe-4e99-960d-33f4656b6468" name="默认的" comment="" />
+    <ignored path="wap_xuetang.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="wap_xuetang" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="demo.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/demo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="105" column="13" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0" vertical-offset="2452" max-vertical-offset="3348">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course_detail.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/course_detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="31" selection-start="1057" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="891" max-vertical-offset="4320">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="top.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/top.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="12" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="837">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tuwen_detail.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tuwen_detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="333" column="76" selection-start="24739" selection-end="24739" vertical-scroll-proportion="0.0" vertical-offset="8603" max-vertical-offset="9612">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="17" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1755">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/layout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="45" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1593">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="center.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/center.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="118" column="19" selection-start="4098" selection-end="4108" vertical-scroll-proportion="0.0" vertical-offset="2673" max-vertical-offset="4590">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video_detail.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/video_detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="40" selection-start="958" selection-end="958" vertical-scroll-proportion="0.22261484" vertical-offset="378" max-vertical-offset="1998">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="63" selection-start="5272" selection-end="5272" vertical-scroll-proportion="0.0" vertical-offset="1913" max-vertical-offset="6183">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/course.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="169" column="0" selection-start="12349" selection-end="12349" vertical-scroll-proportion="0.0" vertical-offset="4563" max-vertical-offset="4887">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/myfav.php" />
+        <option value="$PROJECT_DIR$/phone_kefu.php" />
+        <option value="$PROJECT_DIR$/search_list1.php" />
+        <option value="$PROJECT_DIR$/yi_puchased.php" />
+        <option value="$PROJECT_DIR$/service-notice.php" />
+        <option value="$PROJECT_DIR$/dai_purchased.php" />
+        <option value="$PROJECT_DIR$/comment.php" />
+        <option value="$PROJECT_DIR$/search_list.php" />
+        <option value="$PROJECT_DIR$/css/demo.css" />
+        <option value="$PROJECT_DIR$/tuwen_detail.php" />
+        <option value="$PROJECT_DIR$/js/layout.js" />
+        <option value="$PROJECT_DIR$/top.php" />
+        <option value="$PROJECT_DIR$/center.php" />
+        <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/css/course.css" />
+        <option value="$PROJECT_DIR$/course_detail.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/video_detail.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="添加" />
+    <OptionsSetting value="true" id="移除" />
+    <OptionsSetting value="true" id="签出" />
+    <OptionsSetting value="true" id="更新" />
+    <OptionsSetting value="true" id="状态" />
+    <OptionsSetting value="true" id="编辑" />
+    <ConfirmationsSetting value="0" id="添加" />
+    <ConfirmationsSetting value="0" id="移除" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap_xuetang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap_xuetang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap_xuetang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap_xuetang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap_xuetang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d04c201-6afe-4e99-960d-33f4656b6468" name="默认的" comment="" />
+      <created>1452149305685</created>
+      <updated>1452149305685</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25985092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2548387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="13" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3348">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="31" selection-start="1057" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="891" max-vertical-offset="4320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="837">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuwen_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="76" selection-start="24739" selection-end="24739" vertical-scroll-proportion="0.0" vertical-offset="8603" max-vertical-offset="9612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="17" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="45" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1593">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/center.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="19" selection-start="4098" selection-end="4108" vertical-scroll-proportion="0.0" vertical-offset="2673" max-vertical-offset="4590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1998">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="63" selection-start="5272" selection-end="5272" vertical-scroll-proportion="0.0" vertical-offset="1913" max-vertical-offset="6183">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/course.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="0" selection-start="12349" selection-end="12349" vertical-scroll-proportion="0.0" vertical-offset="4563" max-vertical-offset="4887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="13" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0" vertical-offset="2835" max-vertical-offset="3348">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="28" selection-start="1981" selection-end="1981" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="4617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="837">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuwen_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="31" selection-start="873" selection-end="959" vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="9612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="101" selection-start="2501" selection-end="2501" vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="45" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1593">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/center.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="19" selection-start="4098" selection-end="4108" vertical-scroll-proportion="0.0" vertical-offset="2673" max-vertical-offset="4590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dai_purchased.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="63" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2781" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/course.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="67" selection-start="4610" selection-end="4610" vertical-scroll-proportion="0.0" vertical-offset="1566" max-vertical-offset="4536">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="63" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="1458" max-vertical-offset="4050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="35" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="972" max-vertical-offset="3564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="4455" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuwen_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="50" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0" vertical-offset="6092" max-vertical-offset="6939">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yi_puchased.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="26" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="2214" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="86" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="2781" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/center.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="6" selection-start="3663" selection-end="3663" vertical-scroll-proportion="0.0" vertical-offset="1053" max-vertical-offset="5427">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dai_purchased.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="25" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="2781" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/course.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="34" selection-start="6616" selection-end="6616" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="3105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myfav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="686" selection-end="686" vertical-scroll-proportion="-13.5" vertical-offset="0" max-vertical-offset="1593" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phone_kefu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="729" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-notice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="36" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.5419126" vertical-offset="162" max-vertical-offset="1188" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yi_puchased.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="26" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.38252658" vertical-offset="486" max-vertical-offset="2214" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="9" selection-start="3144" selection-end="3144" vertical-scroll-proportion="-11.508197" vertical-offset="567" max-vertical-offset="2376" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="3" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.43052393" vertical-offset="648" max-vertical-offset="4347" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lrtk.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="11" selection-start="590" selection-end="590" vertical-scroll-proportion="0.4682081" vertical-offset="0" max-vertical-offset="1188" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="4050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="45" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1539">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="837">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="17" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dai_purchased.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="63" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2781" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="13" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0" vertical-offset="2835" max-vertical-offset="3348">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/course.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="0" selection-start="12349" selection-end="12349" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/center.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="19" selection-start="4098" selection-end="4108" vertical-scroll-proportion="0.0" vertical-offset="2673" max-vertical-offset="4590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="63" selection-start="5272" selection-end="5272" vertical-scroll-proportion="0.0" vertical-offset="1913" max-vertical-offset="6183">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tuwen_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="76" selection-start="24739" selection-end="24739" vertical-scroll-proportion="0.0" vertical-offset="8603" max-vertical-offset="9612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="31" selection-start="1057" selection-end="1525" vertical-scroll-proportion="0.0" vertical-offset="891" max-vertical-offset="4320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video_detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="40" selection-start="958" selection-end="958" vertical-scroll-proportion="0.22261484" vertical-offset="378" max-vertical-offset="1998">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

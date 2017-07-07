@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+    <style>
+        body{background-color: rgb(231,233,237);font-size:14px;}
+        .center-top{width: 100%;height: 90px;background: url(../../images/center_top_bg.jpg) no-repeat scroll 0 0;background-size:100% 100%;}
+        .center-top2{width: 100%;height: 50px;background-color: rgb(255,253,253);position: relative}
+        .center_avatar{width: 80px;height: 80px;border-radius: 40px;position: absolute;left: 10px;top: -50px;}
+        .member-info{height: 40px;position: absolute;left: 100px;top: -45px;line-height: 40px;font-size: 1.4em;color: #ffffff}
+        .center-top-menu{width:75%;float: right;}
+        .center-top-menu ul{display: inline-block;width: 100%}
+        .center-top-menu ul li{width: 50%;float: left;text-align: center;}
+        .center-top-menu ul li p{margin-top: 3px;line-height: 20px;color:rgb(64,61,61)}
+/*
+        .center-icon{background: url(../../images/member_center_icon.png) no-repeat;margin:0px auto;position: relative;}
+        .cg-icon{width: 43px;height: 40px;background-position: -15px -15px;}
+        .dfk-icon{width: 43px;height: 40px;background-position: -66px -15px;}
+        .dfh-icon{width: 43px;height: 40px;background-position: -124px -15px;}
+        .dsh-icon{width: 43px;height: 40px;background-position: -177px -15px;}
+        .evaluate-icon{width: 43px;height: 40px;background-position: -174px -122px;}
+        .refund-icon{width: 43px;height: 40px;background-position: -228px -122px;}
+*/
+
+        .center-icon{background: url(../../images/member_center.png) no-repeat;margin:0px auto;position: relative;}
+        .cg-icon{width: 43px;height: 40px;background-position: -15px -15px;}
+        .dfk-icon{width: 43px;height: 40px;background-position: -9px -20px;}
+        .dfh-icon{width: 43px;height: 40px;background-position: -44px -20px;}
+        .dsh-icon{width: 43px;height: 40px;background-position: -79px -20px;}
+        .evaluate-icon{width: 43px;height: 40px;background-position: -114px -20px;}
+        .refund-icon{width: 43px;height: 40px;background-position: -149px -20px;}
+        /*
+        .icon-top{min-width:21px;height:20px;line-height:20px;padding-top:1px;background-color: #f34a9f;border-radius: 11px;top:-5px;;left: 23px;position: absolute;color: #ffffff;}
+        .fav-icon{width: 43px;height: 40px;background-position: -70px -124px;display: inline-block;vertical-align: middle}
+        .history-icon{width: 43px;height: 40px;background-position: -123px -124px;display: inline-block;vertical-align: middle}
+        .czk-icon{width: 43px;height: 40px;background-position: -16px -72px;display: inline-block;vertical-align: middle}
+        .dprz-icon{width: 43px;height: 40px;background-position: -70px -71px;display: inline-block;vertical-align: middle}
+        .wdprz-icon{width: 43px;height: 40px;background-position: -16px -124px;display: inline-block;vertical-align: middle}
+        .dzgl-icon{width: 43px;height: 40px;background-position: -123px -72px;display: inline-block;vertical-align: middle}
+        .vip-icon{width: 60px;height: 25px;background-position: -213px -80px;display: inline-block;vertical-align: middle;top: -7px;}
+        .arrow-icon{background-position: -219px -34px;display: inline-block;vertical-align: middle;}
+        .auth-icon{background-position: -167px -90px;display: inline-block;vertical-align: middle;margin-left: -45px;}
+        */
+        .icon-top{min-width:21px;height:20px;line-height:20px;padding-top:1px;background-color: #f34a9f;border-radius: 11px;top:-5px;;left: 23px;position: absolute;color: #ffffff;}
+        .fav-icon{width: 25px;height: 40px;background-position: -159px -58px;display: inline-block;vertical-align: middle}
+        .history-icon{width: 25px;height: 40px;background-position: -194px -58px;display: inline-block;vertical-align: middle}
+        .czk-icon{width: 25px;height: 40px;background-position: -17px -58px;display: inline-block;vertical-align: middle}
+        .dprz-icon{width: 25px;height: 40px;background-position: -53px -58px;display: inline-block;vertical-align: middle}
+        .wdprz-icon{width: 25px;height: 40px;background-position: -88px -58px;display: inline-block;vertical-align: middle}
+        .dzgl-icon{width: 25px;height: 40px;background-position: -124px -58px;display: inline-block;vertical-align: middle}
+
+        .vip-icon{width: 40px;height: 25px;background-position:-16px -100px;display: inline-block;vertical-align: middle;top: -7px;}
+        .arrow-icon{background-position:-228px -68px;;display: inline-block;vertical-align: middle;}
+        .auth-icon{background-position: -246px -74px;display: inline-block;vertical-align: middle;margin-left: -18px !important;width: 20px !important;}
+
+
+
+        .sep{width: 100%;height: 10px;}
+        .menu_2{background-color: #ffffff;border-bottom:1px solid  rgb(220,219,219);border-top:1px solid  rgb(220,219,219);color:rgb(64,61,61);}
+        .menu_2 .title{padding: 16px 0px 10px 3%;font-size: 14px;}
+        .menu_2 .title .purchase-txt{left: 90%;position: absolute;color: rgb(181,179,179);width: 100px;margin-left: -100px;text-align: center}
+        .menu_2 div ul{width: 90%;margin: 10px 5% 0px;display: inline-block;}
+        .menu_2 div ul li{width: 25%;float: left;text-align: center;}
+        .menu_2 div ul li p{margin-top: 3px;line-height: 20px;color:rgb(64,61,61); }
+
+
+        .menu_3{background-color: #ffffff;border-bottom:1px solid  rgb(220,219,219);border-top:1px solid  rgb(220,219,219); }
+        .menu_3 .item{padding: 2px 0px 0px 3%;}
+        .menu_3 .txt{line-height: 40px;height: 40px;font-size: 16px;color:rgb(64,61,61);margin-left: 5px;}
+        .menu_3 .right-icon{left: 97%;position: absolute;margin-top: 10px;width: 12px;height: 20px;margin-left: -15px;}
+        .menu_3 .right-txt{left: 90%;position: absolute;color: #f34a9f;width: 100px;margin-left: -100px;text-align: center}
+
+
+        .logout_btn{width: 90%;border-radius: 5px;text-align: center;color: #ffffff;font-size: 22px;margin: 30px 5% 70px 5%;background-color: rgb(77,174,253);padding: 15px 0px;cursor: pointer}
+        #footer>div.footer{display: none;}
+        .sep-line{width: 94%;border-top:1px solid  #EEEEEE;margin: 0px auto}
+    </style>
+</head>
+<body>
+    <div class="center-top"></div>
+
+    <div class="center-top2">
+        <img id="avatar" class="center_avatar" src="">
+        <div class="member-info">
+            <span id="username"></span>
+            <span><span class="center-icon" id="vip"></span></span>
+        </div>
+        <div class="center-top-menu">
+            <ul>
+                <li>
+                    <p style="color: #f34a9f" id="predepoit">0.00</p>
+                    <p>账户余额</p>
+                </li>
+                <li>
+                    <p style="color: #f34a9f" id="available_rc_balance">0.00</p>
+                    <p>充值卡余额</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sep"></div>
+    <div class="menu_2">
+        <div class="title">
+                <span>已采购的商品</span>
+                <a href="order_center.html?op=purchase_record">
+                    <span class="purchase-txt">全部采购记录</span>
+                    <span class="center-icon arrow-icon" style="left: 97%;position: absolute;width: 12px;height: 40px;margin-left: -15px;margin-top: -5px;"></span>
+                </a>
+        </div>
+        <div class="sep-line"></div>
+
+        <div>
+            <ul>
+                <li>
+                    <a href="order_center.html?op=order_pay">
+                        <div class="center-icon dfk-icon">
+                            <div class="icon-top" id="nopay">0</div>
+                        </div>
+                    </a>
+                    <span>待付款</span>
+                </li>
+                <li>
+                    <a href="order_center.html?op=order_wait_send">
+                        <div class="center-icon dfh-icon">
+                            <div class="icon-top" id="nosend">0</div>
+                        </div>
+                    </a>
+                    <span>待发货</span>
+                </li>
+                <li>
+                    <a href="order_center.html?op=order_wait_rec">
+                        <div class="center-icon dsh-icon">
+                            <div class="icon-top" id="norecevice">0</div>
+                        </div>
+                    </a>
+                    <span>待收货</span>
+                </li>
+                <li style="display: none">
+                    <a><!-- href="order_center.html?op=order_wait_rec"-->
+                        <div class="center-icon evaluate-icon">
+                            <div class="icon-top" id="evaluate">0</div>
+                        </div>
+                    </a>
+                    <span>待评价</span>
+                </li>
+                <li>
+                    <a href="order_center.html?op=order_wait_refund">
+                        <div class="center-icon refund-icon">
+                            <div class="icon-top" id="refund">0</div>
+                        </div>
+                    </a>
+                    <span>退款中</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sep"></div>
+    <div class="menu_3">
+        <a href="favorites.html">
+            <div class="item">
+                <span class="center-icon fav-icon"></span>
+                <span class="txt">我的收藏</span>
+                <span class="center-icon right-icon arrow-icon"></span>
+            </div>
+        </a>
+        <div class="sep-line"></div>
+        <a href="views_list.html">
+            <div class="item">
+                <span class="center-icon history-icon"></span>
+                <span class="txt">我的足迹</span>
+                <span class="center-icon right-icon arrow-icon"></span>
+            </div>
+        </a>
+    </div>
+    <div class="sep"></div>
+    <div class="menu_3">
+        <a href="card.html">
+            <div class="item">
+                <span class="center-icon czk-icon"></span>
+                <span class="txt">充值卡充值</span>
+                <span class="center-icon right-icon arrow-icon"></span>
+            </div>
+        </a>
+        <div class="sep-line"></div>
+
+        <div class="item">
+            <span class="center-icon wdprz-icon"></span>
+            <span class="txt">店铺认证</span>
+            <span id="auth" style="display: none;">
+                <a href="ipvp_auth.html"><span class="txt right-txt">马上去认证</span></a>
+                <span class="center-icon right-icon arrow-icon"></span>
+            </span>
+            <span id="auth0" style="display: none;">
+                <span class="txt right-txt" style="color: rgb(74,174,253)">认证中</span>
+                <span class="center-icon right-icon arrow-icon"></span>
+            </span>
+            <span id="auth1" style="display: none;">
+                <span class="txt right-txt" style="color: rgb(74,174,253)">已认证</span>
+                <span class="center-icon right-icon auth-icon"></span>
+            </span>
+            <span id="auth2" style="display: none;">
+                <a href="ipvp_auth.html"><span class="txt right-txt">认证失败</span></a>
+                <span class="center-icon right-icon arrow-icon"></span>
+            </span>
+        </div>
+
+        <div class="sep-line"></div>
+        <a href="address_list.html">
+            <div class="item">
+                <span class="center-icon dzgl-icon"></span>
+                <span class="txt">地址管理</span>
+                <span class="center-icon right-icon arrow-icon"></span>
+            </div>
+        </a>
+    </div>
+
+    <div id="" class="logout_btn" onclick="location.href=SiteUrl+'/shop/index.php?act=login&op=logout'">
+        退出当前账号
+    </div>
+
+
+    <div class="footer" id="footer"></div>
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../../js/template.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/common-top.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/member.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/footer.js"></script>
+</body>
+</html>

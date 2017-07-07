@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看退款</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <style>
+        .header-wrap {
+            position: relative;
+            background: #E1017E none repeat scroll 0% 0%;
+            z-index: 8888;
+            height: 50px;
+        }
+        .header-back {
+            position: absolute;
+            top: 8px;
+            left: 6px;
+            width: 30px;
+            height: 32px;
+            display: inline-block;
+        }
+        .header-back span {
+            width: 38px;
+            height: 38px;
+            text-indent: -9999px;
+            background-position: -76px 2px;
+        }
+        .header-wrap h2 {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #FFF;
+            text-align: center;
+        }
+
+        .step-warp{background-color: rgb(232,233,237);padding:25px 0px 30px 0px;text-align: center;margin-left: 5px;}
+        .step-warp .step{display: inline-block;position: relative;margin-left: -4px;}
+        .step-warp .current-step{display: inline-block;position: relative;margin-left: -4px;}
+        .step-warp .all-4{width: 30%;}
+        .step-warp .all-3{width: 45%;}
+
+        .step-warp div:first-child .tip{margin-right: -70px !important;}
+        .step-warp div:last-child .tip{margin-right: -20px !important;}
+        .step-warp .step .tip{color: rgb(80,173,230);top: -26px;position: absolute;font-size: 10px;width: 100px;right: 0px;margin-right: -50px;}
+        .step-warp .step .dot{width: 10px;height: 10px;border-radius: 5px;background-color: rgb(80,173,230);top: -4px;right:0px;position: absolute;z-index: 1}
+        .step-warp .step .line{height:2px;position: relative;background-color: rgb(80,173,230);width: 100%;}
+
+        .step-warp .current-step .tip{color: rgb(243,74,159);top: -26px;position: absolute;font-size: 10px;width: 100px;right: 0px;margin-right: -50px;}
+        .step-warp .current-step .dot{width: 10px;height: 10px;border-radius: 5px;background-color:  rgb(243,74,159);top: -4px;right:0px;position: absolute;z-index: 1}
+        .step-warp .current-step .line{height:2px;position: relative;background-color: rgb(243,74,159);width: 100%;}
+        .down{top: 8px !important;}
+
+        .content-warp{background-color: #ffffff;padding: 3%;margin-bottom: 15px;font-size: 12px;}
+        .content-warp div.head{font-weight: 700}
+        .content-warp dt{display: inline-block;padding: 5px 0px;}
+        .content-warp dd{display: inline-block;padding: 5px 0px 5px 5px;}
+
+        .goods-warp{width: 100%;overflow-x: scroll;}
+        .goods-list{}
+        .goods{width: 60px;padding: 10px;margin-right: 10px;display: inline-block}
+        .goods .name{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
+        .op-bar{
+            background-color: #FFF;
+            height: 60px;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            box-shadow: 0px 0px 8px;
+            text-align: center;
+        }
+        .op-bar div{
+            width: 80px;
+            margin: 15px auto;
+            background-color: rgb(0,157,233);
+            padding: 5px;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        .delivery-list{font-size: 12px;background-color: #ffffff;color: rgb(164,164,164);padding: 10px;margin-top:10px;border-top: 1px solid rgb(210,210,211);border-bottom: 1px solid rgb(210,210,211);padding-left: 3%;}
+        .delivery-list table{width: 100%}
+        .delivery-list table tr{width: 100%}
+        .delivery-list table tr td{padding: 15px 0px;}
+        .delivery-list table tr td div.first {margin-left: 20px;padding: 5px 10px;background-color:#f34a9f;color: #ffffff;margin-right: 5%;border-radius: 5px;position: relative}
+        .delivery-list table tr td div.detail {margin-left: 20px;padding: 5px 10px;background-color:#E7E9ED;;margin-right: 5%;border-radius: 5px;position: relative}
+        .delivery-list table tr td div p{margin-top: 3px;}
+        .status{width: 14px;background: url("../../images/deliver-list.png") no-repeat scroll -18px center;}
+        .status-first{width: 14px;background: url("../../images/deliver-list.png") no-repeat scroll -1px center;}
+        .status-last{width: 14px;background:  url("../../images/deliver-list.png") no-repeat scroll -36px center;}
+
+    </style>
+
+</head>
+<body style="background-color: #E7E9ED">
+
+    <header>
+        <div class="header-wrap">
+            <a href="javascript:void(history.back())" class="header-back">
+                <span>返回</span></a>
+            <h2 id="title">查看退款</h2>
+        </div>
+    </header>
+
+    <div id="detail"></div>
+    <script type="text/html" id="refund_detail">
+
+        <%if(refund.return_type==1){%>
+        <div class="step-warp">
+            <div class="current-step" style="height: 2px;">
+                <div class="tip">买家申请退款</div>
+                <div class="dot"></div>
+            </div>
+            <div class="<%if(refund.seller_state>1){%>current-<%}%>step all-3 ">
+                <div class="tip">商家处理退款申请</div>
+                <div class="dot"></div>
+                <div class="line"></div>
+            </div>
+            <div class="<%if(refund.refund_state==3&&refund.seller_state==2){%>current-<%}%>step all-3">
+                <div class="tip">平台审核&nbsp;退款成功</div>
+                <div class="dot"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <%}else{%>
+        <div class="step-warp">
+            <div class="current-step" style="height: 2px;">
+                <div class="tip">买家申请退款</div>
+                <div class="dot"></div>
+            </div>
+            <div class="<%if(refund.seller_state>1){%>current-<%}%>step all-4 ">
+                <div class="tip down">商家处理退款申请</div>
+                <div class="dot"></div>
+                <div class="line"></div>
+            </div>
+            <div class="<%if(refund.seller_state==2&&refund.goods_state>=2){%>current-<%}%>step all-4">
+                <div class="tip">买家退货给商家</div>
+                <div class="dot"></div>
+                <div class="line"></div>
+            </div>
+            <div class="<%if(refund.refund_state==3&&refund.seller_state==2){%>current-<%}%>step all-4">
+                <div class="tip down">确认收货&nbsp;平台审核</div>
+                <div class="dot"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <%}%>
+
+        <div class="content-warp">
+            <dl>
+                <dt>退款金额:</dt><dd><span style="color: rgb(243,74,159)">¥<%=refund.refund_amount%></span></dd>
+            </dl>
+            <%if(refund.refund_type==2){%>
+            <dl>
+                <dt>退货数量:</dt><dd><span style="color: rgb(243,74,159)"><%=refund.goods_num%></span></dd>
+            </dl>
+            <%}%>
+            <dl>
+                <dt>退款原因:</dt><dd><%=refund.reason_info%></dd>
+            </dl>
+            <dl>
+                <dt>退款说明:</dt><dd><%=refund.buyer_message%></dd>
+            </dl>
+            <dl>
+                <dt>上传凭证:</dt>
+                <dd>
+                    <div>
+
+                        <% if(refund.pic_info.buyer){for(var i in refund.pic_info.buyer){ var img = refund.pic_info.buyer[i];if(img){%>
+                            <img src="<%=refund.dir%><%=img%>" style="max-width: 25%;">
+                        <%}}}%>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+
+
+        <%if(refund.seller_state>1){%>
+        <div class="content-warp">
+            <div class="head">商家处理</div>
+            <dl><dt>审核状态:</dt><dd><%if(refund.seller_state==1){%>待审核<%}else if(refund.seller_state==2){%>同意<%}else if(refund.seller_state==3){%>不同意<%}%></dd></dl>
+            <dl><dt>审核备注:</dt><dd><%=refund.seller_message%></dd></dl>
+        </div>
+        <%}%>
+
+        <%if(refund.refund_type==2&&refund.return_type==2&&refund.express_id&&refund.invoice_no){%>
+        <div class="content-warp">
+            <div class="head" style="position: relative">我的退货信息
+                <span class="search-delivery" express_id="<%=refund.express_id%>" shipping_code="<%=refund.invoice_no%>" style="position: absolute;right: 10px;color:#E1017E;top: 15px;padding: 10px;">V</span>
+            </div>
+            <dl><dt>物流信息:</dt><dd><%=refund.express_info.e_name%>,<%=refund.invoice_no%>
+            </dd></dl>
+            <div class="delivery-box" load="1" style="display: none">
+                <span>加载中...</span>
+            </div>
+        </div>
+        <%}%>
+
+        <%if(refund.refund_state>1&&refund.seller_state==2){%>
+        <div class="content-warp">
+            <div class="head">平台审核</div>
+            <dl><dt>审核状态:</dt><dd><%if(refund.refund_state==2){%>处理中<%}else if(refund.refund_state==3){%>已完成<%}%></dd></dl>
+            <dl><dt>审核备注:</dt><dd><%=refund.admin_message%></dd></dl>
+        </div>
+        <%}%>
+
+        <div class="content-warp"   <%if(refund.seller_state==2&&refund.return_type==2&&!refund.invoice_no){%>style="margin-bottom: 60px;"<%}%>>
+            <div class="head">订单号:<%=order_info.order_sn%></div>
+            <div class="goods-warp">
+                <div class="goods-list" style="width: <%=order_info.extend_order_goods.length*95%>px">
+                    <% for(var i=0;i<order_info.extend_order_goods.length;i++){ var goods = order_info.extend_order_goods[i];%>
+                    <div class="goods">
+                        <a href="<%=WapSiteUrl%>/tmpl/product_detail.html?goods_id=<%=goods.goods_id%>">
+                        <img src="<%=goods.goods_image_url%>" width="60" height="60">
+                        </a>
+                        <p class="name"><%=goods.goods_name%></p>
+                    </div>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <%if(refund.seller_state==2&&refund.return_type==2&&!refund.invoice_no){%>
+        <div class="op-bar">
+            <div onclick="location.href='<%=WapSiteUrl%>/tmpl/member/refund_send.html?refund_id=<%=refund_id%>'">退货</div>
+        </div>
+        <%}%>
+    </script>
+    <script type="text/html" id="delivery">
+        <% if(deliver_info&&deliver_info.status==200){%>
+        <div class="delivery-list">
+            <table cellspacing="0">
+                <tbody>
+                <%for(var i=0;i<deliver_info.data.length;i++){%>
+                <tr>
+                    <td width="10"></td>
+                    <td class="<%if(i==0){%>status-first<%}else if(i==deliver_info.data.length-1){%>status-last<%}else{%>status<%}%>">&nbsp;</td>
+                    <td>
+                        <div class="<%if(i==0){%>first<%}else{%>detail<%}%>">
+                            <div><%= deliver_info.data[i].context%></div>
+                            <p><%= deliver_info.data[i].time%></p>
+                            <div class="angle"></div>
+                        </div>
+                    </td>
+                </tr>
+                <%}%>
+                </tbody>
+            </table>
+        </div>
+        <div style="font-size: 12px;text-align: left;padding: 25px 3%;">
+            以上部分信息来自于第三方，仅供参考如需准确信息可联系物流公司
+        </div>
+        <%}else{%>
+        <div style="width: 100%;padding: 30px 0px;background-color: rgb(232,233,237);">
+            <p style="text-align: center;color: #6D6D6D;font-size: 12px;">暂无物流信息</p>
+            <p style="text-align: center;color: #6D6D6D;font-size: 12px;">如需准确信息可联系物流公司</p>
+        </div>
+        <%}%>
+    </script>
+    <script type="text/javascript" src="../../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../../js/template.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/simple-plugin.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/common-top.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/footer.js"></script>
+    <script type="text/javascript" src="../../js/ap.js"></script>
+    <script>
+
+        /refund_id=([0-9,]*)/.test(location.search);
+        var refund_id = RegExp.$1;
+        var key =getcookie('key');
+        $(function(){
+            if(key==''){
+                window.location.href = WapSiteUrl+'/tmpl/member/login.html';
+            }
+            $.ajax({
+                type:'get',
+                url:ApiUrl+"/index.php?act=member_refund&op=view",
+                data:{key:key,refund_id:refund_id},
+                dataType:'json',
+                success:function(result){
+                    checklogin(result.login);//检测是否登录了
+                    var data = result.datas;
+                    data.WapSiteUrl = WapSiteUrl;//页面地址
+                    data.ApiUrl = ApiUrl;
+                    data.refund_id = refund_id;
+                    data.key = getcookie('key');
+                    template.helper('p2f', function(s) {
+                        return (parseFloat(s) || 0).toFixed(2);
+                    });
+                    template.helper('$getLocalTime', function (nS) {
+                        var d = new Date(parseInt(nS) * 1000);
+                        var s = '';
+                        s += d.getFullYear() + '-';
+                        s += (d.getMonth() + 1) + '-';
+                        s += d.getDate() + ' ';
+                        if( d.getHours()<10){
+                            s += '0'+d.getHours() + ':';
+                        }else{
+                            s += d.getHours() + ':';
+                        }
+                        if(d.getMinutes()<10){
+                            s += "0"+d.getMinutes();
+                        }else{
+                            s += d.getMinutes();
+                        }
+                        return s;
+                    });
+                    var html = template.render('refund_detail', data);
+                    $("#detail").html(html);
+
+                    $('.search-delivery').bind('click',function(){
+                        var box =$(this).closest('.content-warp').find('.delivery-box');
+
+                        if(box.attr('load')==1){
+                            box.show();
+                            box.attr('load',0);
+                            var express_id = $(this).attr('express_id');
+                            var shipping_code = $(this).attr('shipping_code');
+                            $.ajax({
+                                type:'get',
+                                url:ApiUrl+"/index.php?act=member_order&op=ajax_delivery",
+                                data:{key:key,express_id:express_id,shipping_code:shipping_code},
+                                dataType:'json',
+                                success:function(result){
+                                    var html = template.render('delivery', result.datas);
+                                    box.html(html);
+                                    box.show();
+                                }
+                            });
+                        }else{
+                            if(box.css('display')=='none'){
+                                box.show();
+                            }else{
+                                box.hide();
+                            }
+                        }
+                    });
+                    $(window).scrollTop(0);
+                }
+            });
+        });
+
+    </script>
+
+
+
+</body>
+</html>

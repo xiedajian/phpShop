@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>线下转账</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <style>
+        .header-wrap {
+            position: relative;
+            background: #E1017E none repeat scroll 0% 0%;
+            z-index: 8888;
+            height: 50px;
+        }
+        .header-back {
+            position: absolute;
+            top: 8px;
+            left: 6px;
+            width: 30px;
+            height: 32px;
+            display: inline-block;
+        }
+        .header-back span {
+            width: 38px;
+            height: 38px;
+            text-indent: -9999px;
+            background-position: -76px 2px;
+        }
+        .header-wrap h2 {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #FFF;
+            text-align: center;
+        }
+
+        .pay-title{color: #000000;font-size: 14px;margin-top: 20px;}
+        .pay-tip p {font-size: 12px;}
+
+        .warp{margin: 3%;font-size: 12px;}
+        .tf-content{border: 1px solid #A4DBFF;background-color: #ffffff;margin-top: 10px;}
+        .tf-title{background-color: #A4DBFF;color: #ffffff;text-align: center;padding: 5px 0px}
+        .tf-info{padding: 5px 3%;}
+
+        dd{text-align: right;color: #000000;padding: 5px;}
+        .line{border-bottom: 1px dashed #A4DBFF;margin-bottom: 3px;}
+        .no-support{padding: 20px 0px;background-color: #ffffff;color: #dddddd;text-align: center}
+
+        .service-warp{padding: 10px 3%;border: 1px solid #dddddd;margin-top: 20px;background-color: #ffffff;color: #000000}
+        .service-warp p{text-align: center;}
+        .service-btn{width: 50%;margin: 10px 25% 10px 25%;background-color:rgb(83,200,77);color: #ffffff;text-align: center;padding: 10px 0px;border-radius: 5px;font-size: 16px;background-image: url(../../images/qq.png);
+            background-repeat: no-repeat;background-position: 10px 5px;text-indent: 32px;background-size: 28px 28px;
+
+        }
+    </style>
+
+</head>
+<body style="background-color: #E7E9ED">
+
+<header>
+    <div class="header-wrap">
+        <a href="javascript:void(history.back())" class="header-back">
+            <span>返回</span></a>
+        <h2 id="title">线下转账</h2>
+    </div>
+    <div id="transfer">
+
+    </div>
+    <script type="text/html" id="pay">
+        <div class="warp">
+            <div class="pay-title">
+                请将货款(<span style="color: rgb(209,0,118)">￥<%=p2f(pay_info.pay_amount)%>元</span>)汇至下面的账户中...
+            </div>
+            <div class="pay-tip">
+                <p>转账时，请备注“货款”二字即可。</p>
+                <p>如果转账人与下单人不一样，请备注下单人姓名和货款，如“李敏 货款”</p>
+            </div>
+            <%if(payment_info.payment_config){%>
+                <div class="tf-content">
+                    <div class="tf-title">
+                        拼单网对公账户
+                    </div>
+                    <div class="tf-info">
+                        <dl>
+                            <dt>对公基本账户名</dt>
+                            <dd><%=payment_info.payment_config.account_name%></dd>
+                        </dl>
+                        <div class="line"></div>
+                        <dl>
+                            <dt>账号</dt>
+                            <dd class="transfer-font-color"><%=payment_info.payment_config.account_no%></dd>
+                        </dl>
+                        <div class="line"></div>
+                        <dl>
+                            <dt>开户行</dt>
+                            <dd><%=payment_info.payment_config.account_bank%></dd>
+                        </dl>
+                        <div class="line"></div>
+                        <dl>
+                            <dt>对公支付宝账户</dt>
+                            <dd class="transfer-font-color"><%=payment_info.payment_config.alipay_account%></dd>
+                        </dl>
+                        <dl style="clear:both;"></dl>
+                    </div>
+                </div>
+            <%}else{%>
+                <div class="no-support">
+                    暂不支持线下转账！
+                </div>
+            <%}%>
+            <div class="service-warp">
+                <p>线下转账完成后</p>
+                <p>请将纸质或电子凭证截图发给我们的客服人员~</p>
+                <a href="tencent://message/?uin=2785299647">
+                    <div class="service-btn">
+                        联系客服QQ
+                    </div>
+                </a>
+                <a href="<%=WapSiteUrl%>/tmpl/member/order_center.html?op=order_pay">
+                <div style="width: 50%;margin: 10px 25% 10px 25%;border-radius: 5px;border:1px solid #dddddd;text-align: center;background-color: #dddddd;padding: 10px 0px;color: #ffffff">
+                    关闭
+                </div>
+                </a>
+            </div>
+
+
+        </div>
+    </script>
+
+</header>
+
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/template.js"></script>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/simple-plugin.js"></script>
+<script type="text/javascript" src="../../js/tmpl/common-top.js"></script>
+<script type="text/javascript" src="../../js/tmpl/footer.js"></script>
+<script type="text/javascript" src="../../js/ap.js"></script>
+
+<script>
+    /order_id=([0-9,]*)/.test(location.search);
+    var order_id = RegExp.$1;
+    var key =getcookie('key');
+    $(function(){
+        if(key==''){
+            window.location.href = WapSiteUrl+'/tmpl/member/login.html';
+        }
+        $.ajax({
+            type:'post',
+            url:ApiUrl+"/index.php?act=member_order&op=transfer",
+            data:{key:key,order_id:order_id},
+            dataType:'json',
+            success:function(result){
+                checklogin(result.login);//检测是否登录了
+                var data = result.datas;
+                data.WapSiteUrl = WapSiteUrl;//页面地址
+                data.ApiUrl = ApiUrl;
+                data.key = getcookie('key');
+                data.isweixin_browser=/MicroMessenger/i.test(window.navigator.userAgent.toLowerCase());
+                template.helper('p2f', function(s) {
+                    return (parseFloat(s) || 0).toFixed(2);
+                });
+                template.helper('$getLocalTime', function (nS) {
+                    var d = new Date(parseInt(nS) * 1000);
+                    var s = '';
+                    s += d.getFullYear() + '-';
+                    s += (d.getMonth() + 1) + '-';
+                    s += d.getDate() + ' ';
+                    if( d.getHours()<10){
+                        s += '0'+d.getHours() + ':';
+                    }else{
+                        s += d.getHours() + ':';
+                    }
+                    if(d.getMinutes()<10){
+                        s += "0"+d.getMinutes();
+                    }else{
+                        s += d.getMinutes();
+                    }
+                    return s;
+                });
+                var html = template.render('pay', data);
+                $("#transfer").html(html);
+                //$('.pay-option').click(select);
+                //$('.btn-pay').click(pay);
+                $(window).scrollTop(0);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

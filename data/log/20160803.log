@@ -1,0 +1,3 @@
+[2016-08-03 18:45:35] /app_api/index.php?act=member&op=sendCode ( act=member&op=sendcode ) 
+ERR: Db Error: Table 'ipvp.33hao_request_send_msg' doesn't exist
+INSERT  INTO `33hao_request_send_msg` (url,add_time) VALUES ('ipvp.com/app_api/index.php?act=member&op=sendCode','1470221133')

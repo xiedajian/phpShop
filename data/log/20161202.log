@@ -1,0 +1,24 @@
+[2016-12-02 14:29:22] /admin/index.php?act=goods&op=goods ( act=goods&op=goods ) 
+ERR: Db Error: Unknown column 'sort' in 'order clause'
+SELECT COUNT(*) AS nc_count FROM `33hao_goods_common` ORDER BY sort desc,goods_commonid desc LIMIT 1  
+[2016-12-02 14:29:22] /admin/index.php?act=goods&op=goods ( act=goods&op=goods ) 
+ERR: Db Error: Unknown column 'sort' in 'order clause'
+SELECT * FROM `33hao_goods_common` ORDER BY sort desc,goods_commonid desc LIMIT 0,10  
+[2016-12-02 14:31:03] /admin/index.php?act=order&op=index ( act=order&op=index ) 
+ERR: Db Error: Table 'ipvp.33hao_payment' doesn't exist
+SELECT * FROM `33hao_payment` WHERE ( payment_state = '1' ) LIMIT 1000  
+[2016-12-02 14:31:15] /admin/index.php?act=vr_order&op=index ( act=vr_order&op=index ) 
+ERR: Db Error: Table 'ipvp.33hao_payment' doesn't exist
+SELECT * FROM `33hao_payment` WHERE ( payment_state = '1' ) LIMIT 1000  
+[2016-12-02 14:31:27] /admin/index.php?act=vr_order&op=index ( act=vr_order&op=index ) 
+ERR: Db Error: Table 'ipvp.33hao_payment' doesn't exist
+SELECT * FROM `33hao_payment` WHERE ( payment_state = '1' ) LIMIT 1000  
+[2016-12-02 14:31:28] /admin/index.php?act=vr_order&op=index ( act=vr_order&op=index ) 
+ERR: Db Error: Table 'ipvp.33hao_payment' doesn't exist
+SELECT * FROM `33hao_payment` WHERE ( payment_state = '1' ) LIMIT 1000  
+[2016-12-02 14:31:29] /admin/index.php?act=vr_order&op=index ( act=vr_order&op=index ) 
+ERR: Db Error: Table 'ipvp.33hao_payment' doesn't exist
+SELECT * FROM `33hao_payment` WHERE ( payment_state = '1' ) LIMIT 1000  
+[2016-12-02 14:32:38] /admin/index.php?act=order&op=index ( act=order&op=index ) 
+ERR: Db Error: Table 'ipvp.33hao_payment' doesn't exist
+SELECT * FROM `33hao_payment` WHERE ( payment_state = '1' ) LIMIT 1000  

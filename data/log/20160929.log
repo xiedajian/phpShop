@@ -1,0 +1,9 @@
+[2016-09-29 10:15:08] /app_api/index.php?act=licences&op=goods ( act=licences&op=goods ) 
+ERR: Db Error: Table 'ipvp.33hao_licences_goods' doesn't exist
+SELECT * FROM `33hao_licences_goods` LIMIT 30  
+[2016-09-29 10:15:50] /app_api/?act=data&op=getDate ( act=data&op=getdate ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 30' at line 1
+SELECT * FROM `33hao_app` AS `app` LEFT JOIN `33hao_user_app` AS `user_app` ON app.app_id=user_app.app_id AND user_app.uid= LIMIT 30  
+[2016-09-29 10:16:22] /app_api/?act=data&op=getDate ( act=data&op=getdate ) 
+ERR: Db Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 30' at line 1
+SELECT * FROM `33hao_app` AS `app` LEFT JOIN `33hao_user_app` AS `user_app` ON app.app_id=user_app.app_id AND user_app.uid= LIMIT 30  

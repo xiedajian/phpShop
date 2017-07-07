@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/child.css">
+    <style>
+        .fixed-tab-pannel>img{width: 100% !important;}
+        .no-add-to-cart{
+            background-color: #dddddd;
+            border-radius: 5px;
+            padding: 6px 20px;
+            color: #FFF;
+            font-size: 1.4em;
+            margin-right: 10px;
+            cursor: not-allowed;
+
+        }
+		.bondedwarehouse{
+			padding: 3px 5px;
+			border-radius: 3px;
+			background-color: rgb(68, 179, 60);
+			color: #ffffff;
+			white-space: nowrap;
+			font-size: 10px;
+			margin-bottom: 5px;
+		}
+    </style>
+</head>
+<body>
+	<header id="header"></header>
+	<div id="product_detail_wp"></div>
+
+
+    <div class="pddetail-cnt" id="detail_content">
+        <div class="pddc-gray-warp">
+            <p class="pddetail-go-title clearfix">图文详情</p>
+        </div>
+        <div class="pddc-gray-warp">
+            <div class="fixed-tab-pannel" style="background-color: #ffffff;display: none;" id="detail"></div>
+        </div>
+    </div>
+	<footer id="footer"></footer>
+
+
+	<script type="text/html" id="product_detail">
+		<div class="content">
+			<div class="pddetail-cnt">
+				<div class="pddc-topwp">
+					<a href="javascript:void(0);" class="pddct-imgwp">
+						<div id='mySwipe'class='swiper-container'>
+						  <div class='swipe-wrap'>
+						  <% for(var i =0;i<goods_image.length;i++){　%>
+						      <div class="swipe-item"><img src="<%=goods_image[i]%>"/></div>
+						   <%}%>
+						  </div>
+						</div>
+						<div class="pddct-shadow"></div>
+						<div class="pddct-name-wp">
+							<div class="pddctnw-name">
+								<%=goods_info.common_goods_name%>
+							</div>
+						</div>
+						<span class="pd-collect">收藏</span>
+						<span class="pdpic-size-bg"></span>
+						<span class="pdpic-size">
+							<span class="pds-cursize">1</span>
+							/
+							<span class="pds-tsize"><%=goods_image.length%></span>
+						</span>
+					</a>
+				</div>
+				<% if(pindan_info){ %>
+				<div class="pddc-gray-warp">
+				<div class="pindan-info">
+				   <div class="remark">拼单成功需达到<%=pindan_info.success_num%>件,成功后每件将返利<span><%=goods_info.pindan_goods_rebates%></span>元</div>
+                   <div class="percentage-box">
+                       <div class="percentage-value">
+                         <span class="bg"></span>
+                         <span class="txt"><%=pindan_info.scheduler_val%>%</span></div>
+                       <div class="percentage-text">已拼单:<%=pindan_info.current_num%>件</div>
+                       <div style="clear:both;"></div>
+                   </div>
+                   <div class="scheduler-box">
+                        <span class="scheduler" style="width:<%=pindan_info.scheduler_val>100?100:pindan_info.scheduler_val %>%"></span>
+                   </div>
+                   <div id="pindan_time" time_down="<%=pindan_info.time_down%>" class="pindan-time">
+                        距离本轮拼单结束&nbsp;&nbsp;<span>0</span><span>0</span>:<span>0</span><span>0</span>:<span>0</span><span>0</span>
+                   </div>
+				</div>
+				</div>
+				<% } %>
+				<div class="pddc-property-one pddc-gray-warp">
+					<div class="pddcp-one-wp ppdc-white-wrap">
+						<div class="pddcp-one-top">
+							<ul>
+								<%if(goods_info.goods_tag=='保税仓商品'){%>
+								<span class="bondedwarehouse">保税仓发货</span>
+								<%}%>
+
+								<%if(goods_info.goods_jingle){%>
+								<li class="clearfix">
+
+									<br><%=goods_info.goods_jingle%>
+								</li>
+								<%}%>
+                                <% if(show_price){  var goods_show_price;%>
+
+                                        <%if(show_vip_price){ goods_show_price = goods_info.goods_vip_price;%>
+                                            <li class="clearfix">
+                                                <span class="key">会员价：</span>
+                                                <div class="price value">
+                                                    ￥<%=goods_info.goods_vip_price%>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <span class="key">原售价：</span>
+                                                <div class="value"><del>￥<%=goods_info.goods_price%></del></div>
+                                            </li>
+                                        <%}else if(goods_info.promotion_type){
+                                            var promo;
+                                            switch (goods_info.promotion_type) {
+                                            case 'groupbuy':
+                                            promo = '抢购';
+                                            break;
+                                            case 'xianshi':
+                                            promo = '限时折扣';
+                                            break;
+                                            }
+                                goods_show_price = goods_info.promotion_price;
+                                        %>
+                                            <li class="clearfix">
+                                                <span class="key">促销价：</span>
+                                                <div class="price value">
+                                                    ￥<%=goods_info.promotion_price%>
+                                                <% if (promo) { %>
+                                                    （<%= promo %>）
+                                                <% } %>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <span class="key">原售价：</span>
+                                                <div class="value"><del>￥<%=goods_info.goods_price%></del></div>
+                                            </li>
+                                        <% }else{  goods_show_price = goods_info.goods_price; %>
+                                            <li class="clearfix">
+                                                <span class="key">价格：</span>
+                                                <div class="price value">
+                                                    ￥<%=goods_info.goods_price%>
+                                                </div>
+                                            </li>
+                                        <% } %>
+                                        <li class="clearfix">
+                                            <span class="key">市场价：</span>
+                                            <div class="value"><del>￥<%=goods_info.goods_marketprice%></del></div>
+                                        </li>
+                                <% }else{ %>
+                                <li class="clearfix">
+                                    <span class="key">价格：</span>
+                                    <div class="value">
+                                        <%if(show_price_tip==1){%>
+                                        请先登录后查看价格&nbsp;<a href="member/login.html?ref_url=<%=url%>" style="color: #E1017E;">马上登录</a>
+                                        <%}else if(show_price_tip==2){%>
+                                        请先认证后查看价格&nbsp;<a href="member/ipvp_auth.html" style="color: #E1017E;">马上认证</a>
+                                        <%}%>
+                                    </div>
+                                </li>
+                                <%}%>
+								<li class="clearfix">
+									<span class="key">销量：</span>
+									<div class="value"><%=goods_info.goods_salenum%>件</div>
+								</li>
+						<% if (goods_info.is_virtual == '1') { %>
+								<li class="clearfix">
+									<span class="key">提货方式：</span>
+									<div class="value">电子兑换券</div>
+								</li>
+								<li class="clearfix">
+									<span class="key">有效期：</span>
+									<div class="value">
+										即日起 到 <%= goods_info.virtual_indate_str %>
+										<% if (goods_info.buyLimitation && goods_info.buyLimitation > 0) { %>
+										（每人次限购 <%= goods_info.buyLimitation %> 件）
+										<% } %>
+									</div>
+								</li>
+						<% } else { %>
+							<% if (goods_info.is_presell == '1') { %>
+								<li class="clearfix">
+									<span class="key">预售：</span>
+									<div class="value"><%= goods_info.presell_deliverdate_str %> 日发货</div>
+								</li>
+							<% } %>
+							<% if (goods_info.is_fcode == '1') { %>
+								<li class="clearfix">
+									<span class="key">购买类型：</span>
+									<div class="value">F码优先购买（每个F码优先购买一件商品）</div>
+								</li>
+							<% } %>
+						<% } %>
+							</ul>
+							<div class="pddcp-arrow">
+								<span class="graydownarrow"></span>
+							</div>
+						</div>
+						<div class="pddcp-one-hide">
+							<div class="clearfix">
+								<span class="key">商品描述：</span>
+							</div>
+							<p id="mobile_body">
+								暂无商品描述
+							</p>
+						</div>
+					</div>
+				</div>
+			<% if (gift_array && !isEmpty(gift_array)) { %>
+				<div class="pddc-gray-warp">
+					<ul class="ppdc-white-wrap">
+						<li class="clearfix">
+							<span class="key">赠品：</span>
+							<div class="value">
+						<% for (var k in gift_array) { var v = gift_array[k]; %>
+								<div class="gift-item">
+									<a href="?goods_id=<%= v.gift_goodsid %>">
+										<%= v.gift_goodsname %>
+									</a>
+									&#215; <%= v.gift_amount %>
+								</div>
+						<% } %>
+							</div>
+						</li>
+					</ul>
+				</div>
+			<% } %>
+			<% if(mansong_info){ %>
+				<div class="pddc-gray-warp">
+					<ul class="pddc-active ppdc-white-wrap">
+						<li class="clearfix">
+							<span class="key">活动名称：</span>
+							<div class="value">
+								<%if(mansong_info && mansong_info.mansong_name){%>
+									<%=mansong_info.mansong_name%>
+								<%}else{%>
+									暂无
+								<%}%>
+							</div>
+						</li>
+						<li class="bd-tdashed-dd">
+							<span class="no-key">活动描述：</span>
+							<%
+								if (mansong_info != null && mansong_info.rules) {
+									for (var i =0;i<mansong_info.rules.length;i++){
+						    %>
+								<div class="no-value mt5">
+									单笔订单满<span class="clr-d94 mr5 ml5"><%=mansong_info.rules[i].price%></span>元
+								<% if (mansong_info.rules[i].discount > 0) { %>
+									，立减<span class="clr-green mr5 ml5"><%=mansong_info.rules[i].discount%></span>元
+								<% } %>
+								<% if (mansong_info.rules[i].goods_id != '0') { %>
+									，送礼品：
+									<p class="">
+										<img src="<%=mansong_info.rules[i].goods_image_url%>"/>
+									<p>
+								<% } %>
+								</div>
+								<%}}else {%>
+									暂无
+								<%}%>
+						</li>
+					</ul>
+				</div>
+				<% } %>
+				<div class="pddc-gray-warp">
+					<ul class="pddc-stock ppdc-white-wrap">
+						<li class="pddc-stock-title clearfix">
+							<span class="key">库存：</span>
+							<div class="price value">
+								<span class="stock-num"><%=goods_info.goods_storage%></span>
+								件
+							</div>
+						</li>
+						<li class="pddc-stock-title clearfix bd-tdashed-dd">
+							<span class="key">最小混批量：</span>
+							<div class="price value">
+								<span class="stock-num"><%=goods_info.goods_common_moq%></span>
+							</div>
+						</li>
+						<% if(goods_map_spec.length>0){%>
+						<% for(var i =0;i<goods_map_spec.length;i++){%>
+						<li class="pddc-stock-spec bd-tdashed-dd">
+							<span class="key-no" spec_id="<%=goods_map_spec[i].id%>">
+								<%=goods_map_spec[i].goods_spec_name%>：
+							</span>
+							<div class="value-no mt10">
+								<%for(var j = 0;j<goods_map_spec[i].goods_spec_value.length;j++){%>
+									<a href="javascript:void(0);" <%if (goods_info.goods_spec[goods_map_spec[i].goods_spec_value[j].specs_value_id]){%> class="current" <%}%>specs_value_id = "<%=goods_map_spec[i].goods_spec_value[j].specs_value_id%>">
+										<%=goods_map_spec[i].goods_spec_value[j].specs_value_name%>
+									</a>
+								<%}%>
+							</div>
+						</li>
+						<%}%>
+						<%}%>
+					</ul>
+				</div>
+
+                <!-- 样品-->
+                <style>
+                    .sample-rule{padding: 10px 10px 0px 10px;}
+                    .sample-info{padding: 1px 10px 10px 10px;}
+                    .sample-info p{margin-top: 10px;}
+                    .sample-buy-btn{padding: 5px 0px;background-color: #dddddd;cursor: pointer;color: #000000;width: 100px;margin: 0px 10px 10px 10px;text-align: center;float: right;border-radius: 5px;}
+
+                    .sample-reduce-btn{color: #ffffff;background: #D7D7D7 none repeat scroll 0% 0%;border: 0px none;cursor: pointer;width: 26px;border-radius: 3px;}
+                    .sample-add-btn{color: #ffffff;background: #333 none repeat scroll 0% 0%;border: 0px none;cursor: pointer;width: 26px;border-radius: 3px;}
+                    .sample-goods-num{height:22px !important;line-height: 22px  !important;width: 30px;padding: 0px 3px !important;font-size: 12px;text-align: center;}
+                </style>
+                <% if(sample_goods_info.enable==1){%>
+                <div class="pddc-gray-warp">
+
+                    <div class="pddc-commend-wp clearfix">
+                        <%if(sample_goods_info.goods_mobile_rules.length>0){%>
+                        <div class="sample-rule">
+                            <div>取样规则：</div>
+                            <div style="margin-left: 80px;margin-top: -20px;">
+                                <%for(var i=0;i<sample_goods_info.goods_mobile_rules.length;i++){%>
+                                <p><%= sample_goods_info.goods_mobile_rules[i].value%></p>
+                                <%}%>
+                            </div>
+                        </div>
+                        <%}%>
+                        <div class="sample-info">
+                            <p>拿样价格：<span style="color:#F685B5 ">¥<%=sample_goods_info.goods_price%></span></p>
+                            <p>拿样数量：
+                                <button class="sample-reduce-btn">-</button>
+                                <input class="sample-goods-num" value="1" type="text" min="1" max="<%=sample_goods_info.num_limit%>">
+                                <button class="sample-add-btn">+</button>
+                                <span style="margin-left: 10px;color:#BBBBBB">最大限购数量为<%=sample_goods_info.num_limit%></span>
+                            </p>
+                        </div>
+                        <div class="sample-buy-btn">
+                            立即拿样
+                        </div>
+                    </div>
+                </div>
+
+                <%}%>
+
+
+				<div class="pddc-gray-warp">
+					<div class="pddc-commend-list">
+						<span class="pddc-commendl-title">商品推荐：</span>
+						<div class="pddc-commend-wp clearfix">
+							<%for (var i = 0;i<goods_commend_list.length;i++){%>
+								<a href="product_detail.html?goods_id=<%=goods_commend_list[i].goods_id%>">
+									<img src="<%=goods_commend_list[i].goods_image_url%>">
+									<span class="pddc-commendw-t" title="<%=goods_commend_list[i].goods_name%>">
+										<%=goods_commend_list[i].goods_name%>
+									</span>
+									<span class="pddc-commendw-price" title="￥<%=goods_commend_list[i].goods_price%>"><%if(show_price){%>￥<%=goods_commend_list[i].goods_price%><%}%></span>
+								</a>
+							<%}%>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-add-to-cart">
+		    <a class="detail-icon cart-icon" href="cart_list.html"></a>
+		    <% if(typeof(cart_num)!='undefined'){ %>
+			  <span class="cart-count"><%=cart_num%></span>
+			<% } %>
+			<span class="cart-price"><%if(show_price){%>￥<%=goods_show_price%><%}%></span>
+            <a <%if(show_price){%>id="btn_show_goods_select"<%}else{%> class="no-add-to-cart" <%}%> href="javascript:void(0);">加入进货单</a>
+		</div>
+		<div class="add-to-cart-select-box-bg"></div>
+		<div style="display:none;" class="add-to-cart-select-box">
+            <div class="goods-common">
+                <div><img src="<%= goods_info.common_goods_image %>" /></div>
+                <div>
+                    <p><%= goods_info.common_goods_name %></p>
+                    <p class="moq"><%= goods_info.goods_common_moq %>件起订</p>
+                </div>
+            </div>
+            <div class="goods-spec-list">
+               <table><tbody>
+               	  <%for (var i = 0;i<spec_list.length;i++){ %>
+               	  	 <tr class="selected">
+                       <td style="width:10%;"><span class="detail-icon checkbox" data_id="<%= spec_list[i].id %>"></span></td>
+                       <td style="width:18%;"><img src="<%= spec_list[i].image %>" /></td>
+                       <td style="width:40%;">
+                           <p class="name"><%= spec_list[i].name %></p>
+                           <p class="price">￥<%= spec_list[i].price %></p>
+                       </td>
+                       <td style="width:32%;text-align:center;">
+                         <input class="reduce detail-icon" type="button" value="&nbsp;" min_value="<%=spec_list[i].moq %>"/><input type="tel" class="input-moq" value="<%= spec_list[i].moq %>" /><input type="button" class="plus detail-icon" value="&nbsp;"/>
+                       </td>
+               	  	 </tr>
+               	  <%} %>
+               </tbody></table>
+            </div>
+            <div class="bottom-confirm">
+              <span id="btn_close_goods_select" class="detail-icon"></span>
+              <a  id="btn_select_yes" commonid="<%= goods_info.goods_commonid %>" href="javascript:void(0);">确定</a>
+            </div>
+            <div id="notice_row" class="notice-row"></div>
+            <a style="display:none;" class="go-to-cart-list" href="cart_list.html">去进货单></a>
+		</div>
+	</script> 
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/fx.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="../js/template.js"></script>
+	<script type="text/javascript" src="../js/swipe.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/simple-plugin.js"></script>
+	<script type="text/javascript" src="../js/tmpl/common-top.js"></script>
+	<script type="text/javascript" src="../js/tmpl/product_detail.js"></script>
+	<script type='application/javascript' src='../js/fastclick.js'></script>
+	<script type='application/javascript'>
+	window.addEventListener('load', function() {
+	    FastClick.attach(document.body);
+	}, false);
+	
+	</script>
+</body>
+</html>

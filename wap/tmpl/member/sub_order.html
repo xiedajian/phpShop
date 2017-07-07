@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看子单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+	<style>
+
+        .header-wrap {
+            position: relative;
+            background: #E1017E none repeat scroll 0% 0%;
+            z-index: 8888;
+            height: 50px;
+        }
+        .header-back {
+            position: absolute;
+            top: 8px;
+            left: 6px;
+            width: 30px;
+            height: 32px;
+            display: inline-block;
+        }
+        .header-back span {
+            width: 38px;
+            height: 38px;
+            text-indent: -9999px;
+            background-position: -76px 2px;
+        }
+        .header-wrap h2 {
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            color: #FFF;
+            text-align: center;
+        }
+        .h-line{border-bottom: 1px solid #E4E4E4;width: 100%}
+        .sub-order{background-color: #ffffff;width: 100%;margin-top: 20px;}
+        .sub-order-sn{padding: 5px 0px;font-size: 14px;}
+        .box{padding: 10px 3%;}
+        .sub-goods{border-bottom:  1px solid #E4E4E4;border-top:  1px solid #E4E4E4;}
+        .goods div{font-size: 12px;margin-left:10px;}
+        .info{font-size: 12px;}
+        .info dt{display: inline-block;padding: 0px 10px 0px 0px;vertical-align: top}
+        .info dd{display: inline-block;padding: 0px 10px 0px 0px;vertical-align: top}
+
+        .delivery-list{font-size: 12px;background-color: #ffffff;color: rgb(164,164,164);padding: 10px;margin-top:10px;border-top: 1px solid rgb(210,210,211);border-bottom: 1px solid rgb(210,210,211);padding-left: 3%;}
+        .delivery-list table{width: 100%}
+        .delivery-list table tr{width: 100%}
+        .delivery-list table tr td{padding: 15px 0px;}
+        .delivery-list table tr td div.first {margin-left: 20px;padding: 5px 10px;background-color:#f34a9f;color: #ffffff;margin-right: 5%;border-radius: 5px;position: relative}
+        .delivery-list table tr td div.detail {margin-left: 20px;padding: 5px 10px;background-color:#E7E9ED;;margin-right: 5%;border-radius: 5px;position: relative}
+        .delivery-list table tr td div p{margin-top: 3px;}
+        .status{width: 14px;background: url("../../images/deliver-list.png") no-repeat scroll -18px center;}
+        .status-first{width: 14px;background: url("../../images/deliver-list.png") no-repeat scroll -1px center;}
+        .status-last{width: 14px;background:  url("../../images/deliver-list.png") no-repeat scroll -36px center;}
+
+    </style>
+
+</head>
+<body style="background-color: #E7E9ED">
+
+        <header>
+            <div class="header-wrap">
+                <a href="javascript:void(location.href=document.referrer)" class="header-back">
+                    <span>返回</span></a>
+                <h2 id="title">查看子单</h2>
+            </div>
+        </header>
+        <div id="order"></div>
+
+    <script type="text/html" id="order_detail">
+        <div class="h-line"></div>
+        <% for(var i=0;i<sub_order_list.length;i++){ var order = sub_order_list[i];%>
+        <div class="sub-order">
+            <div class="sub-order-sn box">
+                子单编号：<%=order.sub_order_sn%>
+                <%if(order.sub_order_state==2){%>
+                <span style="float: right">已退款</span>
+                <%}else if(order.sub_order_state==1){%>
+                <span style="float: right">已发货</span>
+                <%}else{%>
+                <span style="float: right">待发货</span>
+                <%}%>
+            </div>
+            <div class="sub-goods box">
+                <%for(var goods_id in order.goods_info){var goods_num = order.goods_info[goods_id];%>
+                    <table class="goods">
+                        <tr>
+                            <td><div><img src="<%=goods_list[goods_id].img_url_240%>" width="60" height="60"></div></td>
+                            <td style="vertical-align: top">
+                                <div>
+                                    <p><%=goods_list[goods_id].goods_name%></p>
+                                    <p>￥<%=goods_list[goods_id].goods_price%>&nbsp;&nbsp;X&nbsp;&nbsp;<%=goods_num%>件</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                <%}%>
+            </div>
+            <div class="info box">
+                <%if(order.sub_order_state!=2){%>
+                <dl>
+                    <dt>身份信息:</dt>
+                    <dd><%=order.buyer_info.buyer_name%><%=order.buyer_info.buyer_id_card%></dd>
+                </dl>
+                <dl>
+                    <dt>收货信息:</dt>
+                    <dd>
+                        <div>
+                            <p>
+                            <%=order.reciver_info.reciver_name%>,
+                            <%=order.reciver_info.phone%>
+                            </p>
+                            <p>
+                            <%=order.reciver_info.area_info%>,
+                            <%=order.reciver_info.address%>
+                            </p>
+                            <p>
+                            <%=order.reciver_info.postcode%>
+                            </p>
+                        </div>
+                    </dd>
+                </dl>
+                <%if(order.sub_order_state==1){%>
+                <dl style="position: relative">
+                    <dt>物流信息:</dt>
+                    <dd>
+                        <%=order.e_name%>,
+                        <%=order.shipping_code%>
+                        <span class="search-delivery" express_id="<%=order.express_id%>" shipping_code="<%=order.shipping_code%>" style="position: absolute;right: 10px;color:#E1017E;top: -10px;padding: 10px;">V</span>
+                    </dd>
+                </dl>
+                <%}%>
+                <%}%>
+            </div>
+            <div class="delivery-box" load="1">
+
+            </div>
+        </div>
+        <%}%>
+
+    </script>
+
+    <script type="text/html" id="delivery">
+        <% if(deliver_info&&deliver_info.status==200){%>
+        <div class="delivery-list">
+            <table cellspacing="0">
+                <tbody>
+                <%for(var i=0;i<deliver_info.data.length;i++){%>
+                <tr>
+                    <td width="10"></td>
+                    <td class="<%if(i==0){%>status-first<%}else if(i==deliver_info.data.length-1){%>status-last<%}else{%>status<%}%>">&nbsp;</td>
+                    <td>
+                        <div class="<%if(i==0){%>first<%}else{%>detail<%}%>">
+                            <div><%= deliver_info.data[i].context%></div>
+                            <p><%= deliver_info.data[i].time%></p>
+                            <div class="angle"></div>
+                        </div>
+                    </td>
+                </tr>
+                <%}%>
+                </tbody>
+            </table>
+        </div>
+        <div style="font-size: 12px;text-align: left;padding: 25px 3%;">
+            以上部分信息来自于第三方，仅供参考如需准确信息可联系物流公司
+        </div>
+        <%}else{%>
+        <div style="width: 100%;padding: 30px 0px;background-color: rgb(232,233,237);">
+            <p style="text-align: center;color: #6D6D6D;font-size: 12px;">暂无物流信息</p>
+            <p style="text-align: center;color: #6D6D6D;font-size: 12px;">如需准确信息可联系物流公司</p>
+        </div>
+        <%}%>
+    </script>
+        <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../../js/template.js"></script>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/tmpl/common-top.js"></script>
+    <script>
+        /order_id=([0-9,]*)/.test(location.search);
+        var order_id = RegExp.$1;
+        var key =getcookie('key');
+        $(function(){
+
+
+            if(key==''){
+                window.location.href = WapSiteUrl+'/tmpl/member/login.html';
+            }
+            $.ajax({
+                type:'get',
+                url:ApiUrl+"/index.php?act=member_order&op=sub_order_detail",
+                data:{key:key,order_id:order_id},
+                dataType:'json',
+                success:function(result){
+                    checklogin(result.login);//检测是否登录了
+                    var data = result.datas;
+                    data.WapSiteUrl = WapSiteUrl;//页面地址
+                    data.ApiUrl = ApiUrl;
+                    data.key = getcookie('key');
+                    template.helper('p2f', function(s) {
+                        return (parseFloat(s) || 0).toFixed(2);
+                    });
+                    template.helper('$getLocalTime', function (nS) {
+                        var d = new Date(parseInt(nS) * 1000);
+                        var s = '';
+                        s += d.getFullYear() + '-';
+                        s += (d.getMonth() + 1) + '-';
+                        s += d.getDate() + ' ';
+                        if( d.getHours()<10){
+                            s += '0'+d.getHours() + ':';
+                        }else{
+                            s += d.getHours() + ':';
+                        }
+                        if(d.getMinutes()<10){
+                            s += "0"+d.getMinutes();
+                        }else{
+                            s += d.getMinutes();
+                        }
+                        return s;
+                    });
+                    var html = template.render('order_detail', data);
+                    $("#order").html(html);
+                    $('.search-delivery').bind('click',function(){
+                        var box =$(this).closest('.sub-order').find('.delivery-box');
+                        if(box.attr('load')==1){
+                            box.attr('load',0);
+                            var express_id = $(this).attr('express_id');
+                            var shipping_code = $(this).attr('shipping_code');
+                            $.ajax({
+                                type:'get',
+                                url:ApiUrl+"/index.php?act=member_order&op=ajax_delivery",
+                                data:{key:key,express_id:express_id,shipping_code:shipping_code},
+                                dataType:'json',
+                                success:function(result){
+                                    var html = template.render('delivery', result.datas);
+                                    box.html(html);
+                                    box.show();
+                                }
+                            });
+                        }else{
+                            if(box.css('display')=='none'){
+                                box.show();
+                            }else{
+                                box.hide();
+                            }
+                        }
+                    });
+                    $(window).scrollTop(0);
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

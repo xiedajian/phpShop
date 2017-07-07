@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进货单列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <style type="text/css">
+       body{padding-bottom:120px;}
+       header{text-align:left;position: relative;background: #f34a9f;width: 100%;height: 50px;}
+       header h1{height: 50px;line-height: 50px;margin-left: 10px;font-size: 1.3em;color: #FFF;}
+       header .header-edit{position: absolute;top: 16px;right: 15px;color: #FFF;font-size: 1.3em;}
+       .goods-count-stat{height: 40px;line-height: 40px;padding-left: 15px;font-size: 1.1em;}
+       .goods-count-stat span{color: #f34a9f;}
+       .footer-to-buy{position: fixed;left: 0px;bottom:45px; width: 100%;height: 60px;border-top: 1px solid #CCC;background-size: 32px; text-align: right;background-color: #FFF;line-height: 60px;z-index:100001}
+       .footer-to-buy #btn_to_buy,.footer-to-buy #btn_cart_del{background-color: #f34a9f;border-radius: 5px;padding: 6px 20px;color: #FFF;font-size: 1.4em;margin-right: 10px;}
+       .footer-to-buy .cart-price{color: #333;font-size: 1.2em;margin-right: 10px;color:#f34a9f; }
+       .footer-to-buy .check-all{position: absolute;left: 3px;top:10px;}
+       .footer-to-buy .check-all .c-txt{position: relative;top:-8px;font-size: 1em;}
+
+       .cartlist-icon{background: url(../images/product_detail_icon.png) no-repeat center;background-size: 220px;}
+       .goods-store-list .checkbox,.footer-to-buy .checkbox{margin-left:5px; background-position: -148px -12px;width: 30px;height:30px;display: inline-block;}
+       .goods-store-list  table,.offdown_goods_list table{width: 100%;border:0;margin:0;border-collapse:collapse;border-spacing:0;line-height:0;table-layout: fixed;}
+       .goods-store-list .checkbox.checked,.footer-to-buy .checkbox.checked{background-position: -114px -12px;}
+       .goods-store-list .goods-store{text-align: left;color: #a5a5a5;border-top: 1px solid #ececec;padding: 10px 0; line-height: 30px;}
+       .goods-store-list .goods-common .common_name a{line-height: 20px;padding-right:10px;color:#333;}
+       .goods-store-list .goods-common {border-top: 1px solid #ececec;clear: both;padding: 10px 0;}
+       .goods-store-list .goods-common img{width: 60px;height: 60px;}
+       .goods-store-list .goods-spec-list{clear: both;}
+       .goods-store-list .goods-spec-list img{width: 50px;height: 50px; margin:5px;}
+       
+       .goods-store-list .goods-spec-list table tr{border-top: 1px solid #ececec;}
+       .goods-store-list .goods-spec-list input[type="tel"]{width:30px;height:26px;border: 1px solid #CCC;}
+       .goods-store-list  .goods-spec-list .name{height:25px;line-height: 25px;width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-break:keep-all; }
+       .goods-store-list  .goods-spec-list .name a{color:#a5a5a5;}
+       .goods-store-list .goods-spec-list .price{height:25px;line-height: 25px;color:#666; }
+       .goods-store-list .goods-spec-list .reduce{border:0;  background-position: -44px -10px; width: 32px;height: 32px;}
+       .goods-store-list .goods-spec-list .plus{border:0;  background-position: -79px -10px; width: 32px;height: 32px;}
+
+
+        .body-bg{display:none;position: fixed;width: 100%;height: 100%;background: #000000;opacity:0.5;top: 0;left: 0; }
+       .reg-dialog{display:none;position:fixed;top:30%;width:80%;margin:0 10%;z-index: 2;border-radius: 5px;background-color: #FFF;}
+       .reg-dialog .content{padding: 20px 10px;text-align: center;border-bottom: 1px solid #CCC;}
+       .reg-dialog .confirm-btns a{width: 50%;height: 50px;line-height: 50px;text-align: center;display: inline-block;}
+       .reg-dialog .confirm-btns a:first-child{width: 49%;border-right: 1px solid #CCC;}
+       .reg-dialog  .alert-btn a{width: 100%;height: 50px;line-height: 50px;text-align: center;display: inline-block;color:#333;}
+        #dialog_btn_n{color: #333;}
+        #dialog_btn_y{color: #f34a9f;}
+       .reg-dialog.confirm .alert-btn{display: none;}
+       .reg-dialog.alert .confirm-btns{display: none;}
+
+       .null_cart_list {text-align: center;}
+       .null_cart_list .null_cart_icon{margin-top:10%;width: 100%;background:url(../images/null_cart.png) no-repeat center;height: 120px;background-size: 120px;}
+       .null_cart_list .null_remark{padding: 25px 0;color: #CCC;}
+       .null_cart_list .null_btn a{display: inline-block;padding: 20px 40px;border:2px solid #f34a9f;border-radius: 5px;color:#f34a9f;font-size: 1.5em; }
+
+         
+       .offdown_goods_list table tr{border-top: 1px solid #ececec;line-height: 20px;}
+       .offdown_goods_list table .name{line-height: 18px;font-size: 0.8em;}
+       .offdown_goods_list table .count_price{line-height:20px;font-size: 0.9em;}
+       .offdown_goods_list img{width: 60px;height: 60px;margin:5px 0;}
+       .offdown_goods_list .top-title{height: 45px;line-height: 45px;padding-left: 10px;background-color: #ececec;position: relative;}
+       .offdown_goods_list  #btn_null_del{position: absolute;right:20px;height: 45px;display: block;color:#f34a9f;top: 0; }
+       .bondedwarehouse{
+           padding: 3px 5px;
+           border-radius: 3px;
+           background-color: rgb(68, 179, 60);
+           color: #ffffff;
+           white-space: nowrap;
+           font-size: 10px;
+       }
+    </style>
+</head>
+<body>
+    <header class="cart-list-header">
+        <h1>我的进货单</h1>
+        <a class="header-edit" id="header_edit" href="javascript:void(0);">编辑</a>
+    </header>
+    <div class="goods-count-stat">共<span id="common_count">0</span>款商品<span id="goods_count">0</span>种规格</div>
+    <div class="footer-to-buy">
+        <span class="check-all"><span class="cartlist-icon checkbox checked"></span><span class="c-txt">全选</span></span>
+        <span id="cart_price" class="cart-price">总计￥0.00</span><a id="btn_to_buy" href="javascript:void(0);">去结算</a>
+        <a style="display:none;" id="btn_cart_del" href="javascript:void(0);">删除</a>
+    </div>
+    <div class="cart-list-content"></div>
+    <div style="display:none;" class="null_cart_list">
+          <div class="null_cart_icon"></div>
+          <div class="null_remark">您的进货单里还是空的，去挑选物品吧</div>
+          <div class="null_btn">
+               <a href="../index.html">去逛逛吧</a>
+          </div>
+    </div>
+    <div class="body-bg"></div>
+    <div class="reg-dialog">
+       <div class="content"></div>
+       <div class="confirm-btns"><a id="dialog_btn_n" href="javascript:close_reg_dialog()">取消</a><a id="dialog_btn_y" href="javascript:void(0);">确定</a></div>
+       <div class="alert-btn"><a id="dialog_btn_a" href="javascript:close_reg_dialog()">知道了</a></div>
+    </div>
+    <footer id="footer"></footer>
+<script type="text/html" id="cart-list">
+         <% if(!isOnlineEmpty){ %>
+            <% for(var storeid in online_list){ %>
+             <div class="goods-store-list">
+               <div class="goods-store"><span checktype="store" class="cartlist-icon checkbox checked">&nbsp;</span>
+                   <%= online_list[storeid].store_name %>
+             </div>
+                <% for(var commonid in online_list[storeid]['common_list']){ %>
+                    <div class="goods-common-list">
+                        <div class="goods-common">
+                             <table><tbody>
+                              <tr><td style="width:10%;"><span checktype="common" class="cartlist-icon checkbox checked"></span></td>
+                              <td style="width:20%;"><img src="<%= online_list[storeid]['common_list'][commonid].common_image %>" /></td>
+                              <td class="common_name" ><a href="product_detail.html?goods_id=<%= online_list[storeid]['common_list'][commonid].cart_list[0].goods_id %>"><%= online_list[storeid]['common_list'][commonid].common_name %><br>
+                              <%if(online_list[storeid]['common_list'][commonid].cart_list[0].goods_tag=='保税仓商品'){%>
+                                  <span class="bondedwarehouse">保税仓发货</span></a>
+                                  <%}%>
+                              </td></tr></tbody></table>
+                        </div>
+                        <div class="goods-spec-list">
+                               <table><tbody>
+                                  <%for (var i = 0;i<online_list[storeid]['common_list'][commonid].cart_list.length;i++){ %>
+                                     <% var row_data=online_list[storeid]['common_list'][commonid].cart_list[i] %> 
+                                     <tr class="goods-row" >
+                                       <td style="width:10%;"><span checktype="goods" data_cart_id="<%= row_data.cart_id %>" data_goods_price="<%= row_data.goods_price %>" class="cartlist-icon checkbox checked"></span>
+                                       </td>
+                                       <td style="width:18%;"><img src="<%= row_data.goods_image_url %>" /></td>
+                                       <td style="width:40%;">
+                                           <p class="name"><a href="product_detail.html?goods_id=<%= row_data.goods_id %>"><%= row_data.goods_spec_name %></a></p>
+                                           <p class="price">￥<%= row_data.goods_price %></p>
+                                       </td>
+                                       <td style="width:32%;text-align:center;">
+                                         <div class="cart-count-handle">
+                                         <input  data_cart_id="<%= row_data.cart_id %>"  class="reduce cartlist-icon" type="button" value="&nbsp;" min_value="<%=row_data.goods_moq %>"/><input type="tel"  maxlength="5" class="input-moq" data_cart_id="<%= row_data.cart_id %>" value="<%= row_data.goods_num %>" /><input type="button" class="plus cartlist-icon"  data_cart_id="<%= row_data.cart_id %>"  value="&nbsp;"/>
+                                         </div>
+                                       </td>
+                                     </tr>
+                                  <%} %>
+                               </tbody></table>
+                        </div>  
+                    </div>                 
+                <% } %>
+            </div>
+           
+            <% } %>
+         <% } %>
+         <% if(!isOfflineEmpty){ %>
+             <div class="offdown_goods_list">
+                <div class="top-title">失效商品<a id="btn_null_del" href="javascript:offdown_goods_list_del();">删除全部</a></div>
+                <div><table><tbody>
+                    <%for (var i = 0;i<offline_list.length;i++){ %>
+                       <% var row_data=offline_list[i] %> 
+                       <tr data_cart_id="<%= row_data.cart_id %>">
+                         <td style="width:18%;"><img src="<%= row_data.goods_image_url %>" /></td>
+                         <td class="name" style="width:60%;">
+                             <%= row_data.goods_name %>
+                         </td>
+                         <td class="count_price" style="width:22%;">
+                             ￥<%= row_data.goods_price %>
+                             </br>
+                             数量:<%= row_data.goods_num %>
+                         </td>
+                       </tr>
+                    <%} %>
+                </tbody></table></div>
+             </div>
+         <% } %>
+</script>
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/template.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/tmpl/footer.js"></script>
+    <script type="text/javascript">
+    var key = getcookie('key');
+    function initCartList(){
+             $.ajax({
+                url:ApiUrl+"/index.php?act=member_cart&op=ipvp_cart_list",
+                type:"post",
+                dataType:"json",
+                data:{key:key},
+                success:function (result){
+                    if(checklogin(result.login)){
+                        if(!result.datas.error){
+                            result.datas.isOnlineEmpty=Object.keys(result.datas.online_list).length==0;
+                            result.datas.isOfflineEmpty=result.datas.offline_list.length==0;
+                            if(result.datas.isOnlineEmpty&&result.datas.isOfflineEmpty){
+                                $(".null_cart_list").show();
+
+                                return;
+                            }else{
+                              $(".cart-list-content").html(template.render('cart-list', result.datas));
+                            }
+                            if(result.datas.isOnlineEmpty){
+                                  $("#header_edit").hide();
+                            }
+                        }else{
+                           alert(result.datas.error);
+                           return;
+                        }
+                        cart_stat_price();
+                        goods_count_fun();
+                        var input_moq_list=$(".input-moq");
+                        input_moq_list.focus(function(e){
+                            $(this).data("old_num",e.target.value);
+                        });
+                        input_moq_list.blur(function(e){
+                            var input=$(this);
+                            editQuantity(input.attr("data_cart_id"),e.target.value,input,input.data("old_num"));
+                        });
+                    }
+                }
+            });
+    }
+    initCartList();
+    function show_reg_dialog(type,text,call){
+       $(".body-bg").show();
+       var dialog=$(".reg-dialog");
+       dialog.attr("class","reg-dialog");
+       dialog.addClass(type);
+       dialog.find(".content").html(text);
+       dialog.show();
+       dialog.find("a").unbind();
+       if(typeof call=='function'){
+         call(dialog);
+       }
+    }
+    function close_reg_dialog(){
+      $(".body-bg").hide();
+      $(".reg-dialog").hide();
+    }
+    function cart_stat_price(){
+        var all_price=0;
+        $(".goods-spec-list .checked").each(function(){
+             var price=parseFloat($(this).attr("data_goods_price")),num=$(this).closest("tr").find(".input-moq").val();
+             all_price+=(price*num);
+        });
+        $(".footer-to-buy .cart-price").text("总计￥"+all_price.toFixed(2));
+    }
+    function goods_count_fun(){
+        $("#common_count").text($(".goods-common-list").length);
+        $("#goods_count").text($(".goods-spec-list .goods-row").length);
+    }
+    function checkBoxFun(checkbox){
+       var checktype=checkbox.attr("checktype"),checked=checkbox.is(".checked");
+       if(checktype=="store"){
+          var checkboxlist=checkbox.closest(".goods-store-list").find(".checkbox");
+          if(checked){
+             checkboxlist.removeClass("checked");
+          }else{
+             checkboxlist.addClass("checked");
+          }
+       }else if(checktype=="common"){
+          var checkboxlist=checkbox.closest(".goods-common-list").find(".checkbox");
+          if(checked){
+             checkboxlist.removeClass("checked");
+          }else{
+             checkboxlist.addClass("checked");
+          }
+       }else if(checktype=="goods"){
+          if(checked){
+             checkbox.removeClass("checked");
+          }else{
+            checkbox.addClass("checked");
+          }
+       }
+       cart_stat_price();
+    }
+    function reduce_plus_goods_num(type,btn){
+        if(type==0){
+           var num=parseInt(btn.next().val()),min_num=parseInt(btn.attr("min_value"));
+           if(num<=min_num){
+             return;
+           }
+           var new_num=num-1;
+           editQuantity(btn.attr("data_cart_id"),new_num,btn.next(),num);
+        }else{
+           var num=parseInt(btn.prev().val()),new_num=num+1;
+           editQuantity(btn.attr("data_cart_id"),new_num,btn.prev(),num);
+        }
+    }
+   function editQuantity(cart_id,quantity,target,old_quantity){
+        $.ajax({
+            url:ApiUrl+"/index.php?act=member_cart&op=cart_edit_quantity",
+            type:"post",
+            data:{key:key,cart_id:cart_id,quantity:quantity},
+            dataType:"json",
+            success:function (res){
+                if(checklogin(res.login)){
+                    if(res.datas.error){
+                       target.val(old_quantity);
+                       show_reg_dialog("alert",res.datas.error);
+                    }else{
+                      target.val(quantity);
+                      cart_stat_price();
+                    }
+                }
+            }
+        });
+    }
+    function offdown_goods_list_del(){
+       var cart_ids=[];
+       $(".offdown_goods_list tr").each(function(){
+         cart_ids.push($(this).attr("data_cart_id"));
+       });
+       $.ajax({
+              url:ApiUrl+"/index.php?act=member_cart&op=cart_any_del",
+              type:"post",
+              data:{key:key,cart_id:cart_ids.join(",")},
+              dataType:"json",
+              success:function (res){
+                  if(checklogin(res.login)){
+                      if(!res.datas.error && res.datas == "1"){
+                          $(".offdown_goods_list").remove();
+                          if($(".goods-spec-list .goods-row").length==0){
+                            $(".null_cart_list").show();
+                          }
+                      }else{
+                          show_reg_dialog("alert",res.datas.error);
+                      }
+                  }
+              }
+        });
+    }
+    $(".cart-list-content").bind('click',function(e){
+       e.stopPropagation();
+       var target=$(e.target);
+       if(target.is(".checkbox")){
+          checkBoxFun(target);
+       }else if(target.is(".reduce")){
+          reduce_plus_goods_num(0,target);
+       }else if(target.is(".plus")){
+          reduce_plus_goods_num(1,target);
+       }
+    });
+    $(".check-all").bind('click',function(){
+        if($(this).find(".checkbox").is(".checked")){
+            $(".checkbox").removeClass("checked");
+        }else{
+            $(".checkbox").addClass("checked");
+        }
+    });
+    window.checkbox_checked_list=null;
+    $("#header_edit").bind('click',function(){
+        if(checkbox_checked_list==null){
+            checkbox_checked_list=$(".checkbox.checked");
+            $(".checkbox").removeClass("checked");
+            $("#btn_cart_del").show();
+            $("#btn_to_buy").hide();
+            $("#cart_price").hide();
+            $(".cart-count-handle").hide();
+            $("#header_edit").text("完成");
+        }else{
+            checkbox_checked_list.addClass("checked");
+            checkbox_checked_list=null;
+            $("#btn_cart_del").hide();
+            $("#btn_to_buy").show();
+            $("#cart_price").show();
+            $(".cart-count-handle").show();
+            $("#header_edit").text("编辑");
+            cart_stat_price();
+        }
+    });
+    $("#btn_to_buy").bind('click',function(){
+        var cart_ids=[];
+        $(".goods-spec-list .checked").each(function(){
+            var num=$(this).closest("tr").find(".input-moq").val();
+            cart_ids.push($(this).attr("data_cart_id")+"|"+num);
+        });
+        if(cart_ids.length==0){
+            show_reg_dialog("alert","未选择购买的商品");
+            return;
+        }
+        location.href="order/buy_step1.html?ifcart=1&cart_id="+cart_ids.join(',');
+    });
+    $("#btn_cart_del").bind('click',function(){
+         var cart_ids=[],goods_checked_list=$(".goods-spec-list .checked");
+        goods_checked_list.each(function(){
+             cart_ids.push($(this).attr("data_cart_id"));
+        });
+        if(cart_ids.length==0){
+            show_reg_dialog("alert","未选择删除的商品");
+            return;
+        }
+        show_reg_dialog("confirm","是否删除选中的商品",function(d){
+           d.find("#dialog_btn_y").click(function(){
+              close_reg_dialog();
+              $.ajax({
+                url:ApiUrl+"/index.php?act=member_cart&op=cart_any_del",
+                type:"post",
+                data:{key:key,cart_id:cart_ids.join(",")},
+                dataType:"json",
+                success:function (res){
+                    if(checklogin(res.login)){
+                        if(!res.datas.error && res.datas == "1"){
+                            goods_checked_list.each(function(){
+                                var tr=$(this).closest("tr"),table=tr.closest("table");
+                                tr.remove();
+                                if(table.find("tr").length==0){
+                                    var common_list=table.closest(".goods-common-list"),store_list=common_list.closest(".goods-store-list");
+                                    common_list.remove();
+                                    if(store_list.find(".goods-common-list").length==0){
+                                        store_list.remove();
+                                    }
+                                }
+                            });
+                            goods_count_fun();
+                            if($(".goods-spec-list .goods-row").length==0){
+                              if($(".offdown_goods_list").length==0){
+                                $(".null_cart_list").show();
+                              }
+                              $("#header_edit").trigger('click');
+                              $("#header_edit").hide();
+                            }
+                        }else{
+                            show_reg_dialog("alert",res.datas.error);
+                        }
+                    }
+                }
+              });
+           });
+        });
+
+    });
+     
+
+    </script>
+</body>
+</html>

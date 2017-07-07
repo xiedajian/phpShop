@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="__STATIC__/css/style.css" rel="stylesheet" type="text/css">
+    <title>收银台- {$trade_type}</title>
+</head>
+<body touchstart>
+<main class="contain-box">
+    <section class="sy-content">
+        <div class="sy-shop">
+            <img src="__STATIC__/img/shop.png" alt="店家商标" class="img1">
+            <p class="p1">福州宝龙店旗舰店</p>
+        </div>
+        <div class="sy-money">
+            <p class="p2">金额</p>
+            <p class="p3 relative">
+                ￥<i class="blink" style="">&nbsp;</i><input type="number" class="money-input" placeholder="0.00"  readonly id="order_amt"/>
+                <button class="clear-btn"></button>
+            </p>
+        </div>
+    </section>
+    <input type="hidden" name="store_id" value="{$store_id}" id="store_id"/>
+    <input type="hidden" name="trade_type" value="{$trade_type}" id="trade_type"/>
+    <button class="btn-block btn-gray" id="pay" onclick="pay()">确认支付</button>
+
+    <p class="mark">由上海富友提供技术支持和交易保障</p>
+</main>
+<section class="keyboard-panel" id="keyboard">
+    <table class="keyboard-table" id="num-keyboard">
+        <tr>
+            <td data-value="1">1</td>
+            <td data-value="2">2</td>
+            <td data-value="3">3</td>
+            <td rowspan="2" class="grey-bg" data-value="100"><img src="__STATIC__/img/clear.png" alt="按钮清除"/></td>
+        </tr>
+        <tr>
+            <td data-value="4">4</td>
+            <td data-value="5">5</td>
+            <td data-value="6">6</td>
+        </tr>
+        <tr>
+            <td data-value="7">7</td>
+            <td data-value="8">8</td>
+            <td data-value="9">9</td>
+            <td rowspan="2" data-value="99" >确定</td>
+        </tr>
+        <tr>
+            <td data-value="0">0</td>
+            <td data-value=".">.</td>
+            <td data-value="99"><img src="__STATIC__/img/keybord.png" alt="收下键盘" /></td>
+        </tr>
+    </table>
+</section>
+
+<script type="text/javascript" src="__STATIC__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/common.js"></script>
+</body>
+<script type="text/javascript">
+    //1.用户扫码，请求PHP端，进入此页面
+    //2.输入金额，进行ajax请求本平台php页面（不跨域）
+    //3.php端生成订单，并调富友接口生成预支付订单，根据结果完成ajax回应
+    //4.接受ajax响应数据，（还在本页面），回调调起微信/支付宝支付
+    //5.完成付款
+    //6.php端接受富友支付成功回调
+
+    function pay(){
+//        alert($('#store_id').val());
+        var trade_type=$('#trade_type').val();
+        var store_id=$('#store_id').val();
+        var order_amt=($('#order_amt').val())*100;  //单位分
+        $.ajax({
+            type: "POST",
+            url: "http://192.168.1.83/index.php/index/Index/order",
+            data: "order_amt=1000&trade_type=JSPI&store_id=99",
+            success: function(returnData){
+                console.log( returnData );
+                if(returnData.code=='200'){
+
+                }else {
+                    alert(returnData.msg);
+                }
+            }
+        });
+    }
+
+//    var wechatInfo = navigator.userAgent.match(/MicroMessenger\/([\d\.]+)/i) ;
+//    if( !wechatInfo ) {
+//        alert("本活动仅支持微信") ;
+//    } else if ( wechatInfo[1] < "5.0" ) {
+//        alert("本活动仅支持微信5.0以上版本") ;
+//    }
+
+
+
+    //微信支付调起方式
+    function onBridgeReady(){
+        WeixinJSBridge.invoke(
+            'getBrandWCPayRequest', {
+                "appId":"wx2421b1c4370ec43b",     //公众号名称，由商户传入
+                "timeStamp":"1395712654",         //时间戳，自1970年以来的秒数
+                "nonceStr":"e61463f8efa94090b1f366cccfbbb444", //随机串
+                "package":"prepay_id=u802345jgfjsdfgsdg888",
+                "signType":"MD5",         //微信签名方式：
+                "paySign":"70EA570631E4BB79628FBCA90534C63FF7FADD89" //微信签名
+            },
+            function(res){
+                if(res.err_msg == "get_brand_wcpay_request:ok" ) {}     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+            }
+        );
+    }
+//    if (typeof WeixinJSBridge == "undefined"){
+//        if( document.addEventListener ){
+//            document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+//        }else if (document.attachEvent){
+//            document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+//            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+//        }
+//    }else{
+//        onBridgeReady();
+//    }
+</script>
+</html>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拼单网-登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <style type="text/css">
+       body{background-color: #e7e8ec;}
+       .login-icon{background: url(../../images/login-reg-icon.png) no-repeat;background-size: 130px;display: block;width: 30px;height: 30px;}
+       header{text-align:center;position: relative;background: #f34a9f;width: 100%;height: 50px;}
+       .header-close{position: absolute;  left:10px;top: 10px;background-position: -13px -56px;}
+       .header-login,.header-register{display: inline-block; height: 30px;width: 85px;line-height: 30px;text-align: center;border: 1px solid #FFF;margin: 0px;margin-top:9px;}
+       .header-login,.header-login:link,.header-login:hover,.header-login:active{background-color: #FFF;color:#f34a9f;border-bottom-left-radius: 5px;border-top-left-radius: 5px;}
+       .header-register,.header-register:link,.header-register:hover,.header-register:active{color:#FFF;border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+       .login-form{position: relative;}
+       .login-form input{width: 82%;height:30px;line-height:30px;padding:20px 0 20px 18%;border:0;font-size:1.2em;}
+       .login-form input{border-top: 1px solid #B1B1B1;}
+       .login-form #userpwd{border-bottom: 1px solid #B1B1B1;}
+       .login-tel-icon{position: absolute;left: 15px;top: 15px;height: 40px;background-position: -57px -7px;}
+       .login-pwd-icon{position: absolute;left: 15px;top: 85px;height: 40px;background-position: -84px -7px;}
+       .ipvp-btn-login{background-color: #45c3f5;height: 50px;line-height: 50px;display: block;text-align: center;width:90%;margin: 0 5%;font-size: 1.5em;color: #FFF;border-radius: 5px;}
+       .forget-password{height: 70px;line-height: 70px;text-align: right;font-size: 1.2em;padding-right: 5%;}
+       .forget-password a{color: #7A7676;}
+   .body-bg{display:none;position: fixed;width: 100%;height: 100%;background: #000000;opacity:0.5;top: 0;left: 0; }
+   .reg-dialog{display:none;position:fixed;top:30%;width:80%;margin:0 10%;z-index: 2;border-radius: 5px;background-color: #FFF;}
+   .reg-dialog .content{padding: 20px 10px;text-align: center;border-bottom: 1px solid #CCC;}
+   .reg-dialog  .alert-btn a{width: 100%;height: 50px;line-height: 50px;text-align: center;display: inline-block;color:#333;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a class="header-close login-icon" href="javascript:history.back();"></a>
+        <a class="header-login" href="">登录</a><a class="header-register" href="ipvp_register.html">注册</a>
+    </header>
+    <div style="height:30px;"></div>
+    <div class="login-form">
+        <form id="form" action="" method ="post">
+            <i class="login-tel-icon login-icon"></i>
+            <i class="login-pwd-icon login-icon"></i>
+            <input type="text" maxlength="11" placeholder="请输入用户名或注册手机号"  name="user_name" id="username"/>
+            <input type="password" maxlength="14" placeholder="请输入密码"  name="password" id="userpwd"/>
+            <div class="forget-password">
+                <a href="forget_password.html">忘记密码?</a>
+            </div>
+            <a href="javascript:void(0);" class="ipvp-btn-login" id="loginbtn">登录</a>
+        </form>
+    </div>
+    <div class="body-bg"></div>
+    <div class="reg-dialog">
+       <div class="content"></div>
+       <div class="alert-btn"><a id="dialog_btn_a" href="javascript:close_reg_dialog()">知道了</a></div>
+    </div>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript">
+    function show_reg_dialog(text,call){
+       $(".body-bg").show();
+       var dialog=$(".reg-dialog");
+       dialog.find(".content").text(text);
+       dialog.show();
+       dialog.find("a").unbind();
+       if(typeof call=='function'){
+         call(dialog);
+       }
+    }
+    function close_reg_dialog(){
+      $(".body-bg").hide();
+      $(".reg-dialog").hide();
+    }
+
+    var action = '';//单点登陆地址
+    $(function(){
+
+        /*-------获取单点登录地址-----------*/
+        /ref_url=(.*)&?/.test(location.search);
+        var ref =RegExp.$1;
+        if(!ref)ref = document.referrer;
+        $.ajax({
+            headers: {'Cookie' : document.cookie },
+            type:'post',
+            url:SiteUrl+'/shop/index.php?act=login&op=get_login_action',
+            data:{ref:ref},
+            dataType:'json',
+            success:function(result){
+                if(!result.error){
+                    action = result.data;
+                }
+            }
+        });
+        /*-------获取单点登录地址-----------*/
+
+        $('#loginbtn').click(function(){//会员登陆
+            var username = $('#username').val();
+            if(!username){
+                show_reg_dialog("请输入用户名或手机号",function(d){
+                    d.find("#dialog_btn_a").click(function(){
+                      $('#username').focus();
+                    });
+                });
+               return;
+            }
+            var pwd = $('#userpwd').val();
+            if(!pwd){
+                show_reg_dialog("请输入密码",function(d){
+                    d.find("#dialog_btn_a").click(function(){
+                          $('#userpwd').focus();
+                    });
+                });
+               return;
+            }
+            var client = 'wap';
+            if(!action){
+                $.ajax({
+                    headers: {'Cookie' : document.cookie },
+                    type:'post',
+                    url:SiteUrl+'/shop/index.php?act=login&op=get_login_action',
+                    data:{ref:ref},
+                    dataType:'json',
+                    success:function(result){
+                        if(!result.error){
+                            action = result.data;
+                            if(!action){
+                                document.location.reload();
+                                return;
+                            }
+                            $('#form').attr('action',action);
+                            $('#form').submit();
+                        }
+                    }
+                });
+                //show_reg_dialog("请求错误，请刷新页面后重试！");return;
+            }else{
+                $('#form').attr('action',action);
+                $('#form').submit();
+//                $.ajax({
+//                    type: 'post',
+//                    url: action,
+//                    data: {user_name: username, password: pwd},
+//                    dataType: 'json',
+//                    success: function (result) {
+//                        if(result.state==1){
+//                            location.href=result.msg;return;
+//                        }
+//                    }
+//                });
+            }
+            /*
+            $.ajax({
+                type:'post',
+                url:ApiUrl+"/index.php?act=login",
+                data:{username:username,password:pwd,client:client},
+                dataType:'json',
+                success:function(result){
+                    if(!result.datas.error){
+                        if(typeof(result.datas.key)=='undefined'){
+                            return false;
+                        }else{
+                            addcookie('username',result.datas.username);
+                            addcookie('key',result.datas.key);
+                            /ref=(.*)&?/.test(location.search);
+                            var ref =RegExp.$1;
+                            if(!ref) ref=document.referrer;
+                            if(!ref||ref.indexOf('login.html')>0||ref.indexOf('ipvp_register.html')>0||ref.indexOf('forget_password.html')>0){
+                                ref = WapSiteUrl;
+                            }
+                            var wxinfo = getcookie('wx_bind');
+                            if(!wxinfo){
+                                location.href = ref;
+                            }else{
+                                location.href = WapSiteUrl+"/tmpl/member/weixin_bind.html?ref="+ref;
+                            }
+
+                        }
+                    }else{
+                      show_reg_dialog(result.datas.error);
+                    }
+                }
+             });
+             */
+         });
+     });
+     </script>
+</body>
+</html>

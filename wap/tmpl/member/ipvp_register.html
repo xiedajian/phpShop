@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拼单网-注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <style type="text/css">
+       body{background: #f3f4f8;}
+       .login-icon{background: url(../../images/login-reg-icon.png) no-repeat;background-size: 130px;display: block;width: 30px;height: 30px;}
+       header{text-align:center;position: relative;background: #f34a9f;width: 100%;height: 50px;text-align: center;}
+       header h2{font-size:1.5em;line-height: 50px;color: #FFF;}
+       .header-back{position: absolute;  left:10px;top: 10px;background-position: -43px -56px;width: 32px;}
+
+       .register-form{position: relative;}
+       .register-form input{width: 80%;height:30px;padding:20px 0 20px 20%;border:0;font-size:1.3em; border-top: 1px solid #B1B1B1;border-bottom: 1px solid #B1B1B1;}
+       .login-tel-icon{position: absolute;left: 15px;top: 15px;height: 40px;background-position: -57px -7px;}
+
+       .ipvp-btn-next{background-color: #45c3f5;height: 50px;line-height: 50px;display: block;text-align: center;width:90%;margin: 0 5%;font-size: 1.5em;color: #FFF;border-radius: 5px;}
+       .register-top-step{color:#4daefd;width: 96%;margin-top: 20px;margin-left: 2%;}
+       .register-top-step ul{height: 45px;line-height: 45px;font-size:1em;}
+       .register-top-step li{background:#fff;float: left;width:32.9%;text-align: center;border-top:1px solid #4daefd;border-bottom:1px solid #4daefd;border-right:1px solid #4daefd; }
+       .register-top-step li:first-child{border-left:1px solid #4daefd;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+       .register-top-step li:last-child{border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+       .register-top-step .done{background-color: #4daefd;color: #FFF;}
+       .reg-provision{height: 50px;line-height: 50px;color:#b1b1b1;font-size: 1em;width: 100%;text-align: center; }
+       .reg-provision a{color:#f34a9f;}
+       #mobile:invalid+.btn-clear{display:none;}
+       .register-form .btn-clear{  background-position: -14px -4px;height: 45px;width: 45px;position: absolute;top: 13px;right: 30px;
+   }
+   .body-bg{display:none;position: fixed;width: 100%;height: 100%;background: #000000;opacity:0.5;top: 0;left: 0;z-index: 2; }
+   .reg-dialog{display:none;position:fixed;top:30%;width:80%;margin:0 10%;z-index: 3;border-radius: 5px;background-color: #FFF;}
+   .reg-dialog .content{padding: 20px 10px;text-align: center;border-bottom: 1px solid #CCC;}
+   .reg-dialog .confirm-btns a{width: 50%;height: 50px;line-height: 50px;text-align: center;display: inline-block;}
+   .reg-dialog .confirm-btns a:first-child{width: 49%;border-right: 1px solid #CCC;}
+   .reg-dialog  .alert-btn a{width: 100%;height: 50px;line-height: 50px;text-align: center;display: inline-block;color:#333;}
+   #dialog_btn_n{color: #333;}
+   #dialog_btn_y{color: #f34a9f;}
+   .reg-dialog.confirm .alert-btn{display: none;}
+   .reg-dialog.alert .confirm-btns{display: none;}
+
+   .valid_code_label{position: absolute;top:25px; left:10px;font-size: 1.4em;}
+   .valid_code_label+input{padding-left:30%;width: 70%;}
+   .valid_code_countdown{height:70px;line-height: 70px;padding-left: 5%;}
+   .valid_code_countdown span{color: #f34a9f;}
+   .valid_code_again{height:70px;line-height: 70px;text-align: right;padding-right: 5%;}
+   .valid_code_again a{padding: 10px 20px;background-color: #bcbec4;border-radius: 5px;color: #FFF;}
+
+   #form_3 input{margin-bottom: 20px;padding:16px 0 16px 30%;font-size: 1.2em; width: 70%;}
+   #true_name+label{position: absolute;top:21px; left:10px;font-size: 1.4em;}
+   #password+label{position: absolute;top:104px; left:10px;font-size: 1.4em;}
+   #confirm_password+label{position: absolute;top:189px; left:10px;font-size: 1.4em;}
+
+   .reg-success-dialog{display:none;position: fixed;width: 100%;height: 100%;background-color: #f3f4f8;top: 0;left: 0;text-align: center;z-index: 1;}
+   .reg-success-dialog h1{font-size:2em;color: #000;margin:50px 0 20px 0;}
+   .reg-success-dialog p{padding: 5px 5%;}
+   .reg-success-dialog .member-name{color: #f34a9f;}
+   #btn_go_to_auth{margin-top:50px}
+   #btn_go_to_cancel{background-color:#f3f4f8;border:1px solid #999;color: #999;margin-top:30px;}
+
+   .zhiyoubao-protocol-dialog{display: none; position: fixed;width: 100%;height: 100%;left: 0;top: 0;background-color:#fff;z-index: 4;}
+   .zhiyoubao-protocol-dialog .header{position: absolute;top: 0;left: 0;width: 100%;height: 50px;text-align: center;line-height: 50px;font-size: 1.2em;background: #4a9fd1;color: #FFF;}
+.zhiyoubao-protocol-dialog .content{padding: 60px 10px 0 10px;height: 100%;overflow-y:scroll;}
+   .zhiyoubao-protocol-dialog .footer{position: absolute;bottom: 0;left: 0;width: 100%;background: #FFF;}
+   .zhiyoubao-protocol-dialog .check-zhiyoubao-protocol{padding:15px 0 15px 50px;border-top: 1px solid #CCC;}
+   .zhiyoubao-protocol-dialog .btn-agree a{text-decoration: inherit;display: block;width: 100%;background: #4a9fd1;color: #FFF;text-align: center;padding: 12px 0;font-size: 1.2em;}
+
+   .zhiyoubao-protocol-dialog .footer .checkbox{background: url(../../images/product_detail_icon.png) no-repeat center;background-size: 220px;margin-left:5px; background-position: -148px -12px;width: 30px;height:30px;display:inline-block;position: absolute;left:8px;top:10px;}
+   .zhiyoubao-protocol-dialog .footer .checkbox.checked{background-position: -114px -12px;}
+        .code-label{
+            position: absolute;
+            padding: 26px 0px 26px 5px;
+        }
+        .code-image{
+            height: 30px;
+            vertical-align: top;
+            position: absolute;
+            background: red;
+            top: 0px;
+            right: 3%;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="header-back login-icon" href="javascript:history.back();"></a>
+        <h2>注册</h2>
+    </header>
+    <div class="register-top-step">
+       <ul>
+         <li class="done">1.填写手机号</li>
+         <li>2.短信验证</li>
+         <li>3.设置密码</li>
+       </ul>
+    </div>
+    <div style="height:30px;"></div>
+    <div class="register-form">
+        <form id="form_1" action="" method ="">
+            <div style="position: relative">
+                <i class="login-tel-icon login-icon"></i>
+                <input type="tel" maxlength="11" placeholder="请输入手机号" required="required" name="mobile" id="mobile"/>
+                <i class="btn-clear login-icon"></i>
+            </div>
+            <div style="height:30px"></div>
+
+            <div style="position: relative">
+                <label class="code-label">验证码</label>
+                <input type="text" maxlength="6" placeholder="请输验证码" required="required" name="code" id="code"/>
+                <img class="code-image" src="">
+            </div>
+            <div style="height:30px"></div>
+
+            <a href="javascript:void(0);" class="ipvp-btn-next" id="register_next">下一步</a>
+            <div class="reg-provision">点击“下一步”表示已阅并同意<a href="javascrip:void(0)">《拼单网服务条款》</a></div>  
+        </form>
+        <form style="display:none;" id="form_2" action="" method ="">
+            <label class="valid_code_label">验证码</label>
+            <input type="tel" maxlength="6" placeholder="请输入验证码" name="valid_code" id="valid_code"/>
+            <div style="display: none;" class="valid_code_countdown">
+               <span>60</span>秒后重新获取验证码
+            </div>
+            <div style="display:none;" class="valid_code_again">
+                <a href="javascript:void(0)">重新获取验证码</a>
+            </div>
+            <a href="javascript:void(0);" class="ipvp-btn-next" id="valid_code_next">下一步</a>
+        </form>
+        <form style="display:none;" id="form_3" action="" method ="">
+            <input type="text" maxlength="16" placeholder="请输入真实姓名" name="true_name" id="true_name"/>
+            <label>真实姓名</label>
+            <input type="password" maxlength="14" placeholder="6-14位字符" name="password" id="password"/>
+            <label>密码</label>
+            <input type="password" maxlength="14" placeholder="请再次输入密码" name="confirm_password" id="confirm_password"/>
+            <label>确认密码</label>
+            <div style="height:10px"></div>
+            <a href="javascript:void(0);" class="ipvp-btn-next" id="register_submit">提交</a>
+        </form>
+    </div>
+    <div class="body-bg"></div>
+    <div class="reg-dialog">
+       <div class="content"></div>
+       <div class="confirm-btns"><a id="dialog_btn_n" href="javascript:close_reg_dialog()">取消</a><a id="dialog_btn_y" href="javascript:void(0);">确定</a></div>
+       <div class="alert-btn"><a id="dialog_btn_a" href="javascript:close_reg_dialog()">知道了</a></div>
+    </div>
+    <div class="reg-success-dialog">
+       <h1>注册成功</h1>
+       <p>很高兴认识您,<span class="member-name"></span></p>
+       <p>您当前还没认证店铺，无法享受拼单网</p>
+       <p>优惠价格以及不能下单购买哦！</p>
+       <div>
+         <a href="javascript:void(0);" class="ipvp-btn-next" id="btn_go_to_auth">马上去认证</a>
+         <a href="javascript:void(0);" class="ipvp-btn-next" id="btn_go_to_cancel">以后再说吧</a>
+       </div>
+    </div>
+    <div class="zhiyoubao-protocol-dialog">
+        <div class="header"><a class="header-back login-icon" href="javascript:void(0);"></a>直邮宝协议</div>
+        <div class="content">
+             <p class="MsoNormal">
+<b>第一条：立约目的<span></span></b>
+</p>
+<p class="MsoNormal">
+为了规范拼单网直邮宝合作平台经营秩序，明确拼单网和直邮宝合作客户的权利义务，保障各方及消费者的合法权益，特拟定本协议。<span>&nbsp;&nbsp; </span>
+</p>
+<p class="MsoNormal">
+<b>第二条：签约主体<span>&nbsp; </span></b>
+</p>
+<p class="MsoNormal">
+本协议由拼单网电子商务有限公司（以下统称“拼单网”或“甲方”）与申请成为直邮宝合作客户的商家<span>(</span>以下简称“合作商家”或“乙方”<span>)</span>签署<span></span>
+</p>
+<p class="MsoNormal">
+<b>第三条：协议生效和适用范围<span>&nbsp;</span></b>
+</p>
+<p class="MsoNormal">
+3.1、合作商家通过网络页面点击确认或以其他方式选择接受本协议，即表示合作商家与拼单网已达成协议并同意接受本协议的全部约定内容。本协议自合作商家申请平台认证审核通过之时起生效。<span>&nbsp;</span>
+</p>
+<p class="MsoNormal">
+3.2、合作商家的申请在获得拼单网平台审核通过后，在本协议有效期内，合作商家开展直邮宝经营活动应遵守本协议的约定。<span></span>
+</p>
+<p class="MsoNormal">
+<b>第四条：合作直邮宝的条件和拼单网审核流程<span>&nbsp; </span></b>
+</p>
+<p class="MsoNormal">
+    4.1、您申请合作直邮宝业务，需提交企业资质相关证明，成为拼单网的认证客户。拼单网将基于您提交的认证资料对您的申请进行评定。<span></span>
+    </p>
+    <p class="MsoNormal">
+    4.2、您的认证资料提交后，拼单网审核信息有效，通过认证视为双方正式确立合作关系。合作关系确立后，合作商家可在拼单网平台代消费者购买直邮宝相关产品。<span></span>
+    </p>
+    <p class="MsoNormal">
+    <b>第五条：拼单网直邮宝合作商家的权利和义务<span></span></b>
+    </p>
+    <p class="MsoNormal">
+    &nbsp;&nbsp; “直邮宝”业务是由拼单网合法经营的母婴产品跨境电子商务平台，用作满足消费者购买海外本土商品的需求。消费者可以通过直邮宝平台，手机在线下单购买，平台产品供应商将通过海外仓或保税仓将消费者购买的境外商品直邮至消费者手中。该跨境贸易方式以“个人、合理、自用”为原则清关，接受该购买方式的消费者须同时接受平台上的商品无中文标签。 <span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    <b>5.1</b><b>：合作方式<span></span></b>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.1.1乙方在其经营的门店中，规划一定区域或货架用于直邮宝业务的合作推广；<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.1.2甲方在合作区域内设置直邮宝业务的境外商品展示设施及业务模式宣传设施，用于直邮宝业务的开展<span>;</span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.1.3合作双方按约定的方式进行费用结算。<span></span>
+    </p>
+    <p style="margin-left:0cm;text-indent:24.0pt;">
+    <b>5.2</b><b>：甲方权利与义务<span></span></b>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.2.1 甲方负责直邮宝业务平台的建设维护；<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.2.2 甲方在合作商家确定展品品类后，制作相应品类的物料，包括价格标签、海外直邮围标、直邮宝业务模式介绍材料等。<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.2.3甲方负责运营的售中服务，包括订单的受理、推送订单详情到海关保税区、发货、物流追踪等。<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    <b>5.3</b><b>：乙方权利与义务<span></span></b>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.3.1 乙方在其经营的门店中，规划一定区域或货架用于直邮宝业务的推广合作。<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.3.2 乙方从拼单网直邮宝分类中选择展示商品品类，并进行展品采购。<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.3.3 乙方的展品陈列应维持甲方提出的陈列规范，该规范以甲方首次指导乙方做展品陈列的规范为准，任何未经甲方许可的陈列改动所导致的法律风险，由乙方自行承担，甲方不承担任何责任，仅提供解释协助。<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.3.4 乙方负责提供人员导购服务，并告知消费者甲方的客服热线，便于甲方提供售中、售后服务。<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.3.5 乙方不能利用甲方提供的物料推广或销售非甲方提供的商品，否则甲方有权终止合作协议，如有涉及不合法来源的商品，甲方依法保留对乙方起诉的权利。<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.3.6 乙方不得在协议合作期内与其他公司或个人合作开展与直邮宝有竞争关系的业务；<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.3.7 乙方不得在甲方其他客户的约定保护区内开展直邮宝及相关业务；<span></span>
+    </p>
+    <p style="margin-left:21.0pt;">
+    5.3.8 乙方同意甲方根据业务调整情况，将甲方在本协议约定内的权利和义务部分或全部转移给甲方关联公司，但须提前<span>5</span>日通知乙方。<span></span>
+    </p>
+    <p style="margin-left:0cm;">
+    <b>第六条：协议有效期<span></span></b>
+    </p>
+    <p style="margin-left:21.0pt;">
+    6.1 本协议自双方签署后成立，持续对缔约双方有效，有效期<u><span>&nbsp; 3 &nbsp;</span></u>年，除非发生本协议约定的终止或解除事项。<span></span>
+    </p>
+    <p style="margin-left:57.0pt;text-indent:-36.0pt;">
+    6.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    本协议到期后，乙方没有提出异议则自动续约。<span></span>
+    </p>
+    <p style="margin-left:0cm;">
+    <b>第七条：协议终止及解除<span></span></b>
+    </p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+7.1&nbsp;
+本协议在下述情形下自然终止：双方签署新协议替代本协议的；<span></span>
+</p>
+<p class="MsoNormal" style="margin-left:21.0pt;">
+7.2&nbsp; 缔约双方中任一方在本协议有效期内提前终止本协议的，须提前<span>15</span>天以书面形式通知对方，经对方同意后双方签署书面补充协议终止本协议；<span></span>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+7.3 协议终止后后续事项的处理<span></span>
+</p>
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:21.0pt;">
+双方合作终止后，自终止合作之日起，甲方将关闭直邮宝业务对乙方的平台接口，<span>30</span>日之内完成所有业务财务结算，同时乙方需配合将店内甲方提供的所有物料退回甲方。<span></span>
+</p>
+<p style="margin-left:0cm;">
+<b>第八条：其它<span></span></b>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+8.1 本协议其他条款变更或增加新的条款，均须经缔约双方协商同意并签署书面补充<span></span>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+协议，补充协议、协议附件一经签署，即构成本协议的组成部分，与本协议具有同等法<span></span>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+律效力。<span></span>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+8.2 甲乙双方对于本协议的签订、内容及在履行本协议期间所获知的另一方的商业秘密<span></span>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+负有保密义务。非经对方书面同意，任何一方不得向第三方（关联公司除外）泄露、给<span></span>
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+予或转让该等保密信息。&nbsp;<span></span>
+</p>
+</br></br></br></br></br></br></br></br></br>
+        </div>
+        <div class="footer">
+           <div class="check-zhiyoubao-protocol">
+              <span class="checkbox checked"></span>我已阅读并接受此协议
+           </div>
+           <div class="btn-agree">
+             <a href="javascript:void(0)">确定</a>
+           </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/config.js"></script>
+    <script type="text/javascript" src="../../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript">
+    function show_reg_dialog(type,text,call){
+       $(".body-bg").show();
+       var dialog=$(".reg-dialog");
+       dialog.attr("class","reg-dialog");
+       dialog.addClass(type);
+       dialog.find(".content").html(text);
+       dialog.show();
+       dialog.find("a").unbind();
+       if(typeof call=='function'){
+         call(dialog);
+       }
+    }
+    function close_reg_dialog(){
+      $(".body-bg").hide();
+      $(".reg-dialog").hide();
+    }
+    function send_valid_code(mobile,succ_call){
+        $.ajax({
+              type:'get',
+              url:ApiUrl+"/index.php?act=login&op=send_register_code",
+              data:{mobile:mobile,code:$('#code').val()},
+              dataType:'json',
+              success:function(result){
+                  if(result.code===0){//发送成功
+                     if(typeof succ_call=='function'){
+                         succ_call();
+                     }else{
+                       show_reg_dialog("alert","我们已发送验证码短信到"+mobile+"</br>请注意查收",function(d){
+                           d.find("#dialog_btn_a").click(function(){
+                             step_2_valid_code();
+                           });
+                       });
+                     }
+                  }else if(result.code===1){//发送错误
+                     show_reg_dialog('alert',result.msg);
+                  }else if(result.code===2){
+                    show_reg_dialog('confirm','此手机号已注册,可直接登录',function(d){
+                        d.find("#dialog_btn_y").click(function(){
+                            location.href ='login.html';
+                        });
+                    });
+                  }
+              }
+       });  
+    }
+    function valid_code_countdown(){
+        $(".valid_code_again a").unbind();
+        $(".valid_code_again").hide();
+        $(".valid_code_countdown").show();
+        var wait_time=60;
+        var interval=setInterval(function(){
+          $(".valid_code_countdown span").text(--wait_time);
+          if(wait_time==0){
+            wait_time=60;
+            clearInterval(interval);
+            $(".valid_code_countdown").hide();
+            $(".valid_code_again").show();
+            $(".valid_code_again a").bind('click',function(){
+                var mobile=$("#mobile").val();
+                send_valid_code(mobile,valid_code_countdown);
+            });
+          }
+       },1000);
+    }
+    function step_2_valid_code(){
+       $(".register-top-step li").eq(1).addClass("done");
+       $("#form_1").hide();
+       $("#form_2").show();
+       valid_code_countdown();
+       $("#valid_code_next").bind('click',function(){
+           var mobile=$("#mobile").val();
+           var code=$("#valid_code").val();
+           if(!/^\d{6}$/.test(code)){
+               show_reg_dialog("alert","请输入6位数字验证码",function(d){
+                   d.find("#dialog_btn_a").click(function(){
+                      $("#valid_code").focus();
+                   });
+               });
+               return;
+           }
+           $.ajax({
+              type:'get',
+              url:ApiUrl+"/index.php?act=login&op=check_register_code",  
+              data:{mobile:mobile,valid_code:code},
+              dataType:'json',
+              success:function(result){
+                  if(result.code===0){//验证成功 进入下一步
+                       step_3_submit_info();
+                  }else if(result.code===1){//发送错误
+                     show_reg_dialog('alert',result.msg);
+                  }
+              }
+       });  
+       });
+       
+    }
+   
+    function step_3_submit_info(){
+       $(".register-top-step li").eq(2).addClass("done");
+       $("#form_2").hide();
+       $("#form_3").show();
+       $("#register_submit").bind('click',function(){
+            var mobile=$("#mobile").val(),valid_code=$("#valid_code").val(),
+            true_name=$("#true_name").val(),password=$("#password").val(),confirm_password=$("#confirm_password").val();
+            if(!true_name){
+                 show_reg_dialog("alert","请输入真实姓名",function(d){
+                   d.find("#dialog_btn_a").click(function(){
+                      $("#true_name").focus();
+                   });
+               });
+               return;
+            }
+            if(!password||password.length<6||password.length>14){
+                show_reg_dialog("alert","请输入6-14位字符密码",function(d){
+                   d.find("#dialog_btn_a").click(function(){
+                      $("#password").focus();
+                   });
+               });
+               return;
+            }
+            if(!confirm_password){
+                show_reg_dialog("alert","请输入确认密码",function(d){
+                   d.find("#dialog_btn_a").click(function(){
+                      $("#confirm_password").focus();
+                   });
+               });
+               return;
+            }
+            if(password!=confirm_password){
+                show_reg_dialog("alert","两次密码不一致",function(d){
+                   d.find("#dialog_btn_a").click(function(){
+                      $("#confirm_password").focus();
+                   });
+               });
+               return;
+            }
+            $.ajax({
+              type:'post',
+              url:ApiUrl+"/index.php?act=login&op=ipvp_register",  
+              data:{mobile:mobile,valid_code:valid_code,true_name:true_name,password:password},
+              dataType:'json',
+              success:function(result){
+                if(!result.datas.error){
+                  addcookie('username',result.datas.username);
+                  addcookie('key',result.datas.key);
+                  show_success_dialog(true_name);
+                }else{
+                  show_reg_dialog('alert',result.datas.error);
+                }
+              }
+            });  
+
+       });
+    }
+    
+    function show_success_dialog(member_name){
+       show_reg_dialog("confirm","是否加入直邮宝?",function(d){
+           d.find("#dialog_btn_y").click(function(){
+             show_zhiyoubao_dialog();
+           });
+       });
+       var dialog=$(".reg-success-dialog");
+       dialog.find(".member-name").text(member_name);
+       dialog.show();
+       dialog.find("#btn_go_to_auth").bind('click',function(){
+          location.href="ipvp_auth.html";//认证页
+       });
+       dialog.find("#btn_go_to_cancel").bind('click',function(){
+          location.href=WapSiteUrl;//首页
+       });
+    }
+     
+    function show_zhiyoubao_dialog(){
+       var dialog=$(".zhiyoubao-protocol-dialog");
+       dialog.show();
+       dialog.find(".header-back").click(function(){
+          dialog.hide();
+       });
+       dialog.find(".checkbox").click(function(){
+           if($(this).is(".checked")){
+              $(this).removeClass("checked");
+              dialog.find(".btn-agree a").css("background","#CCC");
+           }else{
+              $(this).addClass("checked");
+              dialog.find(".btn-agree a").removeAttr("style");
+           }
+       });
+       dialog.find(".btn-agree a").click(function(){
+           if(dialog.find(".checkbox").is(".checked")){
+             $.ajax({
+              type:'get',
+              url:ApiUrl+"/index.php?act=member_index&op=agree_zhiyoubao_protocal&key="+getcookie('key'),  
+              dataType:'json',
+              success:function(result){
+                if(!result.datas.error){
+                    dialog.hide();
+                    close_reg_dialog();
+                }
+              }
+            });  
+           }
+       });
+    }
+    $(function(){
+        $(".btn-clear").bind('click',function(){$(this).prev().val("");$(this).prev().focus();});
+        $("#register_next").bind('click',function(){
+              var mobile=$("#mobile").val();
+              var code=$("#code").val();
+              if(mobile){
+                 if(!/^(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/.test(mobile)){
+                    show_reg_dialog("alert","请输入正确手机号码",function(d){
+                         d.find("#dialog_btn_a").click(function(){
+                          $("#mobile").focus();
+                         });
+                    });
+                    return;
+                 }
+              }else{
+                  show_reg_dialog("alert","请输入手机号码",function(d){
+                      d.find("#dialog_btn_a").click(function(){
+                          $("#mobile").focus();
+                      });
+                  });
+                  return;
+              }
+            if(!code){
+                show_reg_dialog("alert","请输入验证码",function(d){
+                    d.find("#dialog_btn_a").click(function(){
+                        $("#code").focus();
+                    });
+                });
+                return;
+            }
+              send_valid_code(mobile);
+        });
+        //验证码
+        $.get(SiteUrl+'/shop/index.php?act=mycode&op=get_hash&param=login,send_register_code',function(data){
+            $('.code-image').attr('src',SiteUrl+'/shop/index.php?act=mycode&op=makecode&hash='+data);
+            $('.code-image').click(function(){
+                $(this).attr('src',SiteUrl+'/shop/index.php?act=mycode&op=makecode&hash='+data+'&r='+Math.random());
+            });
+            $('.code-image').show();
+        });
+     });
+    
+     </script>
+</body>
+</html>

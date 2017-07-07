@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>拼单网-母婴零售服务平台_十万家母婴零售店联合采购!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+    <style>
+        .no-show-price-xianshi{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            left: 0px;
+            bottom: 10px;
+            text-align: center;font-size: 12px;color: #dddddd;
+        }
+        .no-show-price{
+            font-size: 12px;color: #dddddd;
+            height: 20px;
+            padding: 8px 0px;
+            margin: 0px 8px;
+            border-top: 1px dotted #EDEDED;
+        }
+    </style>
+</head>
+<body>
+<div style="display: none;">
+ <img src="images/logo300.png" />
+</div>
+<header class="header-top">
+    <div class="header-menu ipvp-icon"></div>
+    <div class="header-search-icon ipvp-icon"></div>
+    <div class="header-search">
+    <form action="http://ipvp.cn/wap/tmpl/product_list.html">
+    	 <input type="search" name="keyword" required="required" class="htsearch-input clr-999" value="" id="keyword" placeholder="搜索商品"/>
+    	 <input type="reset" value="" />
+    </form>
+   </div>
+    <a class="header-login" href="javascript:void(0);"></a>
+</header>
+
+<div class="main" id="main-container"></div>
+<footer id="footer"></footer>
+
+<script type="text/html" id="xianshi">
+    <div class="xianshi-title-warp">
+        <div class="xianshi-title">限时抢购</div>
+    </div>
+    <div style="overflow-x: scroll">
+        <div class="xianshi-box" style="width: <%= 33*item.length%>%">
+            <div class="xianshi-list">
+                        <% for (var i in item) { %>
+                        <div style="width: <%= 99/item.length%>%">
+                            <div class="xianshi-time" xianshi_time_down="<%=item[i].time_down %>">
+                                <span>0</span><span>0</span>:<span>0</span><span>0</span>:<span>0</span><span>0</span>
+                            </div>
+                            <div class="xianshi-img">
+                                <a href="<%= item[i].goods_url %>">
+                                    <img src="<%= item[i].image_url %>" alt="">
+                                </a>
+                            </div>
+                            <%if(islogin<1){%>
+                            <div class="no-show-price-xianshi">登录后显示价格</div>
+                            <%}else if(islogin<2){%>
+                            <div class="no-show-price-xianshi">认证后显示价格</div>
+                            <%}else{%>
+                            <div class="xianshi-price">￥<%=item[i].xianshi_price %></div>
+                            <%}%>
+                        </div>
+                        <% } %>
+                    </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+</script>
+<script type="text/html" id="adv_list">
+	<div class="adv_list">
+		<div class="swipe-wrap">
+		<% for (var i in item) { %>
+			<div class="item">
+				<a href="<%= item[i].url %>">
+					<img src="<%= item[i].image %>" alt="">
+				</a>
+			</div>
+		<% } %>
+		</div>
+		<div class="adv_list_circle">
+		<% for (var i in item) { %>
+			<i class="ipvp-icon"></i>
+	    <% } %>
+	    </div>
+	</div>
+	<div class="menu-box">
+<div class="menu-list">
+	<a href="http://ipvp.cn/wap/tmpl/member/member.html?act=member">
+		<div><span class="menu-icon-1 ipvp-icon"></span></div>
+		个人中心
+	</a>
+    <a href="http://ipvp.cn/wap/tmpl/cart_list.html">
+        <div><span class="menu-icon-2 ipvp-icon"></span></div>
+		进货单
+    </a>
+	<a href="http://ipvp.cn/wap/tmpl/member/favorites.html">
+		<div><span class="menu-icon-3 ipvp-icon"></span></div>
+		收藏
+	</a>
+    <a href="http://ipvp.cn/wap/tmpl/member/order_list.html">
+        <div><span class="menu-icon-4 ipvp-icon"></span></div>
+		订单查询
+    </a>
+	<a href="http://ipvp.cn/wap/tmpl/product_first_categroy.html">
+		<div><span class="menu-icon-5 ipvp-icon"></span></div>
+		分类
+	</a>
+    <a href="http://ipvp.cn/wap/tmpl/member/views_list.html">
+        <div><span class="menu-icon-6 ipvp-icon"></span></div>
+		足迹
+    </a>
+</div>
+<div style="clear:both;"></div>
+</div>
+
+</script>
+<script type="text/html" id="home1">
+	<div class="index_block home1">
+	<% if (title) { %>
+		<div class="title"><div><%= title_0 %><span><%= title_1 %></span></div></div>
+	<% } %>
+		<div class="content">
+			<div class="item">
+				<a href="<%= url %>">
+					<img src="<%= image %>" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="home2">
+	<div class="index_block home2">
+	<% if (title) { %>
+		<div class="title"><div><%= title_0 %><span><%= title_1 %></span></div></div>
+	<% } %>
+		<div class="content">
+			<div class="item home2_1">
+				<a href="<%= square_url %>"><img src="<%= square_image %>" alt=""></a>
+			</div>
+			<div class="item home2_2">
+				<div class="border-left">
+					<div class="border-bottom">
+						<a href="<%= rectangle1_url %>"><img src="<%= rectangle1_image %>" alt=""></a>
+					</div>
+					<div>
+						<a href="<%= rectangle2_url %>"><img src="<%= rectangle2_image %>" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="home3">
+	<div class="index_block home3">
+	<% if (title) { %>
+		<div class="title"><div><%= title_0 %><span><%= title_1 %></span></div></div>
+	<% } %>
+		<div class="content">
+		<% for (var i in item) { %>
+			<div class="item">
+				<a href="<%= item[i].url %>"><img src="<%= item[i].image %>" alt=""></a>
+			</div>
+		<% } %>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="home4">
+	<div class="index_block home2">
+	<% if (title) { %>
+		<div class="title"><div><%= title_0 %><span><%= title_1 %></span></div></div>
+	<% } %>
+		<div class="content">
+			<div class="item home2_2">
+				<div class="border-right">
+					<div class="border-bottom">
+						<a href="<%= rectangle1_url %>"><img src="<%= rectangle1_image %>" alt=""></a>
+					</div>
+					<div>
+						<a href="<%= rectangle2_url %>"><img src="<%= rectangle2_image %>" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="item home2_1">
+				<a href="<%= square_url %>"><img src="<%= square_image %>" alt=""></a>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/html" id="goods">
+	<div class="index_block goods">
+	<% if (title) { %>
+		<div class="goods-title"><span><%= title %></span></div>
+	<% } %>
+		<div class="content">
+		<% for (var i in item) { %>
+			<div class="goods-item">
+				<a href="tmpl/product_detail.html?goods_id=<%= item[i].goods_id %>">
+					<div class="goods-item-pic"><img src="<%= item[i].goods_image %>" alt=""></div>
+					<div class="goods-item-name"><%= item[i].goods_name %></div>
+                    <%if(islogin<1){%>
+                    <div class="no-show-price">登录后显示价格</div>
+                    <%}else if(islogin<2){%>
+                    <div class="no-show-price">认证后显示价格</div>
+                    <%}else{%>
+					<div class="goods-item-price">￥<%= item[i].goods_promotion_price %></div>
+                    <%}%>
+				</a>
+			</div>
+		<% } %>
+		</div>
+	</div>
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/tmpl/footer.js"></script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255968768'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255968768%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+    function close_ad(){
+        $('#modal').hide();$('.ad').hide();
+    }
+</script>
+<div id="modal" class="popup"></div>
+<div class="ad" show_times ="0">
+    <div class="close" onclick="close_ad()"></div>
+    <a href="tmpl/product_detail.html?goods_id=104363">
+    <img src="images/wap_ad.jpg?r=1" class="ad-img">
+    </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/style.css" rel="stylesheet" type="text/css">
+    <title>自助收银-{$name}</title>
+</head>
+<body>
+<!--头部-->
+<header class="bar-header">
+    <button class="bar-button">
+        <i class="icon back-icon"><img src="static/img/back.png" alt="返回按钮"></i>
+    </button>
+    <h1 class="title">自助收银-{$name}</h1>
+</header>
+<main class="contain-box">
+    <section class="sy-content">
+        <div class="sy-shop">
+            <img src="static/img/shop.png" alt="店家商标" class="img1">
+            <p class="p1">福州宝龙店旗舰店</p>
+        </div>
+        <div class="sy-money">
+            <p class="p2">金额</p>
+            <p class="p3">￥<input type="number" class="money-input" placeholder="0.00"/></p>
+        </div>
+    </section>
+    <button class="btn-block btn-blue">确认支付</button>
+    <p class="mark">由上海富友提供技术支持和交易保障</p>
+</main>
+</body>
+<script type="text/javascript">
+    //1.用户扫码，请求PHP端，进入此页面
+    //2.输入金额，进行ajax请求本平台php页面（不跨域）
+    //3.php端生成订单，并调富友接口生成预支付订单，根据结果完成ajax回应
+    //4.接受ajax响应数据，（还在本页面），回调调起微信/支付宝支付
+    //5.完成付款
+    //6.php端接受富友支付成功回调
+
+    // 这里要使用拼接好的XML字符串
+    var data = '<root><classCode>cellphone</classCode><city>GuangDong</city></root>';
+    $.ajax({
+        type: "POST",
+        url: "/xmlServer.php",
+
+        // data sent is xml
+        contentType: "application/xml; charset=utf-8",
+        // Post 方式，data参数不能为空""，
+        //如果不传参数，也要写成"{}"，否则contentType将不能附加在Request Headers中。
+        data: data,
+
+        // data in response will expected xml
+        dataType: "xml",
+        anysc: false,
+        success: function (result) {
+            $("h1").text(result.getElementsByTagName("city")[0].childNodes[0].nodeValue)
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(errorThrown + ':' + textStatus); // 错误处理
+        }
+    });
+
+
+/*
+    //2.1 统一下单
+    var postData='<?xml version="1.0" encoding="GBK" standalone="yes"?>' +
+        '<version>1.0</version>' +
+        '<ins_cd>机构号,接入机构在富友的唯一代码</ins_cd>' +
+        '<mchnt_cd>1.0</mchnt_cd>' +
+        '<term_id>1.0</term_id>' +
+        '<random_str>1.0</random_str>' +
+        '<sign>1.0</sign>' +
+        '<order_type>1.0</order_type>' +
+        '<mchnt_cd>1.0</mchnt_cd>' +
+        '<eserved_fy_term_id>1.0</eserved_fy_term_id>';
+    var req='<?xml version="1.0" encoding="GBK" standalone="yes"?><xml></xml>';
+
+    console.log(escape(req));
+    console.log(encodeURI(req));
+    console.log(encodeURIComponent(req));
+*/
+
+    var postData=[];
+    postData['version']='1.0';
+    postData['ins_cd']='123456789987654321';               //机构号,接入机构在富友的唯一代码  20
+    postData['mchnt_cd']='123456678912345';                  //商户号, 富友分配给二级商户的商户号  15
+    postData['term_id']='12345678';                  //终端号(随机8字节数字字母组合)   8
+    postData['random_str']='random_strrandom_strrandom_strrandom_str';                  //随机字符串   32
+    postData['sign']='signsignsignsignsignsignsignsignsignsignsignsign';                         //签名  32
+    postData['goods_des']='奶粉奶粉奶粉';                  //商品描述    128
+    postData['mchnt_order_no']='ipvp5464645fdsfdsf545df';                  //商户订单号, 商户系统内部的订单号  30
+    postData['order_amt']=100000;                  //总金额, 订单总金额，单位为分   16
+    postData['term_ip']='192.168.100.100';                  //终端IP    16
+    postData['txn_begin_ts']='20170519153930';                  //交易起始时间, 订单生成时间，格式为yyyyMMddHHmmss  14
+    postData['notify_url']='http://localhost';                  //富友异步通知回调地址 (必须为直接可访问的url，不能携带参数)  256
+    postData['trade_type']='JSAPI';                  //支付方式 JSAPI--公众号支付、FWC--支付宝服务窗   16
+    postData['sub_openid']='13546546';                  //子商户用户标识，（JSAPI时必传）   128
+    postData['sub_appid']='1546456';                  //子商户公众号id   32
+
+
+    function setSign(arr) {
+        var ret = [];
+        for (var key in obj) {
+             var values = obj[key];
+            if (values && values.constructor == Array) {//数组
+                 var queryValues = [];
+                for (var i = 0, len = values.length, value; i < len; i++) {
+                    value = values[i];
+                    queryValues.push(this.toSignPair(key, value));
+                }
+                ret = ret.concat(queryValues);
+            } else { //字符串
+                ret.push(toSignPair(key, values));
+            }
+        }
+        ret.sort();
+        var retStr=ret.join('&');
+
+    }
+    function  toSignPair(key, value) {
+        return key + '=' + (value === null ? '' : String(value));
+    }
+
+</script>
+</html>

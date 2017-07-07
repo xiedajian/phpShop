@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拼单网-找人代付</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<style type="text/css">
+      body{padding: 0;margin: 0;background-color:#e8e9ed;color: #333; padding-bottom: 50px;}
+      p{padding: 0;margin: 0;}
+      .ipvp-logo{text-align: center;width: 100%;padding: 10px 0;text-align: center;}
+      .ipvp-logo>a{border-radius: 10px;padding-left:25px;  padding-right: 5px;color: #FFF;font-size: 1em;background:#87949a url(../../../favicon.ico) no-repeat 5px 5px;display: inline-block;width:50px;height:25px;line-height: 25px;text-decoration:inherit;}
+      .remark-box{background:#FFF;min-height:105px;padding:15px;}
+      .remark-box .name{color:#f078b5; }
+      .remark-box .text-box{padding: 15px 0;}
+      .remark-box .text-box img{width: 70px;height: 70px;margin-right: 5px;}
+      .order-list table{width: 100%;border:0;margin:0;border-collapse:collapse;border-spacing:0;line-height:0;table-layout: fixed;background-color: #FFF;}
+      .order-list table tr{border-top: 1px solid #e3e2e2;}
+      .order-list .common img{width: 60px;height: 60px;margin: 5px;}
+      .order-list .spec-box img{width: 50px;height: 50px;margin: 5px;}
+      .order-list-title {text-align: center;padding: 10px 0;color: #a4a4a4;}
+      .order-list .spec-box .spec-name{color:#a7a7a7;}
+      .btn-pay-box{position: fixed;width: 100%;left: 0;bottom: 0;}
+      .btn-pay-box a{width: 100%;padding: 10px 0;color: #FFF;margin-top: 10px;background-color:#4daefd;display: block;text-align: center;text-decoration: inherit;font-size: 1.3em; }
+
+      .error-content{margin-top: 10%;padding: 20px;background: #FFF;}
+      .error-content h2{text-align: center;}
+      .error-content p{color: #999;padding: 5px 0;}
+      .go-ipvp{padding-top: 8%;}
+      .go-ipvp a{display: block;width: 90%;margin: 5%;height: 45px;line-height: 45px;color: #FFF;background:#45c3f5;border-radius: 5px;text-align: center;text-decoration: inherit;font-size: 1.2em;}
+	</style>
+</head>
+<body>
+   <div class="ipvp-logo"><a href="http://www.ipvp.cn/wap">拼单网</a></div>
+   <div id="content_box"></div>
+   <script type="text/html" id="otherpay_tmpl">
+	   <div class="remark-box">
+	   	  <p><span class="name"><%=sender_name%></span>  请您支付￥<%=pay_amount%>元</p>
+	      <p class="text-box"><img align="left"  src="<%=remark_image%>"><span><%=remark_text%></span></p>
+	   </div>
+	   <div class="order-list-title">采购清单</div>
+	   <div class="order-list">
+	   	   <table>
+	   	   	 <tbody>
+	   	   	    <% for(var i in common_order_list){%>
+	   	   	 	<tr class="common">
+	   	   	 		<td style="width:20%;"><img src="<%=common_order_list[i].order_goods[0].goods_image %>"/></td>
+	   	   	 		<td style="width:62%;line-height:20px;"><%=common_order_list[i].common_name%></td>
+                    <td></td>
+	   	   	 	</tr>
+	   	   	 	   <% for(var j=0;j<common_order_list[i].order_goods.length;j++){ %>
+		   	   	 	<tr class="spec-box">
+		   	   	 		<td style="width:20%;"><img src="<%=common_order_list[i].order_goods[j].goods_image%>" /></td>
+		   	   	 		<td style="width:62%;line-height:22px;">
+                           <p class="spec-name"><%=common_order_list[i].order_goods[j].goods_spec_name%></p>
+                           <p>￥<%=common_order_list[i].order_goods[j].goods_price%></p>
+		   	   	 		</td>
+		   	   	 		<td style="width:18%;">×<%=common_order_list[i].order_goods[j].goods_num%></td>
+		   	   	 	</tr>
+	   	   	 	   <% } %>
+	   	   	 	<% } %>
+	   	   	 </tbody>
+	   	   </table>
+	   </div>
+	   <div class="btn-pay-box">
+	   <%for(var p = 0;p < payment_list.length;p++){ %>
+         <%if((isweixin_browser&&payment_list[p].payment_code=='wxpay')||payment_list[p].payment_code=='alipay'){%>
+            <a id="btn-<%=payment_list[p].payment_code%>" href="<%=ApiUrl %>/index.php?act=otherpay&op=pay&sn=<%=pay_sn%>&payment_code=<%=payment_list[p].payment_code%>">
+            <%=payment_list[p].payment_name%>（￥<%=pay_amount%>）</a>
+          <% } %>
+      <%} %>
+      </div>
+   </script>
+   <script type="text/html" id="error_tmpl">
+       <div id="error_content" class="error-content">
+   	   <h2>抱歉，此支付链接已失效</h2>
+       <p>可能原因:<%=error%></p>
+       <p>具体原因请询问发送给您链接的人员</p>
+       <p>或咨询我们的客服热线：400-090-8982</p>
+       </div>
+       <div class="go-ipvp">
+           <a href="http://www.ipvp.cn/wap">去逛逛拼单网</a>
+       </div>
+   </div>
+   </script>
+   <script type="text/javascript" src="../js/config.js"></script>
+   <script type="text/javascript" src="../js/zepto.min.js"></script>
+   <script type="text/javascript" src="../js/template.js"></script>
+   <script type="text/javascript" src="../js/ap.js"></script>
+   <script type="text/javascript">
+    $(function(){
+       $.ajax({
+			type:'get',
+            url:ApiUrl+"/index.php?act=otherpay&op=index&"+location.search.replace("?",""),
+			dataType:'json',
+			success:function(result){
+				if(result.datas.error){
+                    var html=template.render('error_tmpl', result.datas);
+				    $("#content_box").html(html);
+				}else{
+				  result.datas.ApiUrl = ApiUrl;
+          result.datas.isweixin_browser=/MicroMessenger/i.test(window.navigator.userAgent.toLowerCase());
+				  var html=template.render('otherpay_tmpl', result.datas);
+				  $("#content_box").html(html);
+				  $("#btn-alipay").bind('click',function(e){
+				  	    e.preventDefault();
+				        e.stopPropagation();
+				        e.stopImmediatePropagation();
+				        //ele.href 是GET到支付宝收银台的URL
+				        _AP.pay(e.target.href);
+				        return false;
+				  });
+				}
+			}
+       });
+   });
+   </script>
+</body>
